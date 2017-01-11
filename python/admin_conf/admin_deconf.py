@@ -2,11 +2,66 @@ from lxml import etree as ET
 from copy import copy
 
 import yaml
+import argparse
 
 
 class Script:
 
-    pass
+    def __init__(self, service_xml):
+        self.__xml = service_xml
+        self._name = ''
+        self._descr = ''
+        self._path = ''
+        self._mob_folder = ''
+
+        self.__set_name()
+        self.__set_descr()
+        self.__set_path()
+
+    def __set_name(self):
+        self._name = '_'.join(self.__xml.get('name').split('_')[2:])
+
+    def __set_descr(self):
+        self._descr = self.__xml.get('descr')
+
+    def __set_path(self):
+        path_param = self.__find_path_param()
+        self._path = self.__extract_path_and_mob_folder(path_param)
+
+    def __find_path_param(self):
+        for param in self.__xml:
+            param_value = param.get('value')
+            if param_value and param_value.endswith('.py'):
+                return param_value
+
+    def __extract_path_and_mob_folder(self, path_param):
+        path = path_param.split('/')
+        for i, path_part in enumerate(path):
+            if path_part.startswith('service'):
+                path = '/'.join(path[i+2:])
+                if path.startswith('mobs'):
+                    self.__set_mob_folder(path)
+                break
+        return path
+
+    def __set_mob_folder(self, path):
+        mob_folder = path.split('/')[1]
+        mob_folder = mob_folder if not mob_folder.endswith('.py') else 'ROOT'
+        self._mob_folder = mob_folder
+
+    def is_mob(self):
+        return bool(self._mob_folder)
+
+    def res(self):
+        return '%s (%s) @ %s' % (self._name, self._descr, self._path)
+
+    @property
+    def name(self):
+        return self._name
+
+    @property
+    def mob_folder(self):
+        return self._mob_folder
 
 
 class Scripts(dict):
@@ -16,34 +71,49 @@ class Scripts(dict):
         'special': 'email,core_email,arena,arena_battle_ground,battle_ground'.split(',')
     }
 
-    def add_script(self, script):
-        if script.is_mob():
-            self.__add_mob(script)
-        else:
-            self.__add_regular(script)
+    def __init__(self):
+        super(self.__class__, self).__init__(auto=[], special=[], other=[], mobs={})
+
+    def add_script(self, service_xml):
+        if self.__valid_xml(service_xml):
+            script = Script(service_xml)
+            if script.is_mob():
+                self.__add_mob(script)
+            else:
+                self.__add_regular(script)
+
+    def __valid_xml(self, service_xml):
+        return bool(service_xml.get('name'))
 
     def __add_mob(self, script):
-        if script.mob_folder not in self['mobs']:
-            self['mobs'][script.mob_folder] = []
+        self.__prepare_mob_folder(script.mob_folder)
         self.__add_script(self['mobs'][script.mob_folder], script)
+
+    def __prepare_mob_folder(self, mob_folder):
+        if mob_folder not in self['mobs']:
+            self['mobs'][mob_folder] = []
 
     def __add_regular(self, script):
         for script_type, script_names in Scripts.REGULAR.items():
             if script.name in script_names:
-                self.__add_script(self.regular[script_type], script)
-            else:
-                self.__add_script(self.regular['other'], script)
+                self.__add_script(self[script_type], script)
+                break
+        else:
+            self.__add_script(self['other'], script)
 
     def __add_script(self, target, script):
         target.append(script.res())
 
+    @property
+    def mobs(self):
+        return self['mobs']
 
 
 class Core:
 
     def __init__(self, group_xml):
         self.id = self.__get_core_id(group_xml)
-        self.scripts = Scripts(auto=[], special=[], other=[], mobs={})
+        self.scripts = Scripts()
         self.__get_scripts(group_xml)
 
     def __get_core_id(self, group_xml):
@@ -51,13 +121,75 @@ class Core:
 
     def __get_scripts(self, group_xml):
         for service_xml in group_xml:
-            self.scripts.add_script(Script(service_xml))
+            self.scripts.add_script(service_xml)
+
+    def get_mobs(self):
+        return self.scripts.mobs
+
+
+class Manager:
+
+    def __init__(self, location):
+        self.error = False
+        path_config = self.__get_path_config(location)
+        if not self.error:
+            self.xml_conf = ET.parse(path_config)
+            self.yaml_res_cores_path = 'deconf_cores.yaml'
+            self.yaml_res_patterns_path = 'deconf_patterns.yaml'
+            self.cores = self.__get_cores()
+
+    def __get_path_config(self, location):
+        with open('deconf_path.yaml', 'r') as deconf_yaml_file:
+            config = yaml.load(deconf_yaml_file)
+            if location in config:
+                return config[location]
+            else:
+                self.error = True
+
+    def __get_cores(self):
+        correct_group_name = lambda el: el.get('name').split('_')[1] == '1'
+        return [Core(group_xml) for group_xml in self.xml_conf.xpath('//services/group') if correct_group_name(group_xml)]
+
+    def save_cores(self):
+        print 'saving cores ...'
+        with open(self.yaml_res_cores_path, 'w') as yaml_res_cores_file:
+            yaml.dump({core.id:dict(core.scripts) for core in self.cores}, yaml_res_cores_file, default_flow_style=False)
+
+    def save_patterns(self):
+        print 'saving patterns ...'
+        with open(self.yaml_res_patterns_path, 'w') as yaml_res_patterns_file:
+            patterns = self.__get_patterns()
+            yaml.dump(patterns, yaml_res_patterns_file, default_flow_style=False)
+
+    def __get_patterns(self):
+        res = {}
+        for core in self.cores:
+            mobs = core.get_mobs()
+            for mob_folder in mobs:
+                if mob_folder not in res:
+                    res[mob_folder] = {'count':0, 'mobs':set(mobs[mob_folder])}
+                res[mob_folder]['count'] += 1
+                matched_mobs = res[mob_folder]['mobs'] & set(mobs[mob_folder])
+                if res[mob_folder]['count'] > 1 and not matched_mobs:
+                    matched_mobs = res[mob_folder]['mobs']
+                res[mob_folder]['mobs'] = matched_mobs
+        self.__convert_sets_to_lists(res)
+        return res
+
+    def __convert_sets_to_lists(self, res):
+        for mob_folder_name, mob_folder in res.items():
+            res[mob_folder_name]['mobs'] = list(mob_folder['mobs'])
 
 
 if __name__ == '__main__':
-    xml_conf = ET.parse('/home/fyrros/workspace/projects/kor_social_outer/data/srveye/templates.xml')
-    yaml_res = '/home/fyrros/workspace/projects/ksibox/admin_conf/deconf.yaml'
-    cores = [Core(group_xml) for group_xml in xml_conf.xpath('//services/group') if group_xml.get('name').split('_')[1] == '1']
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-L', "--location", help="path config location")
+    args = parser.parse_args()
+    location = args.location or 'default'
 
-    with open(yaml_res, 'w') as yaml_res_file:
-        yaml.dump({core.id:core.scripts for core in cores}, yaml_res_file, default_flow_style=False)
+    manager = Manager(location)
+    if manager.error:
+        print 'WRONG_LOCATION_ERROR'
+    else:
+        manager.save_cores()
+        manager.save_patterns()

@@ -1,0 +1,7 @@
+default: '/home/fyrros/workspace/kor/kor_social_outer/data/srveye/templates.xml'
+
+work: '/home/fyrros/workspace/kor/kor_social_outer/data/srveye/templates.xml'
+home_ubuntu: '/home/fyrros/workspace/projects/kor_social_outer/data/srveye/templates.xml'
+
+
+#home_windows: '/home/fyrros/workspace/projects/kor_social_outer/data/srveye/templates.xml'
