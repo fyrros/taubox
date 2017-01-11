@@ -1,0 +1,21 @@
+'27':
+  NONE: [cabmans, core_email, digest, gamer, resource_server, combat, swag, planner,
+    arena, traders, repair]
+  mobs:
+    island_robots: [mob_robots_panzer, mob_robots_common, mob_robots_common_patrols]
+  quests: [island_robots]
+  utility: [gift, corpse_manager]
+'28':
+  NONE: [cabmans, core_email, digest, gamer, resource_server, combat, swag, planner,
+    arena, traders, repair]
+  mobs:
+    guards: [labyrinth_guardian, mob_soldier_throne_death, mob_elite_league_range,
+      mob_elite_throne_range, mob_soldier_league_death]
+    land: [chu_fire_horn, gao_barubon, gao_yop, boguk_shaman, chu_fateat, boguk_miner]
+    outpost_colonial: [goblin, black_dragon, mob_town_colonial, swamp_dragon, popugaios,
+      boar]
+    outpost_elf: [black_cat, elf_colony, mob_town_elf, follower]
+    outpost_human: [mob_coast_human, human_colony, bandit, mob_town_human, woodcutter]
+  quests: [colony]
+  social: [arena_battle_ground]
+  utility: [gift, corpse_manager]

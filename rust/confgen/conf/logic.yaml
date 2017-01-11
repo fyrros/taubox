@@ -1,0 +1,38 @@
+common: [swag, combat, gamer, traders, planner, gift, email, cabmans, digest, corpse_manager, arena, repair, resource_server]
+groups:
+
+
+
+
+
+cores:
+  1:
+    exclude: [digest, corpse_manager, arena, repair, resource_server]
+  2:
+    exclude: [corpse_manager, resource_server]
+  3:
+    exclude: [cabmans, digest, corpse_manager, arena, repair, resource_server]
+  10:
+    exclude: [corpse_manager, resource_server]
+  12:
+    exclude: [arena]
+  15:
+    exclude: [resource_server]
+  16:
+    exclude: [repair]
+  17:
+    exclude: [repair, resource_server]
+  18:
+    exclude: [repair, resource_server]
+  19:
+    exclude: [repair, resource_server]
+  20:
+    exclude: [repair, resource_server]
+  25:
+    exclude: [repair]
+  26:
+    exclude: [resource_server]
+
+
+
+

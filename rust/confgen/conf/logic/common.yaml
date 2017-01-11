@@ -1,0 +1,16 @@
+auto_include: 
+  - swag
+  - combat
+  - gamer
+  - traders
+  - planner
+  - gift
+  - email
+  - cabmans
+  - digest
+  - corpse_manager
+  - arena
+  - repair
+  - resource_server
+
+events: []
