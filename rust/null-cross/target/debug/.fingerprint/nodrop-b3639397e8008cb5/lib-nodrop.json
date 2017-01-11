@@ -1,1 +1,0 @@
-{"rustc":7931031742209587524,"target":17870007319373758942,"profile":11154289914177168617,"local":{"variant":"Precalculated","fields":["0.1.8"]},"features":"Some([\"odds\", \"std\"])","deps":[["odds v0.2.25",438295688684877069]],"rustflags":[]}
