@@ -1,0 +1,6 @@
+[package]
+name = "null-cross"
+version = "0.1.0"
+authors = ["Alex Rulkov <fyrros@gmail.com>"]
+
+[dependencies]
