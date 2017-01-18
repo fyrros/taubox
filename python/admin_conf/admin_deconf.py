@@ -126,6 +126,28 @@ class Core:
     def get_mobs(self):
         return self.scripts.mobs
 
+    def dump(self, types):
+        return {k:v for k,v in self.scripts.items() if (k in types) or not types}
+
+
+class Cores(list):
+
+    def __init__(self, xml_conf):
+        super(self.__class__, self).__init__()
+        for group_xml in self.__groups(xml_conf):
+            if self.__correct_group_name(group_xml):
+                self.append(Core(group_xml))
+
+    def __correct_group_name(self, group_xml):
+        return group_xml.get('name').split('_')[1] == '1'
+
+    def __groups(self, xml_conf):
+        return xml_conf.xpath('//services/group')
+
+    def dump(self, types):
+        types = types and types.split(',') or []
+        return {core.id:core.dump(types) for core in self}
+
 
 class Manager:
 
@@ -134,9 +156,9 @@ class Manager:
         path_config = self.__get_path_config(location)
         if not self.error:
             self.xml_conf = ET.parse(path_config)
-            self.yaml_res_cores_path = 'deconf_cores.yaml'
-            self.yaml_res_patterns_path = 'deconf_patterns.yaml'
-            self.cores = self.__get_cores()
+            self.yaml_res_cores_path = 'result/cores.yaml'
+            self.yaml_res_patterns_path = 'result/patterns.yaml'
+            self.cores = Cores(self.xml_conf)
 
     def __get_path_config(self, location):
         with open('deconf_path.yaml', 'r') as deconf_yaml_file:
@@ -146,14 +168,13 @@ class Manager:
             else:
                 self.error = True
 
-    def __get_cores(self):
-        correct_group_name = lambda el: el.get('name').split('_')[1] == '1'
-        return [Core(group_xml) for group_xml in self.xml_conf.xpath('//services/group') if correct_group_name(group_xml)]
-
-    def save_cores(self):
+    def save_cores(self, types):
         print 'saving cores ...'
         with open(self.yaml_res_cores_path, 'w') as yaml_res_cores_file:
-            yaml.dump({core.id:dict(core.scripts) for core in self.cores}, yaml_res_cores_file, default_flow_style=False)
+            yaml.dump(self.cores.dump(types), yaml_res_cores_file, default_flow_style=False)
+
+            #yaml.dump({core.id:(core.scripts if not special else core.scripts['special']) for core in self.cores},
+            #    yaml_res_cores_file, default_flow_style=False)
 
     def save_patterns(self):
         print 'saving patterns ...'
@@ -184,12 +205,14 @@ class Manager:
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('-L', "--location", help="path config location")
+    parser.add_argument('-T', "--types", help="save only target types")
     args = parser.parse_args()
     location = args.location or 'default'
+    types = args.types or ''
 
     manager = Manager(location)
     if manager.error:
         print 'WRONG_LOCATION_ERROR'
     else:
-        manager.save_cores()
+        manager.save_cores(types)
         manager.save_patterns()

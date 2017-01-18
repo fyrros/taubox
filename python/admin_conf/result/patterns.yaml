@@ -1,0 +1,373 @@
+ROOT:
+  count: 4
+  mobs:
+  - battle_guard_human (Mob battle_guard_human) @ mobs/battle_guard_human.py
+  - fake_humanplayer_1 (Mob fake_humanplayer_1) @ mobs/fake_humanplayer_1.py
+  - fake_elfplayer_2 (Mob fake_elfplayer_2) @ mobs/fake_elfplayer_2.py
+  - fake_humanplayer_2 (Mob fake_humanplayer_2) @ mobs/fake_humanplayer_2.py
+  - fake_humanplayer_3 (Mob fake_humanplayer_3) @ mobs/fake_humanplayer_3.py
+  - fake_elfplayer_3 (Mob fake_elfplayer_3) @ mobs/fake_elfplayer_3.py
+  - mob_battle_guard_elf (Mob battle_guard_elf) @ mobs/battle_guard_elf.py
+  - fake_elfplayer_1 (Mob fake_elfplayer_1) @ mobs/fake_elfplayer_1.py
+arena:
+  count: 2
+  mobs:
+  - shooter_8 (Mob shooter 8) @ mobs/arena/mob_shooter_8.py
+  - mob_shooter_3 (Mobs Arena Shooter 3) @ mobs/arena/mob_shooter_3.py
+  - paladin_7 (Mob paladin 7) @ mobs/arena/mob_paladin_7.py
+  - shooter_7 (Mob shooter 7) @ mobs/arena/mob_shooter_7.py
+  - paladin_4 (Mob paladin 4) @ mobs/arena/mob_paladin_4.py
+  - mob_paladin_3 (Mobs Arena Paladin 3) @ mobs/arena/mob_paladin_3.py
+  - shooter_4 (Mob shooter 4) @ mobs/arena/mob_shooter_4.py
+  - paladin_8 (Mob paladin 8) @ mobs/arena/mob_paladin_8.py
+  - shooter_5 (Mob shooter 7) @ mobs/arena/mob_shooter_5.py
+  - paladin_5 (Mob paladin 7) @ mobs/arena/mob_paladin_5.py
+colder:
+  count: 5
+  mobs:
+  - mob_colder_jelly (Mobs Colder Jelly) @ mobs/colder/mob_colder_jelly.py
+  - mob_golem_guard (Mobs Colder Golem Guard) @ mobs/colder/mob_golem_guard.py
+  - mob_penguin (Mobs Colder Penguin) @ mobs/colder/mob_penguin.py
+  - mob_snowman_radical (Mobs Colder Snowman Radical) @ mobs/colder/mob_snowman_radical.py
+  - mob_vopling (Mobs Colder Vopling) @ mobs/colder/mob_vopling.py
+  - mob_snowman_leader (Mobs Colder Snowman Leader) @ mobs/colder/mob_snowman_leader.py
+  - mob_colder_cake_gigant (Mobs Colder Cake Gigant) @ mobs/colder/mob_colder_cake_gigant.py
+  - mob_colder_aoe_tree (Mobs Colder Aoe Tree) @ mobs/colder/colder_aoe_tree.py
+  - mob_boss (Mobs Colder Boss) @ mobs/colder/mob_boss.py
+  - mob_boss_assistant (Mobs Colder Boss Assistant) @ mobs/colder/mob_boss_assistant.py
+  - mob_golem_warrior (Mobs Colder Golem Warrior) @ mobs/colder/mob_golem_warrior.py
+  - mob_yeti (Mobs Colder Yeti) @ mobs/colder/mob_yeti.py
+  - mob_vopling_champion (Mobs Colder Vopling Champion) @ mobs/colder/mob_vopling_champion.py
+  - mob_white_bear (Mobs Colder White Bear) @ mobs/colder/mob_white_bear.py
+demonhunter:
+  count: 6
+  mobs:
+  - mob_demon (Mob witch server) @ mobs/demonhunter/demon.py
+fair:
+  count: 6
+  mobs:
+  - mob_fair_boar (Mob fair_boar) @ mobs/fair/mob_fair_boar.py
+  - mob_fair_turkey (Mob fair_turkey) @ mobs/fair/mob_fair_turkey.py
+  - mob_fair_grum_hrum (Mob fair_grum_hrum) @ mobs/fair/mob_fair_grum_hrum.py
+  - mob_fair_werewolf (Mob fair_werewolf) @ mobs/fair/mob_fair_werewolf.py
+  - mob_fair_stripped (Mob fair_stripped) @ mobs/fair/mob_fair_stripped.py
+floring:
+  count: 1
+  mobs:
+  - mob_homeless_filiar (Mob homeless filiar server) @ mobs/floring/mob_homeless_filiar.py
+  - mob_rasmur (Mob rasmur server) @ mobs/floring/mob_rasmur.py
+  - mob_young_ash_rogue_elf (Mob young ash rogue server) @ mobs/floring/mob_young_ash_rogue_elf.py
+  - mob_lia_di_amry (Mob lia di amry server) @ mobs/floring/mob_lia_di_amry.py
+  - mob_tuber (Mob tuber server) @ mobs/floring/mob_tuber.py
+  - mob_red_meduse (Mob red meduse server) @ mobs/floring/mob_red_meduse.py
+  - mob_emili_rogue (Mob emili rogue server) @ mobs/floring/mob_emili_rogue.py
+  - mob_brown_bear (Mob brown bear server) @ mobs/floring/mob_brown_bear.py
+  - mob_fishman (Mob fishman server) @ mobs/floring/mob_fishman.py
+  - mob_rind (Mob rind server) @ mobs/floring/mob_rind.py
+  - mob_wolf (Mob wolf server) @ mobs/floring/mob_wolf.py
+  - mob_redsfirya (Mob red sfirya server) @ mobs/floring/mob_redsfirya.py
+  - mob_bear_shatun (Mob bear shatun server) @ mobs/floring/mob_bear_shatun.py
+  - mob_little_crab (Mob little crab server) @ mobs/floring/mob_little_crab.py
+gaina:
+  count: 1
+  mobs:
+  - mob_little_crab (Mob little crab server) @ mobs/gaina/mob_little_crab.py
+  - mob_tunder_meduse (Mob tunder meduse server) @ mobs/gaina/mob_tunder_meduse.py
+  - mob_black_bear (Mob black bear server) @ mobs/gaina/mob_black_bear.py
+  - mob_ball_fish (Mob ball fish server) @ mobs/gaina/mob_ball_fish.py
+  - mob_gaina_story_demon (Mob gaina_story_demon) @ mobs/gaina/mob_gaina_story_demon.py
+  - mob_herald (Mob herald) @ mobs/gaina/mob_herald.py
+  - mob_pupil (Mob pupil server) @ mobs/gaina/mob_pupil.py
+  - mob_white_boar (Mob white boar server) @ mobs/gaina/mob_white_boar.py
+  - mob_niara_cat (Mob niara cat server) @ mobs/gaina/mob_niara_cat.py
+  - mob_nosmus (Mob nosmus server) @ mobs/gaina/mob_nosmus.py
+  - mob_housewife (Mob housewife server) @ mobs/gaina/mob_housewife.py
+  - mob_filiar (Mob filiar server) @ mobs/gaina/mob_filiar.py
+  - mob_warrior_throne (Mob warrior_throne server) @ mobs/gaina/mob_warrior_throne.py
+  - mob_sarna (Mob sarna server) @ mobs/gaina/mob_sarna.py
+  - mob_warrior_blood (Mob warrior_blood server) @ mobs/gaina/mob_warrior_blood.py
+  - mob_wildsatyr (Mob wild satyr server) @ mobs/gaina/mob_wildsatyr.py
+  - mob_hunter (Mob hunter server) @ mobs/gaina/mob_hunter.py
+graven:
+  count: 1
+  mobs:
+  - mob_brother_smith (Mob server for brother smith) @ mobs/graven/mob_brother_smith.py
+  - fake_humanplayer_1 (Mob fake_humanplayer_1) @ mobs/graven/fake_humanplayer_1.py
+  - mob_kaban_red (Mob red kaban server) @ mobs/graven/mob_kaban_red.py
+  - mob_north_turtle (Mob north turtle server) @ mobs/graven/mob_north_turtle.py
+  - mob_crab_pearl (Mob crab server) @ mobs/graven/mob_crab_pearl.py
+  - fake_humanplayer_3 (Mob fake_humanplayer_3) @ mobs/graven/fake_humanplayer_3.py
+  - fake_humanplayer_2 (Mob fake_humanplayer_2) @ mobs/graven/fake_humanplayer_2.py
+  - mob_volk (Mob volk server) @ mobs/graven/mob_volk.py
+  - mob_kvigg (Mob crab server) @ mobs/graven/mob_kvigg.py
+  - mob_pretendents_human (Mob server for pretendents human) @ mobs/graven/mob_pretendents_human.py
+  - mob_sayran (Mob sayran server) @ mobs/graven/mob_sayran.py
+guards:
+  count: 13
+  mobs:
+  - mob_elite_throne_range_2 (Mob elite range server) @ mobs/guards/mob_elite_throne_range_2.py
+halloween:
+  count: 1
+  mobs:
+  - mob_squirrel_2 (Mobs Halloween Squirrel 2) @ mobs/halloween/squirrel_2.py
+  - mob_squirrel_1 (Mobs Halloween Squirrel 1) @ mobs/halloween/squirrel_1.py
+  - mob_kadavr (Mobs Halloween Kadavr) @ mobs/halloween/kadavr.py
+  - mob_death_5 (Mobs Halloween Death 5) @ mobs/halloween/death_5.py
+  - mob_black_cat (Mobs Halloween Black Cat) @ mobs/halloween/black_cat.py
+  - mob_death_7 (Mobs Halloween Death 7) @ mobs/halloween/death_7.py
+  - mob_squirrel (Mobs Halloween Squirrel) @ mobs/halloween/squirrel.py
+  - mob_hare (Mobs Halloween Hare) @ mobs/halloween/hare.py
+  - mob_frankenstein (Mobs Halloween Frankenstein) @ mobs/halloween/frankenstein.py
+  - mob_guard_death (Mobs Halloween Guard Death) @ mobs/halloween/guard_death.py
+  - mob_spider (Mobs Halloween Spider) @ mobs/halloween/spider.py
+  - mob_witch (Mobs Halloween Witch) @ mobs/halloween/witch.py
+  - mob_jack (Mobs Halloween Jack) @ mobs/halloween/jack.py
+  - mob_black_sphyria (Mobs Halloween Black Sphyria) @ mobs/halloween/black_sphyria.py
+  - mob_rage_pumpkin (Mobs Halloween Rage Pumpkin) @ mobs/halloween/rage_pumpkin.py
+  - mob_guard (Mobs Halloween Guard) @ mobs/halloween/guard.py
+  - mob_ghost_king (Mobs Halloween Ghost King) @ mobs/halloween/ghost_king.py
+  - mob_hackee (Mobs Halloween Hackee) @ mobs/halloween/hackee.py
+  - mob_pumpkin_knight (Mobs Halloween Pumpkin Knight) @ mobs/halloween/pumpkin_knight.py
+  - mob_ghost (Mobs Halloween Ghost) @ mobs/halloween/ghost.py
+  - mob_death_3 (Mobs Halloween Death 3) @ mobs/halloween/death_3.py
+halloween_arena:
+  count: 1
+  mobs:
+  - mob_paladin_halloween (Mobs Halloween Arena Paladin) @ mobs/halloween_arena/paladin.py
+  - mob_warrior_halloween (Mobs Halloween Arena Warrior) @ mobs/halloween_arena/warrior.py
+  - mob_shooter_halloween (Mobs Halloween Arena Shooter) @ mobs/halloween_arena/shooter.py
+hirn:
+  count: 1
+  mobs:
+  - mob_wild_ruzr (Mob wild_ruzr server) @ mobs/hirn/mob_wild_ruzr.py
+  - mob_tarrakan (Mob tarrakan server) @ mobs/hirn/mob_tarrakan.py
+  - mob_ognus (Mob ognus server) @ mobs/hirn/mob_ognus.py
+  - mob_hobo (Mob hobo server) @ mobs/hirn/mob_hobo.py
+  - mob_yar (Mob yar server) @ mobs/hirn/mob_yar.py
+  - mob_hard_hobo (Mob hard_hobo server) @ mobs/hirn/mob_hard_hobo.py
+  - mob_sculptor (Mob sculptor server) @ mobs/hirn/mob_sculptor.py
+  - mob_mahrul (Mob mahrul server) @ mobs/hirn/mob_mahrul.py
+  - mob_ulle (Mob ulle server) @ mobs/hirn/mob_ulle.py
+  - mob_plague_rat (Mob plague_rat server) @ mobs/hirn/mob_plague_rat.py
+instances:
+  count: 2
+  mobs:
+  - behaviour_frost_cave_adalit (Mobs for colder instance) @ mobs/instances/behaviour_frost_cave_adalit.py
+  - behaviour_frost_cave_barald_dark (Mobs for colder instance) @ mobs/instances/behaviour_frost_cave_barald_dark.py
+  - behaviours_st_roger_derrik (Mobs for colder instance) @ mobs/instances/behaviours_st_roger_derrik.py
+  - red_well_salamandr (Mobs for red well instance) @ mobs/instances/red_well_salamandr.py
+  - behaviour_frost_cave_penguin_fisher (Mobs for colder instance) @ mobs/instances/behaviour_frost_cave_penguin_fisher.py
+  - behaviour_frost_cave_mad_dwarf (Mobs for colder instance) @ mobs/instances/behaviour_frost_cave_mad_dwarf.py
+  - red_well_salamandrasmall (Mobs for red well instance) @ mobs/instances/red_well_salamandrasmall.py
+  - mobs_heroic_boss_3 (Mobs for pirates 2 instance) @ mobs/instances/behaviour_heroic_boss_3.py
+  - behaviours_st_roger_corsar (Mobs for colder instance) @ mobs/instances/behaviours_st_roger_corsar.py
+  - red_well_kingsalamandr (Mobs for red well instance) @ mobs/instances/red_well_kingsalamandr.py
+  - behaviours_st_roger_meri (Mobs for colder instance) @ mobs/instances/behaviours_st_roger_meri.py
+  - behaviour_frost_cave_snow_troll (Mobs for colder instance) @ mobs/instances/behaviour_frost_cave_snow_troll.py
+  - behaviour_frost_cave_others (Mobs for colder instance) @ mobs/instances/behaviour_frost_cave_others.py
+  - red_well_magmabug (Mobs for red well instance) @ mobs/instances/red_well_magmabug.py
+  - red_well_pihtun (Mobs for red well instance) @ mobs/instances/red_well_pihtun.py
+  - mobs_heroic_bot_2 (Mobs for pirates 2 instance) @ mobs/instances/behaviour_heroic_bot_2.py
+  - behaviours_st_roger_prisoner (Mobs for colder instance) @ mobs/instances/behaviours_st_roger_prisoner.py
+  - behaviours_dull_swamp_pumpkin_jack (Mobs for colder instance) @ mobs/instances/behaviours_dull_swamp_pumpkin_jack.py
+  - behaviours_st_roger_goblin_overseer (Mobs for colder instance) @ mobs/instances/behaviours_st_roger_goblin_overseer.py
+  - behaviours_dull_swamp_mushroomking (Mobs for colder instance) @ mobs/instances/behaviours_dull_swamp_mushroomking.py
+  - behaviours_st_roger_popugaios (Mobs for colder instance) @ mobs/instances/behaviours_st_roger_popugaios.py
+  - behaviours_st_roger_pirate (Mobs for colder instance) @ mobs/instances/behaviours_st_roger_pirate.py
+  - behaviours_st_roger_goblin_pirate (Mobs for colder instance) @ mobs/instances/behaviours_st_roger_goblin_pirate.py
+  - behaviours_dull_swamp_quagga (Mobs for colder instance) @ mobs/instances/behaviours_dull_swamp_quagga.py
+  - red_well_faory (Mobs for red well instance) @ mobs/instances/red_well_faory.py
+  - red_well_constractor (Mobs for red well instance) @ mobs/instances/red_well_constractor.py
+  - behaviours_st_roger_pirate_derrik (Mobs for colder instance) @ mobs/instances/behaviours_st_roger_pirate_derrik.py
+  - red_well_wartotem (Mobs for red well instance) @ mobs/instances/red_well_wartotem.py
+  - behaviours_dull_swamp_kvigg (Mobs for colder instance) @ mobs/instances/behaviours_dull_swamp_kvigg.py
+  - mobs_heroic_bot_3 (Mobs for pirates 2 instance) @ mobs/instances/behaviour_heroic_bot_3.py
+  - behaviour_frost_cave_blizzard_prophet (Mobs for colder instance) @ mobs/instances/behaviour_frost_cave_blizzard_prophet.py
+  - red_well_watcher (Mobs for red well instance) @ mobs/instances/red_well_watcher.py
+  - mobs_heroic_bot_4 (Mobs for pirates 2 instance) @ mobs/instances/behaviour_heroic_bot_4.py
+  - behaviours_st_roger_botsman_dugbi (Mobs for colder instance) @ mobs/instances/behaviours_st_roger_botsman_dugbi.py
+  - mobs_heroic_boss_1 (Mobs for pirates 2 instance) @ mobs/instances/behaviour_heroic_boss_1.py
+  - behaviours_dull_swamp_pumpkin (Mobs for colder instance) @ mobs/instances/behaviours_dull_swamp_pumpkin.py
+  - red_well_ognus (Mobs for red well instance) @ mobs/instances/red_well_ognus.py
+  - red_well_grugos (Mobs for red well instance) @ mobs/instances/red_well_grugos.py
+  - behaviour_frost_cave_others (Mobs for colder instance) @ mobs/instances/behaviour_frost_cave_adalit.py
+  - behaviours_dull_swamp_mushroomherd (Mobs for colder instance) @ mobs/instances/behaviours_dull_swamp_mushroomherd.py
+  - mobs_heroic_boss_2 (Mobs for pirates 2 instance) @ mobs/instances/behaviour_heroic_boss_2.py
+  - behaviours_dull_swamp_kvigg_boss (Mobs for colder instance) @ mobs/instances/behaviours_dull_swamp_kvigg_boss.py
+  - mobs_heroic_bot_1 (Mobs for pirates 2 instance) @ mobs/instances/behaviour_heroic_bot_1.py
+island_robots:
+  count: 1
+  mobs:
+  - mob_robots_7 (Mobs Island Robots 7) @ mobs/island_robots/mob_robots_7.py
+  - mob_environment_gnome (Mobs Island Robots Environment Gnome) @ mobs/island_robots/mob_environment_gnome.py
+  - mob_robots_3 (Mobs Island Robots 3) @ mobs/island_robots/mob_robots_3.py
+  - mob_robots_4 (Mobs Island Robots 4) @ mobs/island_robots/mob_robots_4.py
+  - mob_robots_5 (Mobs Island Robots 5) @ mobs/island_robots/mob_robots_5.py
+  - mob_robots_6 (Mobs Island Robots 6) @ mobs/island_robots/mob_robots_6.py
+  - mob_robots_panzer (Mobs Island Robots Panzer) @ mobs/island_robots/mob_robots_panzer.py
+  - mob_robots_8 (Mobs Island Robots 8) @ mobs/island_robots/mob_robots_8.py
+  - mob_robots_common (Mobs Island Robots Common) @ mobs/island_robots/mob_robots_common.py
+  - mob_environment_nature (Mobs Island Robots Environment Nature) @ mobs/island_robots/mob_environment_nature.py
+  - mob_robots_common_patrols (Mobs Island Robots Common Patrols) @ mobs/island_robots/mob_robots_common_patrols.py
+joust_2x2:
+  count: 1
+  mobs:
+  - mob_shooter (Mobs Joust 2x2 Shooter) @ mobs/joust_2x2/shooter.py
+  - mob_paladin (Mobs Joust 2x2 Paladin) @ mobs/joust_2x2/paladin.py
+king_valley:
+  count: 1
+  mobs:
+  - mob_ognus (Mob ognus server) @ mobs/king_valley/behaviour_mob_king_valley_ognus.py
+  - mob_scalos (Mob scalos server) @ mobs/king_valley/behaviour_mob_king_valley_scalos.py
+  - mob_evil_rats_2 (Mob evil rats 2) @ mobs/king_valley/evil_rats_2.py
+  - mob_scalos_high (Mob scalos_high server) @ mobs/king_valley/behaviour_mob_king_valley_scalos_high.py
+  - mob_guards (Mob guards server) @ mobs/king_valley/behaviour_mob_king_valley_guards.py
+  - mob_slitos (Mob slitos server) @ mobs/king_valley/behaviour_mob_king_valley_slitos.py
+  - mob_evil_rats_1 (Mob evil rats 1) @ mobs/king_valley/evil_rats_1.py
+  - mob_ognus_high (Mob ognus_high server) @ mobs/king_valley/behaviour_mob_king_valley_ognus_high.py
+  - mob_slitos_high (Mob slitos_high server) @ mobs/king_valley/behaviour_mob_king_valley_slitos_high.py
+  - mob_broth_man (Mob broth man) @ mobs/king_valley/broth_man.py
+kohil_islands:
+  count: 1
+  mobs:
+  - mob_spywatchers (Mob Spywatchers server) @ mobs/kohil_islands/mob_spywatchers.py
+  - mob_killing_meduse (Mob killing meduse server) @ mobs/kohil_islands/mob_killing_meduse.py
+  - mob_sinko (Mob sinko server) @ mobs/kohil_islands/mob_sinko.py
+  - mob_krain (Mob witch server) @ mobs/kohil_islands/mob_krain.py
+  - mob_fighting_seahorse (Mob fighting seahorse server) @ mobs/kohil_islands/mob_fighting_seahorse.py
+  - mob_storm_demon (Mob storm demon server) @ mobs/kohil_islands/mob_storm_demon.py
+  - mob_little_crab (Mob little crab server) @ mobs/kohil_islands/mob_little_crab.py
+  - mob_ballon_fish (Mob ballon fish server) @ mobs/kohil_islands/mob_ballon_fish.py
+  - mob_marauder_human (Mob marauder human server) @ mobs/kohil_islands/mob_marauder_human.py
+  - mob_bronze_turtle (Mob bronze turtle server) @ mobs/kohil_islands/mob_bronze_turtle.py
+  - mob_ancient_fishman (Mob ancient fishman server) @ mobs/kohil_islands/mob_ancient_fishman.py
+  - mob_golden_seahorse (Mob golden seahorse server) @ mobs/kohil_islands/mob_golden_seahorse.py
+kor_birthday:
+  count: 6
+  mobs:
+  - mob_mechanical_beetle (Mobs Kor Birthday Mechanical Beetle) @ mobs/kor_birthday/mob_mechanical_beetle.py
+land:
+  count: 4
+  mobs:
+  - mob_land_chu_fire_horn (Mob land_chu_fire_horn) @ mobs/land/chu_fire_horn.py
+  - mob_land_boguk_miner (Mob land_boguk_miner) @ mobs/land/boguk_miner.py
+  - mob_land_gao_yop (Mob land_gao_yop) @ mobs/land/gao_yop.py
+  - mob_land_chu_fateat (Mob land_chu_fateat) @ mobs/land/chu_fateat.py
+  - mob_land_boguk_shaman (Mob land_boguk_shaman) @ mobs/land/boguk_shaman.py
+  - mob_land_gao_barubon (Mob land_gao_barubon) @ mobs/land/gao_barubon.py
+outpost_colonial:
+  count: 4
+  mobs:
+  - mob_black_dragon (Mobs Outpost Colonial Black Dragon) @ mobs/outpost_colonial/black_dragon.py
+outpost_elf:
+  count: 4
+  mobs:
+  - mob_outpost_elf_town_elf (Mob outpost_elf_town_elf) @ mobs/outpost_elf/mob_town_elf.py
+  - mob_outpost_elf_black_cat (Mob outpost_elf_black_cat) @ mobs/outpost_elf/black_cat.py
+  - mob_outpost_elf_colony (Mob outpost_elf_colony) @ mobs/outpost_elf/elf_colony.py
+  - mob_outpost_elf_follower (Mob outpost_elf_follower) @ mobs/outpost_elf/follower.py
+outpost_human:
+  count: 4
+  mobs:
+  - mob_outpost_human_coast_human (Mob outpost_human_coast_human) @ mobs/outpost_human/mob_coast_human.py
+  - mob_outpost_human_town_human (Mob outpost_human_town_human) @ mobs/outpost_human/mob_town_human.py
+  - mob_outpost_human_colony (Mob outpost_human_colony) @ mobs/outpost_human/human_colony.py
+  - mob_outpost_human_woodcutter (Mob outpost_human_woodcutter) @ mobs/outpost_human/woodcutter.py
+  - mob_outpost_human_bandit (Mob outpost_human_bandit) @ mobs/outpost_human/bandit.py
+ritaly:
+  count: 1
+  mobs:
+  - fake_elfplayer_1 (Mob fake_elfplayer_1) @ mobs/ritaly/fake_elfplayer_1.py
+  - mob_ruzr (Mob server for salamandra) @ mobs/ritaly/mob_ruzr.py
+  - mob_salamandra (Mob server for salamandra) @ mobs/ritaly/mob_salamandra.py
+  - mob_pretendents_elf (Mob server for pretendents elf) @ mobs/ritaly/mob_pretendents_elf.py
+  - fake_elfplayer_3 (Mob fake_elfplayer_3) @ mobs/ritaly/fake_elfplayer_3.py
+  - mob_salamander (Mob server for pretendents elf) @ mobs/ritaly/mob_salamander.py
+  - fake_elfplayer_2 (Mob fake_elfplayer_2) @ mobs/ritaly/fake_elfplayer_2.py
+  - mob_sinnu (Mob server for salamandra) @ mobs/ritaly/mob_sinnu.py
+  - mob_brother_okano (Mob server for brother okano) @ mobs/ritaly/mob_brother_okano.py
+  - mob_sfirya (Mob server for salamandra) @ mobs/ritaly/mob_sfirya.py
+  - mob_seadragon (Mob server for salamandra) @ mobs/ritaly/mob_seadragon.py
+  - mob_joyfulsatyr (Mob server for salamandra) @ mobs/ritaly/mob_joyfulsatyr.py
+  - mob_silen_wald (Mob server for silen wald) @ mobs/ritaly/mob_silen_wald.py
+south_fyorl:
+  count: 1
+  mobs:
+  - mob_chimera_boss_cat (Mobs South Fyorl Chimera Boss Cat) @ mobs/south_fyorl/mob_chimera_boss_cat.py
+  - mob_vivisector (Mobs South Fyorl Vivisector) @ mobs/south_fyorl/mob_vivisector.py
+  - mob_chimerazavr (Mobs South Fyorl Chimerazavr) @ mobs/south_fyorl/mob_chimerazavr.py
+  - mob_chimera_swamp (Mobs South Fyorl Chimera Swamp) @ mobs/south_fyorl/mob_chimera_swamp.py
+  - mob_chimera_human (Mobs South Fyorl Chimera Human) @ mobs/south_fyorl/mob_chimera_human.py
+  - mob_chimera_elf (Mobs South Fyorl Chimera Elf) @ mobs/south_fyorl/mob_chimera_elf.py
+  - mob_chimeroid (Mobs South Fyorl Chimeroid) @ mobs/south_fyorl/mob_chimeroid.py
+  - mob_chimera_forest (Mobs South Fyorl Chimera Forest) @ mobs/south_fyorl/mob_chimera_forest.py
+spring_shore:
+  count: 1
+  mobs:
+  - mob_muabar (Mob truln server) @ mobs/spring_shore/mob_muabar.py
+  - mob_gray_bear (Mob gray_bear server) @ mobs/spring_shore/mob_gray_bear.py
+  - mob_moon_lynx (Mob moon lynx server) @ mobs/spring_shore/mob_moon_lynx.py
+  - mob_elf_spy (Mob elf_spy server) @ mobs/spring_shore/mob_elf_spy.py
+  - mob_townsman (Mob townsman server) @ mobs/spring_shore/mob_townsman.py
+  - mob_little_crab (Mob little crab server) @ mobs/spring_shore/mob_little_crab.py
+  - mob_ice_dwarf (Mob ice dwarf server) @ mobs/spring_shore/mob_ice_dwarf.py
+  - mob_slitos (Mob slitos server) @ mobs/spring_shore/mob_slitos.py
+  - mob_marauder_elf (Mob marauder server) @ mobs/spring_shore/mob_marauder_elf.py
+  - mob_vagabond (Mob vagabond server) @ mobs/spring_shore/mob_vagabond.py
+  - mob_skalos (Mob skalos server) @ mobs/spring_shore/mob_skalos.py
+  - mob_muabar_priest (Mob muabar priest server) @ mobs/spring_shore/mob_muabar_priest.py
+  - mob_warrior_throne_ss (Mob warrior_throne_ss server) @ mobs/spring_shore/mob_warrior_throne_ss.py
+  - mob_truln (Mob truln server) @ mobs/spring_shore/mob_truln.py
+  - mob_rocky_lynx (Mob rocky lynx server) @ mobs/spring_shore/mob_rocky_lynx.py
+  - mob_human_spy (Mob human_spy server) @ mobs/spring_shore/mob_human_spy.py
+  - mob_rocky_bear (Mob rocky_bear server) @ mobs/spring_shore/mob_rocky_bear.py
+  - mob_warrior_blood_ss (Mob warrior_blood_ss server) @ mobs/spring_shore/mob_warrior_blood_ss.py
+st_patric:
+  count: 6
+  mobs:
+  - mob_housekeeper (Mobs St Patric Housekeeper) @ mobs/st_patric/housekeeper.py
+  - mob_leprecon (Mobs St Patric Leprecon) @ mobs/st_patric/leprecon.py
+  - mob_mothra (Mobs St Patric Mothra) @ mobs/st_patric/mothra.py
+  - mob_mothra_larva (Mobs St Patric Mothra Larva) @ mobs/st_patric/mothra_larva.py
+st_patrick_arena:
+  count: 1
+  mobs:
+  - mob_warrior_st_patrick (Mobs St_Patrick Arena Warrior) @ mobs/st_patrick_arena/warrior.py
+  - mob_paladin_st_patrick (Mobs St_Patrick Arena Paladin) @ mobs/st_patrick_arena/paladin.py
+  - mob_shooter_st_patrick (Mobs St_Patrick Arena Shooter) @ mobs/st_patrick_arena/shooter.py
+statues:
+  count: 1
+  mobs:
+  - mob_statue_cepnoinec (Mobs Statues Statue Cepnoinec) @ mobs/statues/statue_cepnoinec.py
+  - mob_statue_turkey (Mobs Statues Statue Turkey) @ mobs/statues/statue_turkey.py
+  - mob_statue_matahari (Mobs Statues Statue Matahari) @ mobs/statues/statue_matahari.py
+  - mob_statue_liyaya_orchidaceae (Mobs Statues Statue Liyaya Orchidaceae) @ mobs/statues/statue_liyaya_orchidaceae.py
+  - mob_statue_floidv1 (Mobs Statues Statue Floidv1) @ mobs/statues/statue_floidv1.py
+  - mob_statue_skalporezische (Mobs Statues Statue Skalporezische) @ mobs/statues/statue_skalporezische.py
+  - mob_statue_shershemviev (Mobs Statues Statue Shershemviev) @ mobs/statues/statue_shershemviev.py
+  - mob_statue_ogi (Mobs Statues Statue Ogi) @ mobs/statues/statue_ogi.py
+  - mob_statue_modnyichel (Mobs Statues Statue Modnyichel) @ mobs/statues/statue_modnyichel.py
+  - mob_statue_marrok (Mobs Statues Statue Marrok) @ mobs/statues/statue_marrok.py
+  - mob_statue_stela (Mobs Statues Statue Stela) @ mobs/statues/statue_stela.py
+tutorial:
+  count: 1
+  mobs:
+  - mob_orc_tutorial (Mob Orc) @ mobs/tutorial/mob_ork_tutorial.py
+  - mob_human_tutorial (Human tutorial mobs) @ mobs/tutorial/mob_human_tutorial.py
+  - mob_elf_tutorial (Elf tutorial mobs) @ mobs/tutorial/mob_elf_tutorial.py
+walk_of_fame:
+  count: 1
+  mobs:
+  - mob_walk_of_fames (Mobs Walk Of Fame Walk Of Fame Mobs) @ mobs/walk_of_fame/walk_of_fame_mobs.py
+  - mob_statue_turkey (Mobs Walk Of Fame Statue Turkey) @ mobs/walk_of_fame/statue_turkey.py
+  - mob_statue_skalporezische (Mobs Walk Of Fame Statue Skalporezische) @ mobs/walk_of_fame/statue_skalporezische.py
+  - mob_statue_floidv1 (Mobs Walk Of Fame Statue Floidv1) @ mobs/walk_of_fame/statue_floidv1.py
+  - mob_statue_modnyichel (Mobs Walk Of Fame Statue Modnyichel) @ mobs/walk_of_fame/statue_modnyichel.py
+  - mob_statue_cepnoinec (Mobs Walk Of Fame Statue Cepnoinec) @ mobs/walk_of_fame/statue_cepnoinec.py
+  - mob_statue_marrok (Mobs Walk Of Fame Statue Marrok) @ mobs/walk_of_fame/statue_marrok.py
+  - mob_statue_matahari (Mobs Walk Of Fame Statue Matahari) @ mobs/walk_of_fame/statue_matahari.py
+  - mob_statue_stela (Mobs Walk Of Fame Statue Stela) @ mobs/walk_of_fame/statue_stela.py
+  - mob_statue_ogi (Mobs Walk Of Fame Statue Ogi) @ mobs/walk_of_fame/statue_ogi.py
+  - mob_statue_liyaya_orchidaceae (Mobs Walk Of Fame Statue Liyaya Orchidaceae) @
+    mobs/walk_of_fame/statue_liyaya_orchidaceae.py
+  - mob_statue_shershemviev (Mobs Walk Of Fame Statue Shershemviev) @ mobs/walk_of_fame/statue_shershemviev.py

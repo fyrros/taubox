@@ -1,0 +1,97 @@
+1:
+  special:
+  - email (Core email service) @ core_email.py
+2:
+  special:
+  - arena (Arena server) @ arena.py
+  - email (Core email service) @ core_email.py
+3:
+  special:
+  - email (Core email service) @ core_email.py
+5:
+  special:
+  - arena (Arena server) @ arena.py
+  - email (Core email service) @ core_email.py
+6:
+  special:
+  - arena (Arena server) @ arena.py
+  - email (Core email service) @ core_email.py
+7:
+  special:
+  - arena (Arena server) @ arena.py
+  - email (Core email service) @ core_email.py
+8:
+  special:
+  - arena (Arena server) @ arena.py
+  - email (Core email service) @ core_email.py
+9:
+  special:
+  - arena (Arena server) @ arena.py
+  - email (Core email service) @ core_email.py
+10:
+  special:
+  - arena () @ arena.py
+  - email (Core email service) @ core_email.py
+12:
+  special:
+  - email (Core email service) @ core_email.py
+14:
+  special:
+  - arena (Arena server) @ arena.py
+  - email (Core email service) @ core_email.py
+15:
+  special:
+  - arena (Arena server) @ arena.py
+  - email (Core email service) @ core_email.py
+16:
+  special:
+  - email (Core email service) @ core_email.py
+  - arena (arena server) @ arena.py
+17:
+  special:
+  - email (Core email service) @ core_email.py
+  - arena (Arena server) @ arena.py
+18:
+  special:
+  - email (Core email service) @ core_email.py
+  - arena (Arena server) @ arena.py
+19:
+  special:
+  - email (Core email service) @ core_email.py
+  - arena (Arena server) @ arena.py
+20:
+  special:
+  - email (Core email service) @ core_email.py
+  - arena (Arena server) @ arena.py
+21:
+  special:
+  - battle_ground () @ social/arena_battle_ground.py
+  - email (Core email service) @ core_email.py
+22:
+  special:
+  - battle_ground () @ social/arena_battle_ground.py
+  - email (Core email service) @ core_email.py
+23:
+  special:
+  - battle_ground () @ social/arena_battle_ground.py
+  - email (Core email service) @ core_email.py
+24:
+  special:
+  - arena_battle_ground (Social Arena Battle Ground) @ social/arena_battle_ground.py
+  - core_email (Core Email) @ core_email.py
+25:
+  special:
+  - core_email (Core Email) @ core_email.py
+  - arena_battle_ground (Social Arena Battle Ground) @ social/arena_battle_ground.py
+26:
+  special:
+  - arena (Arena server) @ arena.py
+  - email (Core email service) @ core_email.py
+27:
+  special:
+  - arena (Arena) @ arena.py
+  - core_email (Core Email) @ core_email.py
+28:
+  special:
+  - arena_battle_ground (Social Arena Battle Ground) @ social/arena_battle_ground.py
+  - core_email (Core Email) @ core_email.py
