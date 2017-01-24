@@ -1,0 +1,16 @@
+include:
+  mobs:
+    island_robots:
+    - mob_robots_panzer
+    - mob_robots_common_patrols
+    - mob_robots_common
+    - mob_robots_8
+    - mob_robots_7
+    - mob_robots_3
+    - mob_robots_5
+    - mob_robots_4
+    - mob_environment_nature
+    - mob_robots_6
+    - mob_environment_gnome
+  quests:
+  - island_robots

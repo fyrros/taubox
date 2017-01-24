@@ -1,0 +1,14 @@
+exclude: [resource_server]
+include:
+  mobs:
+    arena:
+    - mob_paladin_7
+    - mob_shooter_7
+    - mob_paladin_5
+    - mob_shooter_5
+    - mob_paladin_8
+    - mob_shooter_8
+    - mob_paladin_4
+    - mob_shooter_4
+    - mob_paladin_3
+    - mob_shooter_3

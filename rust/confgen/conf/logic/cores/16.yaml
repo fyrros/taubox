@@ -1,0 +1,27 @@
+exclude: [repair]
+include:
+  mobs:
+    halloween:
+    - ghost
+    - black_cat
+    - squirrel_1
+    - squirrel
+    - kadavr
+    - pumpkin_knight
+    - hare
+    - hackee
+    - spider
+    - guard_death
+    - squirrel_2
+    - guard
+    - death_3
+    - witch
+    - death_5
+    - death_7
+    - frankenstein
+    - rage_pumpkin
+    - black_sphyria
+    - jack
+    - ghost_king
+  quests:
+  - event_quests

@@ -1,0 +1,62 @@
+include:
+  mobs:
+    colder:
+    - mob_yeti
+    - mob_vopling
+    - mob_vopling_champion
+    - mob_boss
+    - colder_aoe_tree
+    - mob_snowman_radical
+    - mob_boss_assistant
+    - mob_golem_guard
+    - mob_snowman_leader
+    - mob_white_bear
+    - mob_penguin
+    - mob_golem_warrior
+    - mob_colder_cake_gigant
+    - mob_colder_jelly
+    demonhunter:
+    - demon
+    fair:
+    - mob_fair_boar
+    - mob_fair_grum_hrum
+    - mob_fair_turkey
+    - mob_fair_werewolf
+    - mob_fair_stripped
+    guards:
+    - mob_elite_throne_close_2
+    - mob_elite_throne_range_2
+    - mob_elite_league_range_2
+    - mob_elite_league_close_2
+    - mob_soldier_league_death
+    - mob_soldier_throne_death
+    hirn:
+    - mob_mahrul
+    - mob_ognus
+    - mob_plague_rat
+    - mob_sculptor
+    - mob_tarrakan
+    - mob_wild_ruzr
+    - mob_yar
+    - mob_hobo
+    - mob_ulle
+    - mob_hard_hobo
+    kor_birthday:
+    - mob_mechanical_beetle
+    st_patric:
+    - leprecon
+    - housekeeper
+    - mothra_larva
+    - mothra
+  quests:
+  - event_quests
+  - pets_quests
+  - demonhunter
+  - arena
+  - hero_chronicles
+  - daily_quests
+  - hirn
+  - archeolog
+  social:
+  - elf_craft
+  - human_craft

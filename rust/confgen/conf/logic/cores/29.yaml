@@ -1,0 +1,62 @@
+include:
+  mobs:
+    demonhunter:
+    - demon
+    fair:
+    - mob_fair_stripped
+    - mob_fair_werewolf
+    - mob_fair_grum_hrum
+    - mob_fair_turkey
+    - mob_fair_boar
+    flowers:
+    - big_flowers
+    - squirrel
+    - goblin
+    - fairy_cat
+    - dwarf
+    - small_flowers
+    - boss
+    guards:
+    - mob_soldier_league_death
+    - mob_soldier_throne_range_3
+    - mob_soldier_throne_death
+    - mob_soldier_league_range_3
+    - mob_elite_league_range_2
+    - mob_elite_throne_range_2
+    kor_birthday:
+    - mob_mechanical_beetle
+    march_8:
+    - strange_fairy
+    - kadavr_4
+    - kadavr_1
+    - kadavr_2
+    - kadavr_3
+    - mercenary
+    - fairy_boss
+    - fairy
+    north_fyorl:
+    - mob_golem_red_boss
+    - mob_golem_blue
+    - mob_golem_violet
+    - mob_golem_green
+    - mob_golem_white
+    st_patric:
+    - leprecon
+    - mothra_larva
+    - mothra
+    - housekeeper
+    valentin:
+    - goblin_boss_9
+    - valentin_boss
+    - dwarf_boss
+    - squirrel_9
+  quests:
+  - demonhunter
+  - silent_bay
+  - event_quests
+  - archeolog
+  - hero_chronicles
+  - daily_quests
+  - pets_quests
+  - north_fyorl
+  - konqueror

@@ -7,12 +7,15 @@ import argparse
 
 class Script:
 
+    FOLDERS = {'mobs/','quests/','social/','instances/'}
+
     def __init__(self, service_xml):
         self.__xml = service_xml
         self._name = ''
         self._descr = ''
         self._path = ''
         self._mob_folder = ''
+        self._other_folder = ''
 
         self.__set_name()
         self.__set_descr()
@@ -26,7 +29,7 @@ class Script:
 
     def __set_path(self):
         path_param = self.__find_path_param()
-        self._path = self.__extract_path_and_mob_folder(path_param)
+        self._path = self.__extract_path_and_folder(path_param)
 
     def __find_path_param(self):
         for param in self.__xml:
@@ -34,26 +37,45 @@ class Script:
             if param_value and param_value.endswith('.py'):
                 return param_value
 
-    def __extract_path_and_mob_folder(self, path_param):
+    def __extract_path_and_folder(self, path_param):
         path = path_param.split('/')
         for i, path_part in enumerate(path):
             if path_part.startswith('service'):
                 path = '/'.join(path[i+2:])
-                if path.startswith('mobs'):
-                    self.__set_mob_folder(path)
+                self.__set_folder(path)
                 break
         return path
+
+    def __set_folder(self, path):
+        for folder in Script.FOLDERS:
+            if path.startswith(folder):
+                if folder.startswith('mobs'):
+                    self.__set_mob_folder(path)
+                else:
+                    self.__set_other_folder(path)
+                return
 
     def __set_mob_folder(self, path):
         mob_folder = path.split('/')[1]
         mob_folder = mob_folder if not mob_folder.endswith('.py') else 'ROOT'
         self._mob_folder = mob_folder
 
+    def __set_other_folder(self, path):
+        self._other_folder = path.split('/')[0]
+
     def is_mob(self):
         return bool(self._mob_folder)
 
+    def is_other(self):
+        return bool(self._other_folder)
+
     def res(self):
-        return '%s (%s) @ %s' % (self._name, self._descr, self._path)
+        #return '%s (%s) @ %s' % (self._name, self._descr, self._path)
+        #return self._path
+        return self.__script_name()
+
+    def __script_name(self):
+        return self._path.split('/')[-1].replace('.py','')
 
     @property
     def name(self):
@@ -63,22 +85,28 @@ class Script:
     def mob_folder(self):
         return self._mob_folder
 
+    @property
+    def other_folder(self):
+        return self._other_folder
+
 
 class Scripts(dict):
 
     REGULAR = {
-        'auto': 'swag,combat,gamer,traders,planner,gift,cabmans,digest,corpse_manager,repair,resource_server'.split(','),
-        'special': 'email,core_email,arena,arena_battle_ground,battle_ground'.split(',')
+        'auto': 'arena,arena_battle_ground,battle_ground,swag,combat,gamer,traders,planner,gift,cabmans,digest,corpse_manager,repair,resource_server'.split(','),
+        'special': 'email,core_email'.split(',')
     }
 
     def __init__(self):
-        super(self.__class__, self).__init__(auto=[], special=[], other=[], mobs={})
+        super(self.__class__, self).__init__(auto=[], special=[], unknown=[], quests=[], social=[], instances=[], mobs={})
 
     def add_script(self, service_xml):
         if self.__valid_xml(service_xml):
             script = Script(service_xml)
             if script.is_mob():
                 self.__add_mob(script)
+            elif script.is_other():
+                self.__add_other(script)
             else:
                 self.__add_regular(script)
 
@@ -88,6 +116,9 @@ class Scripts(dict):
     def __add_mob(self, script):
         self.__prepare_mob_folder(script.mob_folder)
         self.__add_script(self['mobs'][script.mob_folder], script)
+
+    def __add_other(self, script):
+        self.__add_script(self[script.other_folder], script)
 
     def __prepare_mob_folder(self, mob_folder):
         if mob_folder not in self['mobs']:
@@ -99,7 +130,7 @@ class Scripts(dict):
                 self.__add_script(self[script_type], script)
                 break
         else:
-            self.__add_script(self['other'], script)
+            self.__add_script(self['unknown'], script)
 
     def __add_script(self, target, script):
         target.append(script.res())
@@ -127,7 +158,7 @@ class Core:
         return self.scripts.mobs
 
     def dump(self, types):
-        return {k:v for k,v in self.scripts.items() if (k in types) or not types}
+        return {k:v for k,v in self.scripts.items() if v and ((k in types) or not types)}
 
 
 class Cores(list):
@@ -139,7 +170,8 @@ class Cores(list):
                 self.append(Core(group_xml))
 
     def __correct_group_name(self, group_xml):
-        return group_xml.get('name').split('_')[1] == '1'
+        return True
+        #return group_xml.get('name').split('_')[1] == '1'
 
     def __groups(self, xml_conf):
         return xml_conf.xpath('//services/group')

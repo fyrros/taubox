@@ -1,3 +1,5 @@
+# скрипты автоматически добавляются в каждую копию
+# если какой-то из скриптов не нужен, он добавляется в exlude копии
 auto_include: 
   - swag
   - combat
@@ -13,4 +15,148 @@ auto_include:
   - repair
   - resource_server
 
-events: []
+# особые пути до скриптов выше, которые сложились исторически
+special_rules:
+  email: core_email
+  gift: utility/gift
+  corpse_manager: utility/corpse_manager
+
+# группы скриптов, которые встречаются несколько раз
+groups:
+  starter_quests:
+    - quests/yalve
+    - quests/mirmigon
+    - quests/graven
+    - quests/ritaly
+  common_quests:
+    - quests/daily_quests
+    - quests/event_quests
+    - quests/pets_quests
+    - quests/hero_chronicles
+    - quests/demonhunter
+    - quests/archeolog
+    - quests/arena    
+  craft:
+    - social/elf_craft
+    - social/human_craft
+  swamp:
+    - instances/swamp_elf
+    - instances/swamp_human
+  bots:
+    - mobs/fake_humanplayer_1
+    - mobs/fake_humanplayer_2
+    - mobs/fake_humanplayer_3
+    - mobs/fake_elfplayer_1
+    - mobs/fake_elfplayer_2
+    - mobs/fake_elfplayer_3
+    - mobs/battle_guard_human
+    - mobs/battle_guard_elf
+  arena:
+    - mobs/arena/mob_shooter_7
+    - mobs/arena/mob_shooter_5
+    - mobs/arena/mob_paladin_5
+    - mobs/arena/mob_shooter_3
+    - mobs/arena/mob_paladin_3
+    - mobs/arena/mob_shooter_4
+    - mobs/arena/mob_paladin_8
+    - mobs/arena/mob_shooter_8
+    - mobs/arena/mob_paladin_7
+    - mobs/arena/mob_paladin_4
+  colder:
+    - mobs/colder/mob_snowman_leader
+    - mobs/colder/mob_penguin
+    - mobs/colder/mob_boss
+    - mobs/colder/mob_golem_warrior
+    - mobs/colder/mob_vopling
+    - mobs/colder/mob_boss_assistant
+    - mobs/colder/mob_snowman_radical
+    - mobs/colder/mob_white_bear
+    - mobs/colder/mob_colder_cake_gigant
+    - mobs/colder/mob_vopling_champion
+    - mobs/colder/mob_golem_guard
+    - mobs/colder/mob_yeti
+    - mobs/colder/colder_aoe_tree
+    - mobs/colder/mob_colder_jelly
+  demonhunter:
+    - mobs/demonhunter/demon
+  fair:
+    - mobs/fair/mob_fair_stripped
+    - mobs/fair/mob_fair_boar
+    - mobs/fair/mob_fair_werewolf
+    - mobs/fair/mob_fair_turkey
+    - mobs/fair/mob_fair_grum_hrum
+  kor_birthday:
+    - mobs/kor_birthday/mob_mechanical_beetle
+  land:
+    - mobs/land/boguk_miner
+    - mobs/land/chu_fire_horn
+    - mobs/land/gao_barubon
+    - mobs/land/chu_fateat
+    - mobs/land/boguk_shaman
+    - mobs/land/gao_yop
+  outpost:
+    - mobs/outpost_colonial/swamp_dragon
+    - mobs/outpost_colonial/mob_town_colonial
+    - mobs/outpost_colonial/goblin
+    - mobs/outpost_colonial/popugaios
+    - mobs/outpost_colonial/boar
+    - mobs/outpost_colonial/black_dragon
+    # elf
+    - mobs/outpost_elf/follower
+    - mobs/outpost_elf/elf_colony
+    - mobs/outpost_elf/black_cat
+    - mobs/outpost_elf/mob_town_elf
+    # human
+    - mobs/outpost_human/bandit
+    - mobs/outpost_human/mob_coast_human
+    - mobs/outpost_human/mob_town_human
+    - mobs/outpost_human/human_colony
+    - mobs/outpost_human/woodcutter
+  st_patric:
+    - mobs/st_patric/mothra
+    - mobs/st_patric/housekeeper
+    - mobs/st_patric/leprecon
+    - mobs/st_patric/mothra_larva
+  instances:
+    - mobs/instances/red_well_magmabug
+    - mobs/instances/behaviours_st_roger_pirate
+    - mobs/instances/behaviours_dull_swamp_pumpkin_jack
+    - mobs/instances/behaviour_frost_cave_others
+    - mobs/instances/behaviours_dull_swamp_pumpkin
+    - mobs/instances/behaviours_st_roger_prisoner
+    - mobs/instances/behaviour_heroic_boss_2
+    - mobs/instances/behaviours_st_roger_derrik
+    - mobs/instances/behaviour_frost_cave_adalit
+    - mobs/instances/behaviours_st_roger_goblin_overseer
+    - mobs/instances/behaviour_heroic_bot_4
+    - mobs/instances/red_well_grugos
+    - mobs/instances/behaviours_dull_swamp_kvigg
+    - mobs/instances/behaviours_st_roger_goblin_pirate
+    - mobs/instances/behaviour_heroic_bot_3
+    - mobs/instances/behaviour_heroic_boss_3
+    - mobs/instances/behaviour_frost_cave_penguin_fisher
+    - mobs/instances/behaviour_frost_cave_blizzard_prophet
+    - mobs/instances/behaviours_dull_swamp_kvigg_boss
+    - mobs/instances/behaviours_dull_swamp_mushroomking
+    - mobs/instances/red_well_wartotem
+    - mobs/instances/behaviour_frost_cave_mad_dwarf
+    - mobs/instances/red_well_constractor
+    - mobs/instances/behaviours_dull_swamp_mushroomherd
+    - mobs/instances/red_well_ognus
+    - mobs/instances/behaviours_st_roger_botsman_dugbi
+    - mobs/instances/behaviour_frost_cave_barald_dark
+    - mobs/instances/red_well_kingsalamandr
+    - mobs/instances/red_well_faory
+    - mobs/instances/behaviour_heroic_bot_1
+    - mobs/instances/behaviours_dull_swamp_quagga
+    - mobs/instances/red_well_salamandrasmall
+    - mobs/instances/behaviour_frost_cave_snow_troll
+    - mobs/instances/red_well_salamandr
+    - mobs/instances/behaviour_heroic_bot_2
+    - mobs/instances/behaviours_st_roger_pirate_derrik
+    - mobs/instances/behaviours_st_roger_popugaios
+    - mobs/instances/behaviours_st_roger_meri
+    - mobs/instances/red_well_watcher
+    - mobs/instances/red_well_pihtun
+    - mobs/instances/behaviour_heroic_boss_1
+    - mobs/instances/behaviours_st_roger_corsar

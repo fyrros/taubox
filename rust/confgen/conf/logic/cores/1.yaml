@@ -1,0 +1,12 @@
+exclude: [digest, corpse_manager, arena, repair, resource_server]
+include:
+  mobs:
+    tutorial:
+    - mob_ork_tutorial
+    - mob_elf_tutorial
+    - mob_human_tutorial
+  quests:
+  - yalve
+  - mirmigon
+  - graven
+  - ritaly

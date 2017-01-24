@@ -1,0 +1,14 @@
+exclude: [repair, resource_server]
+include:
+  mobs:
+    _:
+    - battle_guard_elf
+    - battle_guard_human
+    - fake_elfplayer_1
+    - fake_elfplayer_2
+    - fake_elfplayer_3
+    - fake_humanplayer_1
+    - fake_humanplayer_2
+    - fake_humanplayer_3
+  quests:
+  - arena

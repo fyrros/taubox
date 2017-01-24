@@ -1,0 +1,19 @@
+exclude: [corpse_manager, resource_server]
+include:
+  mobs:
+    colder:
+    - behaviour_mob_penguin_3
+    - behaviour_mob_penguin_5
+    - behaviour_mob_snowman_leader_3
+    - behaviour_mob_snowman_leader_5
+    - behaviour_mob_snowman_radical_3
+    - behaviour_mob_snowman_radical_5
+    - behaviour_mob_white_bear_3
+    - behaviour_mob_white_bear_5
+    - behaviour_mob_yeti_3
+    - behaviour_mob_yeti_5
+    guards:
+    - elf_guards
+    - human_guards
+  quests:
+  - colder_quests

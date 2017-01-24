@@ -1,0 +1,70 @@
+include:
+  mobs:
+    colder:
+    - mob_yeti
+    - mob_vopling
+    - mob_vopling_champion
+    - mob_boss
+    - colder_aoe_tree
+    - mob_snowman_radical
+    - mob_boss_assistant
+    - mob_golem_guard
+    - mob_snowman_leader
+    - mob_white_bear
+    - mob_penguin
+    - mob_golem_warrior
+    - mob_colder_cake_gigant
+    - mob_colder_jelly
+    demonhunter:
+    - demon
+    fair:
+    - mob_fair_boar
+    - mob_fair_grum_hrum
+    - mob_fair_turkey
+    - mob_fair_werewolf
+    - mob_fair_stripped
+    guards:
+    - mob_elite_throne_range_2
+    - mob_soldier_throne_range_3
+    - mob_soldier_league_range_3
+    - mob_elite_league_range_2
+    - mob_soldier_league_death
+    - mob_soldier_throne_death
+    kor_birthday:
+    - mob_mechanical_beetle
+    spring_shore:
+    - mob_rocky_lynx
+    - mob_ice_dwarf
+    - mob_slitos
+    - mob_muabar_priest
+    - mob_skalos
+    - mob_little_crab
+    - mob_marauder_elf
+    - mob_moon_lynx
+    - mob_truln
+    - mob_muabar
+    - mob_elf_spy
+    - mob_gray_bear
+    - mob_human_spy
+    - mob_rocky_bear
+    - mob_townsman
+    - mob_vagabond
+    - mob_warrior_blood_ss
+    - mob_warrior_throne_ss
+    st_patric:
+    - leprecon
+    - housekeeper
+    - mothra_larva
+    - mothra
+  quests:
+  - event_quests
+  - pets_quests
+  - arena
+  - hero_chronicles
+  - daily_quests
+  - demonhunter
+  - spring_shore
+  - archeolog
+  social:
+  - elf_craft
+  - human_craft

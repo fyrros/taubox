@@ -1,0 +1,67 @@
+include:
+  mobs:
+    demonhunter:
+    - demon
+    fair:
+    - mob_fair_boar
+    - mob_fair_grum_hrum
+    - mob_fair_turkey
+    - mob_fair_werewolf
+    - mob_fair_stripped
+    floring:
+    - mob_young_ash_rogue_elf
+    - mob_wolf
+    - mob_rasmur
+    - mob_tuber
+    - mob_rind
+    - mob_redsfirya
+    - mob_red_meduse
+    - mob_little_crab
+    - mob_lia_di_amry
+    - mob_homeless_filiar
+    - mob_fishman
+    - mob_emili_rogue
+    - mob_brown_bear
+    - mob_bear_shatun
+    guards:
+    - mob_elite_throne_range_2
+    - mob_soldier_throne_range_3
+    - mob_soldier_league_range_3
+    - mob_elite_league_range_2
+    - mob_soldier_league_death
+    - mob_soldier_throne_death
+    kor_birthday:
+    - mob_mechanical_beetle
+    st_patric:
+    - leprecon
+    - housekeeper
+    - mothra_larva
+    - mothra
+    statues:
+    - statue_turkey
+    - statue_modnyichel
+    - statue_stela
+    - statue_cepnoinec
+    - statue_marrok
+    - statue_floidv1
+    - statue_liyaya_orchidaceae
+    - statue_ogi
+    - statue_shershemviev
+    - statue_matahari
+    - statue_skalporezische
+  quests:
+  - archeolog
+  - event_quests
+  - pets_quests
+  - demonhunter
+  - arena
+  - hero_chronicles
+  - ritaly
+  - graven
+  - daily_quests
+  - floring
+  - kohill_islands
+  - silent_bay
+  social:
+  - elf_craft
+  - human_craft

@@ -1,0 +1,45 @@
+exclude: [arena]
+include:
+  instances:
+  - horras_dangeon_elf
+  - horras_dangeon_human
+  mobs:
+    guards:
+    - mob_soldier_league_death
+    - mob_soldier_throne_death
+    instances:
+    - mob_elite_league_range_2
+    - mob_elite_throne_range_2
+    - mob_horras_herd
+    - mob_horras_mirm
+    - behaviour_horras_dungeon_dragon
+    - behaviour_horras_dungeon_hraks
+    - behaviour_horras_dungeon_metal_thing
+    - behaviour_horras_dungeon_red_john
+    - mob_horras_guard_farm_elf_3
+    - mob_horras_guard_farm_human_1
+    - mob_horras_guard_farm_human_2
+    - mob_horras_miner
+    - raven_hill_book_4
+    - raven_hill_book_5
+    - raven_hill_book_6
+    - raven_hill_book_7
+    - shageron_4
+    - shageron_5
+    - shageron_6
+    - shageron_7
+    - skeleton_4
+    - skeleton_5
+    - skeleton_6
+    - skeleton_7
+    - skeleton_archer_4
+    - skeleton_archer_5
+    - skeleton_archer_6
+    - skeleton_archer_7
+    - skeleton_knight_4
+    - skeleton_knight_5
+    - skeleton_knight_6
+    - skeleton_knight_7
+    - mob_horras_guard_siege
+  quests:
+  - horras_quests

@@ -1,0 +1,41 @@
+exclude: [corpse_manager, resource_server]
+include:
+  mobs:
+    graven:
+    - mob_pretendents_human
+    - mob_brother_smith
+    - mob_volk
+    - mob_sayran
+    - mob_north_turtle
+    - mob_kaban_red
+    - mob_crab_pearl
+    - mob_kvigg
+    - fake_humanplayer_1
+    - fake_humanplayer_2
+    - fake_humanplayer_3
+    guards:
+    - mob_elite_throne_close_2
+    - mob_elite_throne_range_2
+    ritaly:
+    - mob_salamander
+    - mob_pretendents_elf
+    - mob_brother_okano
+    - mob_silen_wald
+    - mob_salamandra
+    - mob_ruzr
+    - mob_sinnu
+    - mob_sfirya
+    - mob_seadragon
+    - mob_joyfulsatyr
+    - fake_elfplayer_1
+    - fake_elfplayer_2
+    - fake_elfplayer_3
+  quests:
+  - hero_chronicles
+  - graven
+  - floring
+  - mirmigon
+  - arena
+  - ritaly
+  - yalve
+

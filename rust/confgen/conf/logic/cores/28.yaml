@@ -1,0 +1,35 @@
+include:
+  mobs:
+    guards:
+    - mob_elite_throne_range
+    - mob_soldier_throne_death
+    - mob_soldier_league_death
+    - mob_elite_league_range
+    - labyrinth_guardian
+    land:
+    - gao_yop
+    - gao_barubon
+    - chu_fire_horn
+    - boguk_shaman
+    - chu_fateat
+    - boguk_miner
+    outpost_colonial:
+    - mob_town_colonial
+    - boar
+    - popugaios
+    - swamp_dragon
+    - black_dragon
+    - goblin
+    outpost_elf:
+    - follower
+    - black_cat
+    - elf_colony
+    - mob_town_elf
+    outpost_human:
+    - mob_coast_human
+    - mob_town_human
+    - human_colony
+    - bandit
+    - woodcutter
+  quests:
+  - colony

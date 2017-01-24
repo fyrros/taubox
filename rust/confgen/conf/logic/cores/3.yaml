@@ -1,0 +1,61 @@
+exclude: [cabmans, digest, corpse_manager, arena, repair, resource_server]
+include:
+  instances:
+  - swamp_elf
+  - swamp_human
+  mobs:
+    instances:
+    - behaviour_heroic_boss_1
+    - behaviour_heroic_boss_2
+    - behaviour_heroic_boss_3
+    - behaviour_heroic_bot_1
+    - behaviour_heroic_bot_2
+    - behaviour_heroic_bot_3
+    - behaviour_heroic_bot_4
+    - behaviour_frost_cave_adalit
+    - behaviour_frost_cave_barald_dark
+    - behaviour_frost_cave_blizzard_prophet
+    - behaviour_frost_cave_mad_dwarf
+    - behaviour_frost_cave_others
+    - behaviour_frost_cave_penguin_fisher
+    - behaviour_frost_cave_snow_troll
+    - behaviour_frost_cave_adalit
+    - behaviours_st_roger_meri
+    - behaviours_st_roger_prisoner
+    - behaviours_st_roger_popugaios
+    - behaviours_st_roger_pirate
+    - behaviours_st_roger_pirate_derrik
+    - behaviours_st_roger_goblin_pirate
+    - behaviours_st_roger_goblin_overseer
+    - behaviours_st_roger_derrik
+    - behaviours_st_roger_corsar
+    - behaviours_st_roger_botsman_dugbi
+    - behaviours_dull_swamp_kvigg_boss
+    - behaviours_dull_swamp_kvigg
+    - behaviours_dull_swamp_mushroomherd
+    - behaviours_dull_swamp_mushroomking
+    - behaviours_dull_swamp_pumpkin_jack
+    - behaviours_dull_swamp_pumpkin
+    - behaviours_dull_swamp_quagga
+    - red_well_constractor
+    - red_well_faory
+    - red_well_grugos
+    - red_well_kingsalamandr
+    - red_well_magmabug
+    - red_well_ognus
+    - red_well_pihtun
+    - red_well_salamandr
+    - red_well_salamandrasmall
+    - red_well_wartotem
+    - red_well_watcher
+  quests:
+  - hero_chronicles
+  - archeolog
+  - floring
+  - kohill_islands
+  - demonhunter
+  - folkstorn
+  - silent_bay
+  - red_well
+  - st_roger
+  - dull_swamp

@@ -1,0 +1,13 @@
+include:
+  mobs:
+    king_valley:
+    - behaviour_mob_king_valley_guards
+    - behaviour_mob_king_valley_ognus_high
+    - behaviour_mob_king_valley_scalos_high
+    - behaviour_mob_king_valley_slitos_high
+    - behaviour_mob_king_valley_ognus
+    - behaviour_mob_king_valley_scalos
+    - behaviour_mob_king_valley_slitos
+    - broth_man
+    - evil_rats_1
+    - evil_rats_2

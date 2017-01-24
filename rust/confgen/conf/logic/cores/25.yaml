@@ -1,0 +1,16 @@
+exclude: [repair]
+include:
+  mobs:
+    halloween_arena:
+    - warrior
+    - paladin
+    - shooter
+    joust_2x2:
+    - paladin
+    - shooter
+    st_patrick_arena:
+    - paladin
+    - shooter
+    - warrior
+  quests:
+  - event_quests

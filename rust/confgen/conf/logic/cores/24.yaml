@@ -1,0 +1,59 @@
+include:
+  mobs:
+    colder:
+    - mob_yeti
+    - mob_vopling
+    - mob_vopling_champion
+    - mob_boss
+    - colder_aoe_tree
+    - mob_snowman_radical
+    - mob_boss_assistant
+    - mob_golem_guard
+    - mob_snowman_leader
+    - mob_white_bear
+    - mob_penguin
+    - mob_golem_warrior
+    - mob_colder_cake_gigant
+    - mob_colder_jelly
+    demonhunter:
+    - demon
+    fair:
+    - mob_fair_stripped
+    - mob_fair_werewolf
+    - mob_fair_grum_hrum
+    - mob_fair_turkey
+    - mob_fair_boar
+    guards:
+    - mob_elite_league_range_2
+    - mob_elite_throne_range_2
+    - mob_soldier_throne_range_3
+    - mob_soldier_league_range_3
+    - mob_soldier_league_death
+    - mob_soldier_throne_death
+    kor_birthday:
+    - mob_mechanical_beetle
+    south_fyorl:
+    - mob_chimera_human
+    - mob_chimera_swamp
+    - mob_chimerazavr
+    - mob_vivisector
+    - mob_chimeroid
+    - mob_chimera_boss_cat
+    - mob_chimera_forest
+    - mob_chimera_elf
+    st_patric:
+    - leprecon
+    - housekeeper
+    - mothra_larva
+    - mothra
+  quests:
+  - event_quests
+  - pets_quests
+  - konqueror
+  - demonhunter
+  - south_fyorl
+  - silent_bay
+  - archeolog
+  - hero_chronicles
+  - daily_quests
+  - arena

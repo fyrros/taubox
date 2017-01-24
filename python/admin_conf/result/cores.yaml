@@ -1,97 +1,1465 @@
 1:
-  special:
-  - email (Core email service) @ core_email.py
+  mobs:
+    tutorial:
+    - mob_ork_tutorial
+    - mob_elf_tutorial
+    - mob_human_tutorial
+  quests:
+  - yalve
+  - mirmigon
+  - graven
+  - ritaly
+  unknown:
+  - core_email
+  - swag
+  - combat
+  - gamer
+  - traders
+  - gift
+  - cabmans
+  - planner
 2:
-  special:
-  - arena (Arena server) @ arena.py
-  - email (Core email service) @ core_email.py
+  mobs:
+    graven:
+    - mob_pretendents_human
+    - mob_brother_smith
+    - mob_volk
+    - mob_sayran
+    - mob_north_turtle
+    - mob_kaban_red
+    - mob_crab_pearl
+    - mob_kvigg
+    - fake_humanplayer_1
+    - fake_humanplayer_2
+    - fake_humanplayer_3
+    guards:
+    - mob_elite_throne_close_2
+    - mob_elite_throne_range_2
+    ritaly:
+    - mob_salamander
+    - mob_pretendents_elf
+    - mob_brother_okano
+    - mob_silen_wald
+    - mob_salamandra
+    - mob_ruzr
+    - mob_sinnu
+    - mob_sfirya
+    - mob_seadragon
+    - mob_joyfulsatyr
+    - fake_elfplayer_1
+    - fake_elfplayer_2
+    - fake_elfplayer_3
+  quests:
+  - hero_chronicles
+  - graven
+  - floring
+  - arena
+  - mirmigon
+  - ritaly
+  - yalve
+  unknown:
+  - core_email
+  - cabmans
+  - swag
+  - combat
+  - gamer
+  - repair
+  - traders
+  - gift
+  - digest
+  - arena
+  - planner
 3:
-  special:
-  - email (Core email service) @ core_email.py
+  instances:
+  - swamp_elf
+  - swamp_human
+  mobs:
+    instances:
+    - behaviour_heroic_boss_1
+    - behaviour_heroic_boss_2
+    - behaviour_heroic_boss_3
+    - behaviour_heroic_bot_1
+    - behaviour_heroic_bot_2
+    - behaviour_heroic_bot_3
+    - behaviour_heroic_bot_4
+    - behaviour_frost_cave_adalit
+    - behaviour_frost_cave_barald_dark
+    - behaviour_frost_cave_blizzard_prophet
+    - behaviour_frost_cave_mad_dwarf
+    - behaviour_frost_cave_others
+    - behaviour_frost_cave_penguin_fisher
+    - behaviour_frost_cave_snow_troll
+    - behaviour_frost_cave_adalit
+    - behaviours_st_roger_meri
+    - behaviours_st_roger_prisoner
+    - behaviours_st_roger_popugaios
+    - behaviours_st_roger_pirate
+    - behaviours_st_roger_pirate_derrik
+    - behaviours_st_roger_goblin_pirate
+    - behaviours_st_roger_goblin_overseer
+    - behaviours_st_roger_derrik
+    - behaviours_st_roger_corsar
+    - behaviours_st_roger_botsman_dugbi
+    - behaviours_dull_swamp_kvigg_boss
+    - behaviours_dull_swamp_kvigg
+    - behaviours_dull_swamp_mushroomherd
+    - behaviours_dull_swamp_mushroomking
+    - behaviours_dull_swamp_pumpkin_jack
+    - behaviours_dull_swamp_pumpkin
+    - behaviours_dull_swamp_quagga
+    - red_well_constractor
+    - red_well_faory
+    - red_well_grugos
+    - red_well_kingsalamandr
+    - red_well_magmabug
+    - red_well_ognus
+    - red_well_pihtun
+    - red_well_salamandr
+    - red_well_salamandrasmall
+    - red_well_wartotem
+    - red_well_watcher
+  quests:
+  - hero_chronicles
+  - archeolog
+  - floring
+  - kohill_islands
+  - demonhunter
+  - folkstorn
+  - silent_bay
+  - red_well
+  - st_roger
+  - dull_swamp
+  unknown:
+  - core_email
+  - traders
+  - swag
+  - combat
+  - gamer
+  - gift
+  - cabmans
+  - planner
 5:
-  special:
-  - arena (Arena server) @ arena.py
-  - email (Core email service) @ core_email.py
+  mobs:
+    demonhunter:
+    - demon
+    fair:
+    - mob_fair_boar
+    - mob_fair_grum_hrum
+    - mob_fair_turkey
+    - mob_fair_werewolf
+    - mob_fair_stripped
+    floring:
+    - mob_young_ash_rogue_elf
+    - mob_wolf
+    - mob_rasmur
+    - mob_tuber
+    - mob_rind
+    - mob_redsfirya
+    - mob_red_meduse
+    - mob_little_crab
+    - mob_lia_di_amry
+    - mob_homeless_filiar
+    - mob_fishman
+    - mob_emili_rogue
+    - mob_brown_bear
+    - mob_bear_shatun
+    - mob_ghost
+    - mob_herald
+    flowers:
+    - goblin
+    - fairy_cat
+    - dwarf
+    - squirrel
+    - boss
+    - small_flowers
+    - big_flowers
+    goblin_land:
+    - goblin_me_elf
+    - goblin_me_human
+    - urmi_elf
+    - urmi_human
+    guards:
+    - mob_elite_throne_range_2
+    - mob_soldier_throne_range_3
+    - mob_soldier_league_range_3
+    - mob_elite_league_range_2
+    - mob_soldier_league_death
+    - mob_soldier_throne_death
+    kor_birthday:
+    - mob_mechanical_beetle
+    march_8:
+    - fairy
+    - fairy_cat
+    - kadavr_4
+    - strange_fairy
+    - kadavr_1
+    - kadavr_2
+    - kadavr_3
+    - fairy_boss
+    st_patric:
+    - leprecon
+    - housekeeper
+    - mothra_larva
+    - mothra
+    statues:
+    - statue_turkey
+    - statue_modnyichel
+    - statue_cepnoinec
+    - statue_marrok
+    - statue_floidv1
+    - statue_liyaya_orchidaceae
+    - statue_ogi
+    - statue_shershemviev
+    - statue_matahari
+    - statue_skalporezische
+    - statue_stela
+  quests:
+  - archeolog
+  - demonhunter
+  - arena
+  - hero_chronicles
+  - ritaly
+  - graven
+  - daily_quests
+  - floring
+  - kohill_islands
+  - pets_quests
+  - silent_bay
+  - event_quests
+  social:
+  - elf_craft
+  - human_craft
+  unknown:
+  - core_email
+  - cabmans
+  - swag
+  - combat
+  - repair
+  - gamer
+  - traders
+  - gift
+  - digest
+  - corpse_manager
+  - arena
+  - resource_server
+  - planner
 6:
-  special:
-  - arena (Arena server) @ arena.py
-  - email (Core email service) @ core_email.py
+  mobs:
+    king_valley:
+    - behaviour_mob_king_valley_guards
+    - behaviour_mob_king_valley_ognus_high
+    - behaviour_mob_king_valley_scalos_high
+    - behaviour_mob_king_valley_slitos_high
+    - behaviour_mob_king_valley_ognus
+    - behaviour_mob_king_valley_scalos
+    - behaviour_mob_king_valley_slitos
+    - broth_man
+    - fetters
+    - evil_rats_1
+    - evil_rats_2
+  unknown:
+  - core_email
+  - combat
+  - repair
+  - gamer
+  - cabmans
+  - traders
+  - swag
+  - corpse_manager
+  - gift
+  - resource_server
+  - planner
+  - digest
+  - arena
 7:
-  special:
-  - arena (Arena server) @ arena.py
-  - email (Core email service) @ core_email.py
+  mobs:
+    demonhunter:
+    - demon
+    fair:
+    - mob_fair_boar
+    - mob_fair_grum_hrum
+    - mob_fair_turkey
+    - mob_fair_werewolf
+    - mob_fair_stripped
+    flowers:
+    - goblin
+    - fairy_cat
+    - dwarf
+    - squirrel
+    - boss
+    - small_flowers
+    - big_flowers
+    goblin_land:
+    - goblin_me_elf
+    - goblin_me_human
+    - urmi_elf
+    - urmi_human
+    guards:
+    - mob_elite_throne_range_2
+    - mob_soldier_throne_range_3
+    - mob_soldier_league_range_3
+    - mob_elite_league_range_2
+    - mob_soldier_league_death
+    - mob_soldier_throne_death
+    kohil_islands:
+    - mob_storm_demon
+    - mob_golden_seahorse
+    - mob_ballon_fish
+    - mob_bronze_turtle
+    - mob_killing_meduse
+    - mob_marauder_human
+    - mob_fighting_seahorse
+    - mob_ancient_fishman
+    - mob_little_crab
+    - mob_spywatchers
+    - mob_sinko
+    - mob_krain
+    - mob_ghost
+    - mob_herald
+    kor_birthday:
+    - mob_mechanical_beetle
+    march_8:
+    - fairy
+    - fairy_cat
+    - kadavr_4
+    - strange_fairy
+    - kadavr_1
+    - kadavr_2
+    - kadavr_3
+    - fairy_boss
+    st_patric:
+    - leprecon
+    - housekeeper
+    - mothra_larva
+    - mothra
+    walk_of_fame:
+    - statue_cepnoinec
+    - statue_floidv1
+    - statue_liyaya_orchidaceae
+    - statue_marrok
+    - statue_matahari
+    - statue_modnyichel
+    - statue_ogi
+    - statue_shershemviev
+    - statue_skalporezische
+    - statue_stela
+    - statue_turkey
+    - walk_of_fame_mobs
+  quests:
+  - floring
+  - pets_quests
+  - kohill_islands
+  - demonhunter
+  - silent_bay
+  - arena
+  - daily_quests
+  - hero_chronicles
+  - archeolog
+  - event_quests
+  social:
+  - elf_craft
+  - human_craft
+  unknown:
+  - core_email
+  - cabmans
+  - swag
+  - combat
+  - gamer
+  - repair
+  - traders
+  - gift
+  - digest
+  - corpse_manager
+  - arena
+  - resource_server
+  - planner
 8:
-  special:
-  - arena (Arena server) @ arena.py
-  - email (Core email service) @ core_email.py
+  mobs:
+    colder:
+    - mob_boss
+    - mob_vopling
+    - mob_yeti
+    - mob_golem_warrior
+    - mob_snowman_radical
+    - mob_boss_assistant
+    - mob_golem_guard
+    - mob_snowman_leader
+    - mob_white_bear
+    - mob_penguin
+    - mob_vopling_champion
+    - colder_aoe_tree
+    - mob_colder_jelly
+    - mob_colder_cake_gigant
+    demonhunter:
+    - demon
+    fair:
+    - mob_fair_boar
+    - mob_fair_grum_hrum
+    - mob_fair_turkey
+    - mob_fair_werewolf
+    - mob_fair_stripped
+    flowers:
+    - goblin
+    - fairy_cat
+    - dwarf
+    - squirrel
+    - boss
+    - goblin
+    - fairy_cat
+    - dwarf
+    - squirrel
+    - boss
+    - small_flowers
+    - big_flowers
+    gaina:
+    - mob_white_boar
+    - mob_nosmus
+    - mob_black_bear
+    - mob_little_crab
+    - mob_niara_cat
+    - mob_wildsatyr
+    - mob_ball_fish
+    - mob_tunder_meduse
+    - mob_filiar
+    - mob_sarna
+    - mob_ghost
+    - mob_gaina_story_demon
+    - mob_housewife
+    - mob_hunter
+    - mob_pupil
+    - mob_warrior_blood
+    - mob_warrior_throne
+    - mob_herald
+    goblin_land:
+    - goblin_me_elf
+    - goblin_me_human
+    - urmi_elf
+    - urmi_human
+    guards:
+    - mob_elite_throne_range_2
+    - mob_soldier_throne_range_3
+    - mob_soldier_league_range_3
+    - mob_elite_league_range_2
+    - mob_soldier_league_death
+    - mob_soldier_throne_death
+    kor_birthday:
+    - mob_mechanical_beetle
+    march_8:
+    - fairy
+    st_patric:
+    - leprecon
+    - housekeeper
+    - mothra_larva
+    - mothra
+  quests:
+  - pets_quests
+  - demonhunter
+  - gaina
+  - arena
+  - hero_chronicles
+  - daily_quests
+  - archeolog
+  - event_quests
+  social:
+  - elf_craft
+  - human_craft
+  unknown:
+  - core_email
+  - cabmans
+  - swag
+  - combat
+  - gamer
+  - repair
+  - traders
+  - gift
+  - digest
+  - corpse_manager
+  - arena
+  - resource_server
+  - planner
 9:
-  special:
-  - arena (Arena server) @ arena.py
-  - email (Core email service) @ core_email.py
+  mobs:
+    colder:
+    - mob_boss
+    - mob_vopling
+    - mob_yeti
+    - mob_golem_warrior
+    - mob_snowman_radical
+    - mob_boss_assistant
+    - mob_golem_guard
+    - mob_snowman_leader
+    - mob_white_bear
+    - mob_penguin
+    - mob_vopling_champion
+    - colder_aoe_tree
+    - mob_colder_jelly
+    - mob_colder_cake_gigant
+    demonhunter:
+    - demon
+    fair:
+    - mob_fair_boar
+    - mob_fair_grum_hrum
+    - mob_fair_turkey
+    - mob_fair_werewolf
+    - mob_fair_stripped
+    flowers:
+    - goblin
+    - fairy_cat
+    - dwarf
+    - squirrel
+    - boss
+    - small_flowers
+    - big_flowers
+    goblin_land:
+    - goblin_me_elf
+    - goblin_me_human
+    - urmi_elf
+    - urmi_human
+    guards:
+    - mob_elite_throne_range_2
+    - mob_soldier_throne_range_3
+    - mob_soldier_league_range_3
+    - mob_elite_league_range_2
+    - mob_soldier_league_death
+    - mob_soldier_throne_death
+    kor_birthday:
+    - mob_mechanical_beetle
+    march_8:
+    - fairy
+    spring_shore:
+    - mob_rocky_lynx
+    - mob_ice_dwarf
+    - mob_slitos
+    - mob_muabar_priest
+    - mob_skalos
+    - mob_little_crab
+    - mob_marauder_elf
+    - mob_moon_lynx
+    - mob_truln
+    - mob_muabar
+    - mob_ghost
+    - mob_elf_spy
+    - mob_gray_bear
+    - mob_human_spy
+    - mob_rocky_bear
+    - mob_townsman
+    - mob_vagabond
+    - mob_warrior_blood_ss
+    - mob_warrior_throne_ss
+    - mob_herald
+    st_patric:
+    - leprecon
+    - housekeeper
+    - mothra_larva
+    - mothra
+  quests:
+  - pets_quests
+  - arena
+  - hero_chronicles
+  - daily_quests
+  - demonhunter
+  - spring_shore
+  - archeolog
+  - event_quests
+  social:
+  - elf_craft
+  - human_craft
+  unknown:
+  - core_email
+  - cabmans
+  - swag
+  - combat
+  - gamer
+  - repair
+  - gift
+  - digest
+  - traders
+  - corpse_manager
+  - resource_server
+  - arena
+  - resource_server
+  - planner
 10:
-  special:
-  - arena () @ arena.py
-  - email (Core email service) @ core_email.py
+  mobs:
+    colder:
+    - behaviour_mob_penguin_3
+    - behaviour_mob_penguin_5
+    - behaviour_mob_snowman_leader_3
+    - behaviour_mob_snowman_leader_5
+    - behaviour_mob_snowman_radical_3
+    - behaviour_mob_snowman_radical_5
+    - behaviour_mob_white_bear_3
+    - behaviour_mob_white_bear_5
+    - behaviour_mob_yeti_3
+    - behaviour_mob_yeti_5
+    guards:
+    - elf_guards
+    - human_guards
+  quests:
+  - colder_quests
+  unknown:
+  - core_email
+  - digest
+  - arena
+  - combat
+  - repair
+  - gamer
+  - cabmans
+  - traders
+  - swag
+  - gift
+  - planner
 12:
-  special:
-  - email (Core email service) @ core_email.py
+  instances:
+  - horras_dangeon_elf
+  - horras_dangeon_human
+  mobs:
+    guards:
+    - mob_soldier_league_death
+    - mob_soldier_throne_death
+    instances:
+    - mob_elite_league_range_2
+    - mob_elite_throne_range_2
+    - mob_horras_herd
+    - mob_horras_mirm
+    - behaviour_horras_dungeon_dragon
+    - behaviour_horras_dungeon_hraks
+    - behaviour_horras_dungeon_metal_thing
+    - behaviour_horras_dungeon_red_john
+    - mob_horras_guard_farm_elf_3
+    - mob_horras_guard_farm_human_1
+    - mob_horras_guard_farm_human_2
+    - mob_horras_miner
+    - raven_hill_book_4
+    - raven_hill_book_5
+    - raven_hill_book_6
+    - raven_hill_book_7
+    - shageron_4
+    - shageron_5
+    - shageron_6
+    - shageron_7
+    - skeleton_4
+    - skeleton_5
+    - skeleton_6
+    - skeleton_7
+    - skeleton_archer_4
+    - skeleton_archer_5
+    - skeleton_archer_6
+    - skeleton_archer_7
+    - skeleton_knight_4
+    - skeleton_knight_5
+    - skeleton_knight_6
+    - skeleton_knight_7
+    - mob_horras_guard_siege
+  quests:
+  - horras_quests
+  social:
+  - arena_battle_ground
+  unknown:
+  - core_email
+  - combat
+  - repair
+  - gamer
+  - cabmans
+  - traders
+  - digest
+  - swag
+  - gift
+  - resource_server
+  - corpse_manager
+  - planner
+13:
+  mobs:
+    ROOT:
+    - broth_man
+    instances:
+    - mob_horras_castellan_1
+    - mob_horras_castellan_2
+    - mob_horras_castellan_3
+    - mob_horras_guard_1
+    - mob_horras_guard_2
+    - mob_horras_guard_3
+    - mob_horras_turell_1
+    - mob_horras_turell_2
+    - mob_horras_turell_3
+  quests:
+  - horras_quests
+  social:
+  - arena_battle_ground
+  unknown:
+  - core_email
+  - combat
+  - repair
+  - gamer
+  - cabmans
+  - traders
+  - digest
+  - swag
+  - gift
+  - resource_server
+  - corpse_manager
+  - planner
 14:
-  special:
-  - arena (Arena server) @ arena.py
-  - email (Core email service) @ core_email.py
+  mobs:
+    colder:
+    - mob_boss
+    - mob_vopling
+    - mob_yeti
+    - mob_golem_warrior
+    - mob_snowman_radical
+    - mob_boss_assistant
+    - mob_golem_guard
+    - mob_snowman_leader
+    - mob_white_bear
+    - mob_penguin
+    - mob_vopling_champion
+    - mob_colder_jelly
+    - mob_colder_cake_gigant
+    - colder_aoe_tree
+    demonhunter:
+    - demon
+    fair:
+    - mob_fair_boar
+    - mob_fair_grum_hrum
+    - mob_fair_turkey
+    - mob_fair_werewolf
+    - mob_fair_stripped
+    flowers:
+    - goblin
+    - fairy_cat
+    - dwarf
+    - squirrel
+    - boss
+    - small_flowers
+    - big_flowers
+    goblin_land:
+    - goblin_me_elf
+    - goblin_me_human
+    - urmi_elf
+    - urmi_human
+    guards:
+    - mob_elite_throne_close_2
+    - mob_elite_throne_range_2
+    - mob_elite_league_range_2
+    - mob_elite_league_close_2
+    - mob_soldier_league_death
+    - mob_soldier_throne_death
+    hirn:
+    - mob_mahrul
+    - mob_ognus
+    - mob_plague_rat
+    - mob_sculptor
+    - mob_tarrakan
+    - mob_wild_ruzr
+    - mob_yar
+    - mob_ghost
+    - mob_hobo
+    - mob_ulle
+    - mob_hard_hobo
+    - mob_herald
+    kor_birthday:
+    - mob_mechanical_beetle
+    march_8:
+    - fairy
+    st_patric:
+    - leprecon
+    - housekeeper
+    - mothra_larva
+    - mothra
+  quests:
+  - pets_quests
+  - demonhunter
+  - arena
+  - hero_chronicles
+  - daily_quests
+  - hirn
+  - archeolog
+  - event_quests
+  social:
+  - elf_craft
+  - human_craft
+  unknown:
+  - core_email
+  - cabmans
+  - swag
+  - combat
+  - gamer
+  - repair
+  - gift
+  - digest
+  - traders
+  - corpse_manager
+  - resource_server
+  - arena
+  - resource_server
+  - planner
 15:
-  special:
-  - arena (Arena server) @ arena.py
-  - email (Core email service) @ core_email.py
+  mobs:
+    arena:
+    - mob_paladin_7
+    - mob_shooter_7
+    - mob_paladin_5
+    - mob_shooter_5
+    - mob_paladin_8
+    - mob_shooter_8
+    - mob_paladin_4
+    - mob_shooter_4
+    - mob_paladin_3
+    - mob_shooter_3
+  unknown:
+  - core_email
+  - cabmans
+  - swag
+  - combat
+  - gamer
+  - repair
+  - gift
+  - digest
+  - traders
+  - corpse_manager
+  - arena
+  - planner
 16:
-  special:
-  - email (Core email service) @ core_email.py
-  - arena (arena server) @ arena.py
+  mobs:
+    dniwe:
+    - crab
+    - crystal_guard
+    - renegade
+    - renegade_boss
+    - big_boss
+    - bomb_boss
+    - mermaid_boss
+    - reasonable_crystal
+    - mermaid
+    - jellyfish
+    dragons:
+    - ram
+    - pig
+    - weather
+    - interceptor
+    - cloud
+    - monkey
+    - mob_dragon
+    - lamp
+    - station
+    - griffon
+    - herdsman
+    - peace_control
+    - pangolin
+    - hunter
+    - snake
+    - black_dragon
+    - raider
+    - airship
+    - bird
+    - herdsman_chest_guard
+    - priest
+    - tower
+    - whirlwind
+    halloween:
+    - black_cat
+    - squirrel
+    - squirrel_1
+    - squirrel_2
+    - kadavr
+    - hare
+    - pumpkin_knight
+    - guard
+    - death_3
+    - witch
+    - death_5
+    - death_7
+    - frankenstein
+    - rage_pumpkin
+    - black_sphyria
+    - jack
+    - ghost
+    - ghost_king
+    - spider
+    - guard_death
+    pirate_day:
+    - siren
+    - devilfish
+    - guard_ship
+    - orc_drakkar
+    - crab
+    - octopus
+    - goblin_bark
+    - turtle
+  quests:
+  - event_quests
+  unknown:
+  - core_email
+  - cabmans
+  - swag
+  - combat
+  - gamer
+  - gift
+  - traders
+  - arena
+  - digest
+  - corpse_manager
+  - resource_server
+  - planner
 17:
-  special:
-  - email (Core email service) @ core_email.py
-  - arena (Arena server) @ arena.py
+  mobs:
+    ROOT:
+    - battle_guard_elf
+    - battle_guard_human
+    - fake_elfplayer_1
+    - fake_elfplayer_2
+    - fake_elfplayer_3
+    - fake_humanplayer_1
+    - fake_humanplayer_2
+    - fake_humanplayer_3
+  quests:
+  - arena
+  unknown:
+  - core_email
+  - cabmans
+  - swag
+  - combat
+  - gamer
+  - digest
+  - gift
+  - traders
+  - corpse_manager
+  - arena
+  - planner
 18:
-  special:
-  - email (Core email service) @ core_email.py
-  - arena (Arena server) @ arena.py
+  mobs:
+    ROOT:
+    - battle_guard_elf
+    - battle_guard_human
+    - battle_guard_range_elf
+    - battle_guard_range_human
+    - fake_elfplayer_1
+    - fake_elfplayer_2
+    - fake_elfplayer_3
+    - fake_humanplayer_1
+    - fake_humanplayer_2
+    - fake_humanplayer_3
+  quests:
+  - arena
+  unknown:
+  - core_email
+  - cabmans
+  - swag
+  - combat
+  - gamer
+  - digest
+  - gift
+  - traders
+  - corpse_manager
+  - arena
+  - planner
 19:
-  special:
-  - email (Core email service) @ core_email.py
-  - arena (Arena server) @ arena.py
+  mobs:
+    ROOT:
+    - battle_guard_elf
+    - battle_guard_human
+    - battle_guard_range_elf
+    - battle_guard_range_human
+    - fake_elfplayer_1
+    - fake_elfplayer_2
+    - fake_elfplayer_3
+    - fake_humanplayer_1
+    - fake_humanplayer_2
+    - fake_humanplayer_3
+  quests:
+  - arena
+  unknown:
+  - core_email
+  - cabmans
+  - swag
+  - combat
+  - gamer
+  - digest
+  - gift
+  - traders
+  - corpse_manager
+  - arena
+  - planner
 20:
-  special:
-  - email (Core email service) @ core_email.py
-  - arena (Arena server) @ arena.py
+  mobs:
+    ROOT:
+    - battle_guard_elf
+    - battle_guard_human
+    - battle_guard_range_elf
+    - battle_guard_range_human
+    - fake_elfplayer_1
+    - fake_elfplayer_2
+    - fake_elfplayer_3
+    - fake_humanplayer_1
+    - fake_humanplayer_2
+    - fake_humanplayer_3
+  quests:
+  - arena
+  unknown:
+  - core_email
+  - cabmans
+  - swag
+  - combat
+  - gamer
+  - digest
+  - gift
+  - traders
+  - corpse_manager
+  - arena
+  - planner
 21:
-  special:
-  - battle_ground () @ social/arena_battle_ground.py
-  - email (Core email service) @ core_email.py
+  mobs:
+    guards:
+    - mob_elite_league_range
+    - mob_elite_throne_range
+    - mob_soldier_league_death
+    - mob_soldier_throne_death
+    - labyrinth_guardian
+    land:
+    - boguk_miner
+    - boguk_shaman
+    - chu_fateat
+    - chu_fire_horn
+    - gao_barubon
+    - gao_yop
+    outpost_colonial:
+    - boar
+    - goblin
+    - mob_town_colonial
+    - popugaios
+    - swamp_dragon
+    - black_dragon
+    outpost_elf:
+    - black_cat
+    - elf_colony
+    - follower
+    - mob_town_elf
+    outpost_human:
+    - bandit
+    - human_colony
+    - mob_coast_human
+    - mob_town_human
+    - woodcutter
+  quests:
+  - colony
+  social:
+  - arena_battle_ground
+  unknown:
+  - corpse_manager
+  - cabmans
+  - combat
+  - core_email
+  - digest
+  - gamer
+  - gift
+  - planner
+  - repair
+  - resource_server
+  - swag
+  - traders
 22:
-  special:
-  - battle_ground () @ social/arena_battle_ground.py
-  - email (Core email service) @ core_email.py
+  mobs:
+    guards:
+    - mob_elite_league_range
+    - mob_elite_throne_range
+    - mob_soldier_league_death
+    - mob_soldier_throne_death
+    - labyrinth_guardian
+    land:
+    - boguk_miner
+    - boguk_shaman
+    - chu_fateat
+    - chu_fire_horn
+    - gao_barubon
+    - gao_yop
+    outpost_colonial:
+    - boar
+    - goblin
+    - mob_town_colonial
+    - popugaios
+    - swamp_dragon
+    - black_dragon
+    outpost_elf:
+    - black_cat
+    - elf_colony
+    - follower
+    - mob_town_elf
+    outpost_human:
+    - bandit
+    - human_colony
+    - mob_coast_human
+    - mob_town_human
+    - woodcutter
+  quests:
+  - colony
+  social:
+  - arena_battle_ground
+  unknown:
+  - corpse_manager
+  - cabmans
+  - combat
+  - core_email
+  - digest
+  - gamer
+  - gift
+  - planner
+  - repair
+  - resource_server
+  - swag
+  - traders
 23:
-  special:
-  - battle_ground () @ social/arena_battle_ground.py
-  - email (Core email service) @ core_email.py
+  mobs:
+    guards:
+    - mob_elite_league_range
+    - mob_elite_throne_range
+    - mob_soldier_league_death
+    - mob_soldier_throne_death
+    - labyrinth_guardian
+    land:
+    - boguk_miner
+    - boguk_shaman
+    - chu_fateat
+    - chu_fire_horn
+    - gao_barubon
+    - gao_yop
+    outpost_colonial:
+    - boar
+    - goblin
+    - mob_town_colonial
+    - popugaios
+    - swamp_dragon
+    - black_dragon
+    outpost_elf:
+    - black_cat
+    - elf_colony
+    - follower
+    - mob_town_elf
+    outpost_human:
+    - bandit
+    - human_colony
+    - mob_coast_human
+    - mob_town_human
+    - woodcutter
+  quests:
+  - colony
+  social:
+  - arena_battle_ground
+  unknown:
+  - corpse_manager
+  - cabmans
+  - combat
+  - core_email
+  - digest
+  - gamer
+  - gift
+  - planner
+  - repair
+  - resource_server
+  - swag
+  - traders
 24:
+  mobs:
+    colder:
+    - mob_boss
+    - mob_vopling
+    - mob_yeti
+    - mob_golem_warrior
+    - mob_snowman_radical
+    - mob_boss_assistant
+    - mob_golem_guard
+    - mob_snowman_leader
+    - mob_white_bear
+    - mob_penguin
+    - mob_vopling_champion
+    - colder_aoe_tree
+    - mob_colder_jelly
+    - mob_colder_cake_gigant
+    demonhunter:
+    - demon
+    fair:
+    - mob_fair_boar
+    - mob_fair_grum_hrum
+    - mob_fair_stripped
+    - mob_fair_turkey
+    - mob_fair_werewolf
+    flowers:
+    - goblin
+    - fairy_cat
+    - dwarf
+    - squirrel
+    - boss
+    - small_flowers
+    - big_flowers
+    goblin_land:
+    - goblin_me_elf
+    - goblin_me_human
+    - urmi_elf
+    - urmi_human
+    guards:
+    - mob_elite_league_range_2
+    - mob_elite_throne_range_2
+    - mob_soldier_league_range_3
+    - mob_soldier_throne_range_3
+    - mob_soldier_league_death
+    - mob_soldier_throne_death
+    kor_birthday:
+    - mob_mechanical_beetle
+    march_8:
+    - fairy
+    south_fyorl:
+    - mob_chimera_boss_cat
+    - mob_chimera_elf
+    - mob_chimera_forest
+    - mob_chimera_human
+    - mob_chimera_swamp
+    - mob_chimerazavr
+    - mob_vivisector
+    - mob_chimeroid
+    st_patric:
+    - leprecon
+    - housekeeper
+    - mothra_larva
+    - mothra
+  quests:
+  - event_quests
+  - archeolog
+  - arena
+  - pets_quests
+  - daily_quests
+  - demonhunter
+  - hero_chronicles
+  - konqueror
+  - silent_bay
+  - south_fyorl
+  social:
+  - arena_battle_ground
   special:
-  - arena_battle_ground (Social Arena Battle Ground) @ social/arena_battle_ground.py
-  - core_email (Core Email) @ core_email.py
+  - core_email
+  unknown:
+  - cabmans
+  - combat
+  - digest
+  - gamer
+  - gift
+  - planner
+  - repair
+  - resource_server
+  - swag
+  - traders
+  - corpse_manager
 25:
+  mobs:
+    dniwe:
+    - siege_bomb
+    - siege_guard
+    - siege_farm
+    halloween_arena:
+    - paladin
+    - shooter
+    - warrior
+    joust_2x2:
+    - paladin
+    - shooter
+    st_patrick_arena:
+    - paladin
+    - shooter
+    - warrior
+  quests:
+  - event_quests
+  social:
+  - arena_battle_ground
   special:
-  - core_email (Core Email) @ core_email.py
-  - arena_battle_ground (Social Arena Battle Ground) @ social/arena_battle_ground.py
+  - core_email
+  unknown:
+  - swag
+  - gift
+  - combat
+  - resource_server
+  - traders
+  - planner
+  - gamer
+  - cabmans
+  - digest
+  - corpse_manager
 26:
-  special:
-  - arena (Arena server) @ arena.py
-  - email (Core email service) @ core_email.py
+  mobs:
+    arena:
+    - mob_paladin_7
+    - mob_shooter_7
+    - mob_paladin_5
+    - mob_shooter_5
+    - mob_paladin_8
+    - mob_shooter_8
+    - mob_paladin_4
+    - mob_shooter_4
+    - mob_paladin_3
+    - mob_shooter_3
+  unknown:
+  - core_email
+  - cabmans
+  - swag
+  - combat
+  - gamer
+  - repair
+  - gift
+  - digest
+  - traders
+  - corpse_manager
+  - arena
+  - planner
 27:
+  mobs:
+    island_robots:
+    - mob_robots_common_patrols
+    - mob_robots_panzer
+    - mob_robots_common
+    - mob_robots_8
+    - mob_robots_7
+    - mob_robots_3
+    - mob_robots_5
+    - mob_robots_4
+    - mob_environment_nature
+    - mob_robots_6
+    - mob_environment_gnome
+  quests:
+  - island_robots
   special:
-  - arena (Arena) @ arena.py
-  - core_email (Core Email) @ core_email.py
+  - core_email
+  unknown:
+  - cabmans
+  - combat
+  - digest
+  - gamer
+  - gift
+  - planner
+  - repair
+  - resource_server
+  - swag
+  - traders
+  - corpse_manager
 28:
-  special:
-  - arena_battle_ground (Social Arena Battle Ground) @ social/arena_battle_ground.py
-  - core_email (Core Email) @ core_email.py
+  mobs:
+    guards:
+    - mob_elite_league_range
+    - mob_elite_throne_range
+    - mob_soldier_league_death
+    - mob_soldier_throne_death
+    - labyrinth_guardian
+    land:
+    - boguk_miner
+    - boguk_shaman
+    - chu_fateat
+    - chu_fire_horn
+    - gao_barubon
+    - gao_yop
+    outpost_colonial:
+    - boar
+    - goblin
+    - mob_town_colonial
+    - popugaios
+    - swamp_dragon
+    - black_dragon
+    outpost_elf:
+    - black_cat
+    - elf_colony
+    - follower
+    - mob_town_elf
+    outpost_human:
+    - bandit
+    - human_colony
+    - mob_coast_human
+    - mob_town_human
+    - woodcutter
+  quests:
+  - colony
+  social:
+  - arena_battle_ground
+  unknown:
+  - corpse_manager
+  - cabmans
+  - combat
+  - core_email
+  - digest
+  - gamer
+  - gift
+  - planner
+  - repair
+  - resource_server
+  - swag
+  - traders
+29:
+  mobs:
+    demonhunter:
+    - demon
+    fair:
+    - mob_fair_stripped
+    - mob_fair_werewolf
+    - mob_fair_grum_hrum
+    - mob_fair_turkey
+    - mob_fair_boar
+    flowers:
+    - big_flowers
+    - squirrel
+    - goblin
+    - fairy_cat
+    - dwarf
+    - small_flowers
+    - boss
+    guards:
+    - mob_soldier_league_death
+    - mob_soldier_throne_range_3
+    - mob_soldier_throne_death
+    - mob_soldier_league_range_3
+    - mob_elite_league_range_2
+    - mob_elite_throne_range_2
+    kor_birthday:
+    - mob_mechanical_beetle
+    march_8:
+    - strange_fairy
+    - kadavr_4
+    - kadavr_1
+    - kadavr_2
+    - kadavr_3
+    - mercenary
+    - fairy_boss
+    - fairy
+    north_fyorl:
+    - mob_golem_red_boss
+    - mob_golem_blue
+    - mob_golem_violet
+    - mob_golem_green
+    - mob_golem_white
+    st_patric:
+    - leprecon
+    - mothra_larva
+    - mothra
+    - housekeeper
+    valentin:
+    - goblin_boss_9
+    - valentin_boss
+    - dwarf_boss
+    - squirrel_9
+  quests:
+  - demonhunter
+  - silent_bay
+  - event_quests
+  - archeolog
+  - hero_chronicles
+  - daily_quests
+  - pets_quests
+  - north_fyorl
+  - konqueror
+  unknown:
+  - swag
+  - repair
+  - resource_server
+  - traders
+  - digest
+  - combat
+  - planner
+  - arena
+  - core_email
+  - cabmans
+  - gamer
+  - corpse_manager
+  - gift
