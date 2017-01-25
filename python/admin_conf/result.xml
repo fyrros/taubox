@@ -1,270 +1,567 @@
-<service name="core16_1_mob_siren" descr="Mobs Dniwe Siren" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
-    <param name="args" value="--reactor kqueue -n"/>
-    <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core16_1/mobs/dniwe/siren.log"/>
-    <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core16_1/mobs/dniwe/siren.pid"/>
-    <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core16/mobs/dniwe/siren.py"/>
-    <param name="env" value="KOR_HOST=10.10.10.37"/>
-    <param name="env" value="KOR_PORT=4348"/>
-    <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
-</service>
-<service name="core16_1_mob_devilfish" descr="Mobs Dniwe Devilfish" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
-    <param name="args" value="--reactor kqueue -n"/>
-    <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core16_1/mobs/dniwe/devilfish.log"/>
-    <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core16_1/mobs/dniwe/devilfish.pid"/>
-    <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core16/mobs/dniwe/devilfish.py"/>
-    <param name="env" value="KOR_HOST=10.10.10.37"/>
-    <param name="env" value="KOR_PORT=4348"/>
-    <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
-</service>
-<service name="core16_1_mob_guard_ship" descr="Mobs Dniwe Guard Ship" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
-    <param name="args" value="--reactor kqueue -n"/>
-    <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core16_1/mobs/dniwe/guard_ship.log"/>
-    <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core16_1/mobs/dniwe/guard_ship.pid"/>
-    <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core16/mobs/dniwe/guard_ship.py"/>
-    <param name="env" value="KOR_HOST=10.10.10.37"/>
-    <param name="env" value="KOR_PORT=4348"/>
-    <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
-</service>
-<service name="core16_1_mob_orc_drakkar" descr="Mobs Dniwe Orc Drakkar" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
-    <param name="args" value="--reactor kqueue -n"/>
-    <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core16_1/mobs/dniwe/orc_drakkar.log"/>
-    <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core16_1/mobs/dniwe/orc_drakkar.pid"/>
-    <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core16/mobs/dniwe/orc_drakkar.py"/>
-    <param name="env" value="KOR_HOST=10.10.10.37"/>
-    <param name="env" value="KOR_PORT=4348"/>
-    <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
-</service>
-<service name="core16_1_mob_octopus" descr="Mobs Dniwe Octopus" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
-    <param name="args" value="--reactor kqueue -n"/>
-    <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core16_1/mobs/dniwe/octopus.log"/>
-    <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core16_1/mobs/dniwe/octopus.pid"/>
-    <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core16/mobs/dniwe/octopus.py"/>
-    <param name="env" value="KOR_HOST=10.10.10.37"/>
-    <param name="env" value="KOR_PORT=4348"/>
-    <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
-</service>
-<service name="core16_1_mob_goblin_bark" descr="Mobs Dniwe Goblin Bark" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
-    <param name="args" value="--reactor kqueue -n"/>
-    <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core16_1/mobs/dniwe/goblin_bark.log"/>
-    <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core16_1/mobs/dniwe/goblin_bark.pid"/>
-    <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core16/mobs/dniwe/goblin_bark.py"/>
-    <param name="env" value="KOR_HOST=10.10.10.37"/>
-    <param name="env" value="KOR_PORT=4348"/>
-    <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
-</service>
-<service name="core16_2_mob_siren" descr="Mobs Dniwe Siren" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
-    <param name="args" value="--reactor kqueue -n"/>
-    <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core16_2/mobs/dniwe/siren.log"/>
-    <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core16_2/mobs/dniwe/siren.pid"/>
-    <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core16/mobs/dniwe/siren.py"/>
-    <param name="env" value="KOR_HOST=10.10.10.81"/>
-    <param name="env" value="KOR_PORT=4348"/>
-    <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
-</service>
-<service name="core16_2_mob_devilfish" descr="Mobs Dniwe Devilfish" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
-    <param name="args" value="--reactor kqueue -n"/>
-    <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core16_2/mobs/dniwe/devilfish.log"/>
-    <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core16_2/mobs/dniwe/devilfish.pid"/>
-    <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core16/mobs/dniwe/devilfish.py"/>
-    <param name="env" value="KOR_HOST=10.10.10.81"/>
-    <param name="env" value="KOR_PORT=4348"/>
-    <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
-</service>
-<service name="core16_2_mob_guard_ship" descr="Mobs Dniwe Guard Ship" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
-    <param name="args" value="--reactor kqueue -n"/>
-    <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core16_2/mobs/dniwe/guard_ship.log"/>
-    <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core16_2/mobs/dniwe/guard_ship.pid"/>
-    <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core16/mobs/dniwe/guard_ship.py"/>
-    <param name="env" value="KOR_HOST=10.10.10.81"/>
-    <param name="env" value="KOR_PORT=4348"/>
-    <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
-</service>
-<service name="core16_2_mob_orc_drakkar" descr="Mobs Dniwe Orc Drakkar" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
-    <param name="args" value="--reactor kqueue -n"/>
-    <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core16_2/mobs/dniwe/orc_drakkar.log"/>
-    <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core16_2/mobs/dniwe/orc_drakkar.pid"/>
-    <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core16/mobs/dniwe/orc_drakkar.py"/>
-    <param name="env" value="KOR_HOST=10.10.10.81"/>
-    <param name="env" value="KOR_PORT=4348"/>
-    <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
-</service>
-<service name="core16_2_mob_octopus" descr="Mobs Dniwe Octopus" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
-    <param name="args" value="--reactor kqueue -n"/>
-    <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core16_2/mobs/dniwe/octopus.log"/>
-    <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core16_2/mobs/dniwe/octopus.pid"/>
-    <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core16/mobs/dniwe/octopus.py"/>
-    <param name="env" value="KOR_HOST=10.10.10.81"/>
-    <param name="env" value="KOR_PORT=4348"/>
-    <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
-</service>
-<service name="core16_2_mob_goblin_bark" descr="Mobs Dniwe Goblin Bark" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
-    <param name="args" value="--reactor kqueue -n"/>
-    <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core16_2/mobs/dniwe/goblin_bark.log"/>
-    <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core16_2/mobs/dniwe/goblin_bark.pid"/>
-    <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core16/mobs/dniwe/goblin_bark.py"/>
-    <param name="env" value="KOR_HOST=10.10.10.81"/>
-    <param name="env" value="KOR_PORT=4348"/>
-    <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
-</service>
-<service name="core16_3_mob_siren" descr="Mobs Dniwe Siren" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
-    <param name="args" value="--reactor kqueue -n"/>
-    <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core16_3/mobs/dniwe/siren.log"/>
-    <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core16_3/mobs/dniwe/siren.pid"/>
-    <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core16/mobs/dniwe/siren.py"/>
-    <param name="env" value="KOR_HOST=10.10.10.73"/>
-    <param name="env" value="KOR_PORT=4348"/>
-    <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
-</service>
-<service name="core16_3_mob_devilfish" descr="Mobs Dniwe Devilfish" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
-    <param name="args" value="--reactor kqueue -n"/>
-    <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core16_3/mobs/dniwe/devilfish.log"/>
-    <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core16_3/mobs/dniwe/devilfish.pid"/>
-    <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core16/mobs/dniwe/devilfish.py"/>
-    <param name="env" value="KOR_HOST=10.10.10.73"/>
-    <param name="env" value="KOR_PORT=4348"/>
-    <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
-</service>
-<service name="core16_3_mob_guard_ship" descr="Mobs Dniwe Guard Ship" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
-    <param name="args" value="--reactor kqueue -n"/>
-    <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core16_3/mobs/dniwe/guard_ship.log"/>
-    <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core16_3/mobs/dniwe/guard_ship.pid"/>
-    <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core16/mobs/dniwe/guard_ship.py"/>
-    <param name="env" value="KOR_HOST=10.10.10.73"/>
-    <param name="env" value="KOR_PORT=4348"/>
-    <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
-</service>
-<service name="core16_3_mob_orc_drakkar" descr="Mobs Dniwe Orc Drakkar" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
-    <param name="args" value="--reactor kqueue -n"/>
-    <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core16_3/mobs/dniwe/orc_drakkar.log"/>
-    <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core16_3/mobs/dniwe/orc_drakkar.pid"/>
-    <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core16/mobs/dniwe/orc_drakkar.py"/>
-    <param name="env" value="KOR_HOST=10.10.10.73"/>
-    <param name="env" value="KOR_PORT=4348"/>
-    <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
-</service>
-<service name="core16_3_mob_octopus" descr="Mobs Dniwe Octopus" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
-    <param name="args" value="--reactor kqueue -n"/>
-    <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core16_3/mobs/dniwe/octopus.log"/>
-    <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core16_3/mobs/dniwe/octopus.pid"/>
-    <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core16/mobs/dniwe/octopus.py"/>
-    <param name="env" value="KOR_HOST=10.10.10.73"/>
-    <param name="env" value="KOR_PORT=4348"/>
-    <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
-</service>
-<service name="core16_3_mob_goblin_bark" descr="Mobs Dniwe Goblin Bark" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
-    <param name="args" value="--reactor kqueue -n"/>
-    <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core16_3/mobs/dniwe/goblin_bark.log"/>
-    <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core16_3/mobs/dniwe/goblin_bark.pid"/>
-    <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core16/mobs/dniwe/goblin_bark.py"/>
-    <param name="env" value="KOR_HOST=10.10.10.73"/>
-    <param name="env" value="KOR_PORT=4348"/>
-    <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
-</service>
-<service name="core16_4_mob_siren" descr="Mobs Dniwe Siren" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
-    <param name="args" value="--reactor kqueue -n"/>
-    <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core16_4/mobs/dniwe/siren.log"/>
-    <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core16_4/mobs/dniwe/siren.pid"/>
-    <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core16/mobs/dniwe/siren.py"/>
-    <param name="env" value="KOR_HOST=10.10.10.77"/>
-    <param name="env" value="KOR_PORT=4348"/>
-    <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
-</service>
-<service name="core16_4_mob_devilfish" descr="Mobs Dniwe Devilfish" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
-    <param name="args" value="--reactor kqueue -n"/>
-    <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core16_4/mobs/dniwe/devilfish.log"/>
-    <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core16_4/mobs/dniwe/devilfish.pid"/>
-    <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core16/mobs/dniwe/devilfish.py"/>
-    <param name="env" value="KOR_HOST=10.10.10.77"/>
-    <param name="env" value="KOR_PORT=4348"/>
-    <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
-</service>
-<service name="core16_4_mob_guard_ship" descr="Mobs Dniwe Guard Ship" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
-    <param name="args" value="--reactor kqueue -n"/>
-    <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core16_4/mobs/dniwe/guard_ship.log"/>
-    <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core16_4/mobs/dniwe/guard_ship.pid"/>
-    <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core16/mobs/dniwe/guard_ship.py"/>
-    <param name="env" value="KOR_HOST=10.10.10.77"/>
-    <param name="env" value="KOR_PORT=4348"/>
-    <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
-</service>
-<service name="core16_4_mob_orc_drakkar" descr="Mobs Dniwe Orc Drakkar" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
-    <param name="args" value="--reactor kqueue -n"/>
-    <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core16_4/mobs/dniwe/orc_drakkar.log"/>
-    <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core16_4/mobs/dniwe/orc_drakkar.pid"/>
-    <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core16/mobs/dniwe/orc_drakkar.py"/>
-    <param name="env" value="KOR_HOST=10.10.10.77"/>
-    <param name="env" value="KOR_PORT=4348"/>
-    <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
-</service>
-<service name="core16_4_mob_octopus" descr="Mobs Dniwe Octopus" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
-    <param name="args" value="--reactor kqueue -n"/>
-    <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core16_4/mobs/dniwe/octopus.log"/>
-    <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core16_4/mobs/dniwe/octopus.pid"/>
-    <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core16/mobs/dniwe/octopus.py"/>
-    <param name="env" value="KOR_HOST=10.10.10.77"/>
-    <param name="env" value="KOR_PORT=4348"/>
-    <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
-</service>
-<service name="core16_4_mob_goblin_bark" descr="Mobs Dniwe Goblin Bark" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
-    <param name="args" value="--reactor kqueue -n"/>
-    <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core16_4/mobs/dniwe/goblin_bark.log"/>
-    <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core16_4/mobs/dniwe/goblin_bark.pid"/>
-    <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core16/mobs/dniwe/goblin_bark.py"/>
-    <param name="env" value="KOR_HOST=10.10.10.77"/>
-    <param name="env" value="KOR_PORT=4348"/>
-    <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
-</service>
-<service name="core16_5_mob_siren" descr="Mobs Dniwe Siren" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
-    <param name="args" value="--reactor kqueue -n"/>
-    <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core16_5/mobs/dniwe/siren.log"/>
-    <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core16_5/mobs/dniwe/siren.pid"/>
-    <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core16/mobs/dniwe/siren.py"/>
-    <param name="env" value="KOR_HOST=10.10.10.6"/>
-    <param name="env" value="KOR_PORT=4348"/>
-    <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
-</service>
-<service name="core16_5_mob_devilfish" descr="Mobs Dniwe Devilfish" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
-    <param name="args" value="--reactor kqueue -n"/>
-    <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core16_5/mobs/dniwe/devilfish.log"/>
-    <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core16_5/mobs/dniwe/devilfish.pid"/>
-    <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core16/mobs/dniwe/devilfish.py"/>
-    <param name="env" value="KOR_HOST=10.10.10.6"/>
-    <param name="env" value="KOR_PORT=4348"/>
-    <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
-</service>
-<service name="core16_5_mob_guard_ship" descr="Mobs Dniwe Guard Ship" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
-    <param name="args" value="--reactor kqueue -n"/>
-    <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core16_5/mobs/dniwe/guard_ship.log"/>
-    <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core16_5/mobs/dniwe/guard_ship.pid"/>
-    <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core16/mobs/dniwe/guard_ship.py"/>
-    <param name="env" value="KOR_HOST=10.10.10.6"/>
-    <param name="env" value="KOR_PORT=4348"/>
-    <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
-</service>
-<service name="core16_5_mob_orc_drakkar" descr="Mobs Dniwe Orc Drakkar" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
-    <param name="args" value="--reactor kqueue -n"/>
-    <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core16_5/mobs/dniwe/orc_drakkar.log"/>
-    <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core16_5/mobs/dniwe/orc_drakkar.pid"/>
-    <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core16/mobs/dniwe/orc_drakkar.py"/>
-    <param name="env" value="KOR_HOST=10.10.10.6"/>
-    <param name="env" value="KOR_PORT=4348"/>
-    <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
-</service>
-<service name="core16_5_mob_octopus" descr="Mobs Dniwe Octopus" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
-    <param name="args" value="--reactor kqueue -n"/>
-    <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core16_5/mobs/dniwe/octopus.log"/>
-    <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core16_5/mobs/dniwe/octopus.pid"/>
-    <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core16/mobs/dniwe/octopus.py"/>
-    <param name="env" value="KOR_HOST=10.10.10.6"/>
-    <param name="env" value="KOR_PORT=4348"/>
-    <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
-</service>
-<service name="core16_5_mob_goblin_bark" descr="Mobs Dniwe Goblin Bark" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
-    <param name="args" value="--reactor kqueue -n"/>
-    <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core16_5/mobs/dniwe/goblin_bark.log"/>
-    <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core16_5/mobs/dniwe/goblin_bark.pid"/>
-    <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core16/mobs/dniwe/goblin_bark.py"/>
-    <param name="env" value="KOR_HOST=10.10.10.6"/>
-    <param name="env" value="KOR_PORT=4348"/>
-    <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
-</service>
+            <service name="core29_swag" descr="Swag" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/swag.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/swag.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/swag.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_repair" descr="Repair" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/repair.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/repair.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/repair.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_resource_server" descr="Resource Server" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/resource_server.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/resource_server.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/resource_server.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_traders" descr="Traders" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/traders.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/traders.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/traders.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_digest" descr="Digest" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/digest.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/digest.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/digest.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_combat" descr="Combat" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/combat.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/combat.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/combat.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_planner" descr="Planner" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/planner.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/planner.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/planner.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_arena" descr="Arena" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/arena.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/arena.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/arena.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_email" descr="Email" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/core_email.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/core_email.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/core_email.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_cabmans" descr="Cabmans" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/cabmans.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/cabmans.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/cabmans.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_gamer" descr="Gamer" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/gamer.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/gamer.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/gamer.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_quest_demonhunter" descr="Quests Demonhunter" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/quests/demonhunter.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/quests/demonhunter.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/quests/demonhunter.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_quest_silent_bay" descr="Quests Silent Bay" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/quests/silent_bay.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/quests/silent_bay.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/quests/silent_bay.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_quest_event_quests" descr="Quests Event Quests" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/quests/event_quests.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/quests/event_quests.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/quests/event_quests.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_quest_archeolog" descr="Quests Archeolog" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/quests/archeolog.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/quests/archeolog.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/quests/archeolog.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_quest_hero_chronicles" descr="Quests Hero Chronicles" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/quests/hero_chronicles.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/quests/hero_chronicles.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/quests/hero_chronicles.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_quest_daily_quests" descr="Quests Daily Quests" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/quests/daily_quests.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/quests/daily_quests.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/quests/daily_quests.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_quest_pets_quests" descr="Quests Pets Quests" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/quests/pets_quests.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/quests/pets_quests.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/quests/pets_quests.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_quest_north_fyorl" descr="Quests North Fyorl" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/quests/north_fyorl.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/quests/north_fyorl.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/quests/north_fyorl.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_quest_konqueror" descr="Quests Konqueror" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/quests/konqueror.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/quests/konqueror.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/quests/konqueror.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_corpse_manager" descr="Utility Corpse Manager" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/utility/corpse_manager.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/utility/corpse_manager.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/utility/corpse_manager.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_gift" descr="Utility Gift" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/utility/gift.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/utility/gift.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/utility/gift.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_fair_stripped" descr="Mobs Fair Stripped" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/fair/mob_fair_stripped.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/fair/mob_fair_stripped.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/fair/mob_fair_stripped.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_fair_werewolf" descr="Mobs Fair Werewolf" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/fair/mob_fair_werewolf.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/fair/mob_fair_werewolf.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/fair/mob_fair_werewolf.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_fair_grum_hrum" descr="Mobs Fair Grum Hrum" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/fair/mob_fair_grum_hrum.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/fair/mob_fair_grum_hrum.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/fair/mob_fair_grum_hrum.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_fair_turkey" descr="Mobs Fair Turkey" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/fair/mob_fair_turkey.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/fair/mob_fair_turkey.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/fair/mob_fair_turkey.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_fair_boar" descr="Mobs Fair Boar" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/fair/mob_fair_boar.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/fair/mob_fair_boar.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/fair/mob_fair_boar.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_soldier_league_death" descr="Mobs Guards Soldier League Death" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/guards/mob_soldier_league_death.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/guards/mob_soldier_league_death.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/guards/mob_soldier_league_death.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_soldier_throne_range_3" descr="Mobs Guards Soldier Throne Range 3" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/guards/mob_soldier_throne_range_3.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/guards/mob_soldier_throne_range_3.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/guards/mob_soldier_throne_range_3.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_soldier_throne_death" descr="Mobs Guards Soldier Throne Death" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/guards/mob_soldier_throne_death.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/guards/mob_soldier_throne_death.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/guards/mob_soldier_throne_death.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_soldier_league_range_3" descr="Mobs Guards Soldier League Range 3" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/guards/mob_soldier_league_range_3.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/guards/mob_soldier_league_range_3.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/guards/mob_soldier_league_range_3.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_elite_league_range_2" descr="Mobs Guards Elite League Range 2" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/guards/mob_elite_league_range_2.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/guards/mob_elite_league_range_2.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/guards/mob_elite_league_range_2.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_elite_throne_range_2" descr="Mobs Guards Elite Throne Range 2" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/guards/mob_elite_throne_range_2.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/guards/mob_elite_throne_range_2.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/guards/mob_elite_throne_range_2.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_big_flowers" descr="Mobs Flowers Big Flowers" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/flowers/big_flowers.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/flowers/big_flowers.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/flowers/big_flowers.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_squirrel" descr="Mobs Flowers Squirrel" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/flowers/squirrel.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/flowers/squirrel.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/flowers/squirrel.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_goblin" descr="Mobs Flowers Goblin" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/flowers/goblin.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/flowers/goblin.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/flowers/goblin.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_strange_fairy" descr="Mobs March 8 Strange Fairy" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/march_8/strange_fairy.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/march_8/strange_fairy.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/march_8/strange_fairy.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_fairy_cat" descr="Mobs Flowers Fairy Cat" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/flowers/fairy_cat.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/flowers/fairy_cat.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/flowers/fairy_cat.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_dwarf" descr="Mobs Flowers Dwarf" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/flowers/dwarf.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/flowers/dwarf.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/flowers/dwarf.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_kadavr_4" descr="Mobs March 8 Kadavr 4" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/march_8/kadavr_4.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/march_8/kadavr_4.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/march_8/kadavr_4.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_kadavr_1" descr="Mobs March 8 Kadavr 1" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/march_8/kadavr_1.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/march_8/kadavr_1.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/march_8/kadavr_1.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_kadavr_2" descr="Mobs March 8 Kadavr 2" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/march_8/kadavr_2.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/march_8/kadavr_2.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/march_8/kadavr_2.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_kadavr_3" descr="Mobs March 8 Kadavr 3" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/march_8/kadavr_3.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/march_8/kadavr_3.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/march_8/kadavr_3.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_small_flowers" descr="Mobs Flowers Small Flowers" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/flowers/small_flowers.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/flowers/small_flowers.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/flowers/small_flowers.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_boss" descr="Mobs Flowers Boss" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/flowers/boss.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/flowers/boss.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/flowers/boss.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_mercenary" descr="Mobs March 8 Mercenary" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/march_8/mercenary.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/march_8/mercenary.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/march_8/mercenary.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_fairy_boss" descr="Mobs March 8 Fairy Boss" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/march_8/fairy_boss.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/march_8/fairy_boss.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/march_8/fairy_boss.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_fairy" descr="Mobs March 8 Fairy" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/march_8/fairy.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/march_8/fairy.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/march_8/fairy.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_goblin_boss_9" descr="Mobs Valentin Goblin Boss 9" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/valentin/goblin_boss_9.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/valentin/goblin_boss_9.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/valentin/goblin_boss_9.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_valentin_boss" descr="Mobs Valentin Boss" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/valentin/valentin_boss.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/valentin/valentin_boss.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/valentin/valentin_boss.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_dwarf_boss" descr="Mobs Valentin Dwarf Boss" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/valentin/dwarf_boss.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/valentin/dwarf_boss.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/valentin/dwarf_boss.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_squirrel_9" descr="Mobs Valentin Squirrel 9" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/valentin/squirrel_9.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/valentin/squirrel_9.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/valentin/squirrel_9.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_leprecon" descr="Mobs St Patric Leprecon" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/st_patric/leprecon.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/st_patric/leprecon.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/st_patric/leprecon.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_mothra_larva" descr="Mobs St Patric Mothra Larva" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/st_patric/mothra_larva.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/st_patric/mothra_larva.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/st_patric/mothra_larva.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_mothra" descr="Mobs St Patric Mothra" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/st_patric/mothra.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/st_patric/mothra.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/st_patric/mothra.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_housekeeper" descr="Mobs St Patric Housekeeper" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/st_patric/housekeeper.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/st_patric/housekeeper.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/st_patric/housekeeper.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_demon" descr="Mobs Demonhunter Demon" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/demonhunter/demon.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/demonhunter/demon.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/demonhunter/demon.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_golem_red_boss" descr="Mobs North Fyorl Golem Red Boss" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/north_fyorl/mob_golem_red_boss.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/north_fyorl/mob_golem_red_boss.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/north_fyorl/mob_golem_red_boss.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_golem_blue" descr="Mobs North Fyorl Golem Blue" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/north_fyorl/mob_golem_blue.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/north_fyorl/mob_golem_blue.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/north_fyorl/mob_golem_blue.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_golem_violet" descr="Mobs North Fyorl Golem Violet" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/north_fyorl/mob_golem_violet.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/north_fyorl/mob_golem_violet.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/north_fyorl/mob_golem_violet.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_golem_green" descr="Mobs North Fyorl Golem Green" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/north_fyorl/mob_golem_green.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/north_fyorl/mob_golem_green.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/north_fyorl/mob_golem_green.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_golem_white" descr="Mobs North Fyorl Golem White" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/north_fyorl/mob_golem_white.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/north_fyorl/mob_golem_white.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/north_fyorl/mob_golem_white.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>
+            <service name="core29_mob_mechanical_beetle" descr="Mobs Kor Birthday Mechanical Beetle" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core29/mobs/kor_birthday/mob_mechanical_beetle.log"/>
+                <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core29/mobs/kor_birthday/mob_mechanical_beetle.pid"/>
+                <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core29/mobs/kor_birthday/mob_mechanical_beetle.py"/>
+                <param name="env" value="KOR_HOST=127.0.0.1"/>
+                <param name="env" value="KOR_PORT=4361"/>
+                <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+            </service>

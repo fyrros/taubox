@@ -170,9 +170,29 @@ cores:
     port: 4357
     mirrors:
       1: 127.0.0.1
+  29_kkk:
+    port: 4361
+    mirrors:
+      1: 127.0.0.1
 
 logic:
-  16:
+  29_kkk:
+    NONE: [cabmans, combat, core_email, digest, gamer, planner, repair, resource_server,
+      swag, traders, arena]
     mobs:
-      dniwe: [devilfish,goblin_bark,guard_ship,octopus,orc_drakkar,siren]
+      demonhunter: [demon]
+      fair: [mob_fair_boar, mob_fair_grum_hrum, mob_fair_stripped, mob_fair_turkey, mob_fair_werewolf]
+      flowers: [big_flowers, boss, dwarf, fairy_cat, goblin, small_flowers, squirrel]
+      guards: [mob_elite_league_range_2, mob_elite_throne_range_2, mob_soldier_league_death,
+        mob_soldier_league_range_3, mob_soldier_throne_death, mob_soldier_throne_range_3]
+      kor_birthday: [mob_mechanical_beetle]
+      march_8: [fairy_boss, fairy_cat, fairy, kadavr_1, kadavr_2, kadavr_3, kadavr_4,
+        mercenary, strange_fairy]
+      north_fyorl: [mob_golem_blue, mob_golem_green, mob_golem_red_boss, mob_golem_violet,
+        mob_golem_white]
+      st_patric: [housekeeper, leprecon, mothra_larva, mothra]
+      valentin: [dwarf_boss, dwarf, goblin_boss_9, goblin, squirrel_9, valentin_boss]
+    quests: [archeolog, arena, daily_quests, demonhunter, event_quests, hero_chronicles,
+      konqueror, north_fyorl, pets_quests, silent_bay]
+    utility: [corpse_manager, gift]
 

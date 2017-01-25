@@ -52,12 +52,15 @@ class Script:
         print self.name
         print self.folders
         return ''
+
+    def __len__(self):
+        return len(self.folders) + len(''.join(self.folders))
         
 
 class AdminConf:
     
-    def __init__(self):
-        self.conf_path = '/home/fyrros/workspace/projects/ksibox/admin_conf/'
+    def __init__(self, conf_path):
+        self.conf_path = conf_path
         self.cores = {}
         self.scripts = {}
         self.__configure()
@@ -100,13 +103,18 @@ class AdminConf:
                             'num': mirror_num,
                             'core': core.num,
                             'port': core.port}
-                    for script in core.scripts.values():
+                    scripts = core.scripts.values()
+                    scripts.sort(key = lambda s: len(s))
+                    for script in scripts:
                         data['logic'] = script.logic_name
                         data['fullpath'] = script.fullpath
                         data['descr'] = script.descr
                         result.write(self.template % data)
-            
+
+# '/home/fyrros/workspace/projects/ksibox/admin_conf/'
+    
 if __name__ == '__main__':
-    app = AdminConf()
+    conf_path = ''
+    app = AdminConf(conf_path)
     app.generate_config()
             
