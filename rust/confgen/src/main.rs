@@ -24,17 +24,19 @@ fn main() {
     */
 
     file_manager = FileManager::new();
-    config = file_manager.load_config();
-    thekingdom = TheKingdom::new(config);
+    config = Config::new(file_manager.load_configs());
+    dummies = Dummies::new(file_manager.load_dummies());
+    thekingdom = TheKingdom::new(config, dummies);
     xml_generator = XMLGenerator::new();
     xml_generator.run(thekingdom);
-    file_manager.save_result(xml_generator);
+    file_manager.save_xml_result(xml_generator.result());
 }
 
 
 #[derive(Debug)]
 enum FileType {
     Config,
+    Dummies,
     XMLResult,
 }
 
@@ -47,8 +49,12 @@ impl FileManager {
     	FileManager {}
     }
 
-    fn load_config(&self) -> yaml::Yaml {
-    	self.load(FileOption::Config)
+    fn load_configs(&self) -> HashMap {
+    	//self.load(FileOption::Config)
+    }
+
+    fn load_dummies(&self) -> HashMap {
+
     }
 
     fn load(&self, file_option: FileOption) -> T {
@@ -58,8 +64,8 @@ impl FileManager {
     	}
     }
 
-    fn save_result(&self, xml_generator: XMLGenerator) {
-    	self.save(FileOption::XMLResult, xml_generator.result())
+    fn save_xml_result(&self, result: HashMap) {
+    	self.save(FileOption::XMLResult, result);
     }
 }
 
