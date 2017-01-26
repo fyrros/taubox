@@ -1,0 +1,2 @@
+<!-- {core_name} -->
+<service name="{core_copy}" descr="{core_name} #{copy_num}" smsmail="yes"  cmd="GMServerd_{core_num}" args="--core-port={game_port} --script-port={logic_port} --http-port={http_port}{extra_params} --profiler-name=core{core_num}mirror{copy_num} --profiler-sampling-seconds=1800 --profiler-report-samples=12" path="/usr/home/game/game{core_num}_{copy_num}/bin/" uid="game" gid="game" enable="yes"/>
