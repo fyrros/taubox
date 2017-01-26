@@ -1,3 +1,11 @@
+extern crate yaml_rust;
+
+use yaml_rust::{Yaml, YamlLoader};
+use std::collections::HashMap;
+use std::path::{PathBuf};
+use std::fs::{read_dir, File};
+use std::io::prelude::*;
+
 fn main() {
     println!("Starting program...");
 
@@ -25,8 +33,11 @@ fn main() {
 
     let file_manager = FileManager::new();
     let config = Config::new(file_manager);
-    println!("{:?}", config.cores[1]);//["name"].as_str().unwrap());
-    println!("{:?}", config.test["foo"]);
+    //let key = Yaml::Integer(1);
+    println!("{:?}", config.cores[2]);
+
+    //["name"].as_str().unwrap());
+    //println!("{:?}", config.test["foo"]);
     //thekingdom = TheKingdom::new(config);
     //xml_generator = XMLGenerator::new();
     //xml_generator.run(thekingdom);
@@ -39,14 +50,6 @@ fn main() {
     */
     //file_manager.save_result_xml(xml_generator.result());
 }
-
-extern crate yaml_rust;
-
-use yaml_rust::{Yaml, YamlLoader};
-use std::collections::HashMap;
-use std::path::{PathBuf};
-use std::fs::{read_dir, File};
-use std::io::prelude::*;
 
 
 static CONFIG_FOLDER: &'static str = "conf";
@@ -75,12 +78,12 @@ impl Config {
 
     pub fn new(file_manager: FileManager) -> Config {
 
-    	fn convert_to_yaml<'a>(file_str: String) -> Yaml {
+    	fn convert_to_yaml(file_str: String) -> Yaml {
 			let docs = YamlLoader::load_from_str(&file_str).unwrap();
 			docs[0].clone()
 		}
 
-		fn convert_to_yaml_hashmap<'a>(hashmap: HashMap<String, String>) -> HashMap<String, Yaml> {
+		fn convert_to_yaml_hashmap(hashmap: HashMap<String, String>) -> HashMap<String, Yaml> {
 			let mut result = HashMap::new();
 			for (key, value) in hashmap.iter() {
 				result.insert(key.clone(), convert_to_yaml(value.to_string()));
