@@ -1,9 +1,0 @@
-<service name="{fullname}" descr="{description}" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
-    <param name="args" value="--reactor kqueue -n"/>
-    <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/{core_copy}/{name}.log"/>
-    <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/{core_copy}/{name}.pid"/>
-    <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/{core}/{name}.py"/>
-    <param name="env" value="KOR_HOST={host}"/>
-    <param name="env" value="KOR_PORT={port}"/>
-    <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
-</service>

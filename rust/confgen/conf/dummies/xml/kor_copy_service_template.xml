@@ -1,3 +1,0 @@
-<group name="{core_copy}_logic" descr="Logic for {core_name} #{copy_num}" start_timeout="1" enable="yes" run_depend="{core_copy}">
-	{scripts}
-</group>
