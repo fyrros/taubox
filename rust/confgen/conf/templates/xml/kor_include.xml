@@ -1,0 +1,1 @@
+<xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//service[@name='core5_1'])"/>

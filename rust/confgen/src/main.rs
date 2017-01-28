@@ -2,8 +2,9 @@ extern crate yaml_rust;
 
 mod config;
 mod file_manager;
+mod thekingdom;
 
-use config::Config;
+use thekingdom::TheKingdom;
 
 
 fn main() {
@@ -31,13 +32,8 @@ fn main() {
 	      - FileManagerCommand
     */
 
-    let config = Config::new();
-    //let key = Yaml::Integer(1);
-    println!("{:?}", config.cores[2]);
-
-    //["name"].as_str().unwrap());
-    //println!("{:?}", config.test["foo"]);
-    //thekingdom = TheKingdom::new(config);
+    //let config = Config::new();
+    let thekingdom = TheKingdom::new();
     //xml_generator = XMLGenerator::new();
     //xml_generator.run(thekingdom);
     //xml_generator.save_result(file_manager);
