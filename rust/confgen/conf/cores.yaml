@@ -24,3 +24,4 @@
 26: {name: "Super Arena",     ports: {game: 3346, logic: 4358, http: 8105}}
 27: {name: "Island Robots",   ports: {game: 3347, logic: 4359, http: 8106}}
 28: {name: "Colony_7",        ports: {game: 3348, logic: 4360, http: 8107}}
+29: {name: "North Fyorl",     ports: {game: 3349, logic: 4361, http: 8108}}

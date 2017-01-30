@@ -34,6 +34,7 @@ fn main() {
 
     //let config = Config::new();
     let thekingdom = TheKingdom::new();
+    thekingdom.generate_configs();
     //xml_generator = XMLGenerator::new();
     //xml_generator.run(thekingdom);
     //xml_generator.save_result(file_manager);

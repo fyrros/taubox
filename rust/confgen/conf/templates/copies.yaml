@@ -1,0 +1,68 @@
+main: |
+    <?xml version='1.0' encoding='utf-8'?>
+    <srveye>
+        <xmpp login="srveye@gmail.com" password="thesrveyepwd"/>
+        <smsmail enable="yes" from_addr="mor@skazkastudio.ru" ident="thekingdom">
+            <recipient>rulkov@kor.ru</recipient>
+            <recipient>79039647464@smsmail.ru</recipient>
+        </smsmail>
+
+        <services>
+            <update_svn>
+                <service name="update_logic" smsmail="no" descr="Svn up logic" cmd="svn" args="up /usr/home/logic/LogicServer" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes"/>
+                <service name="update_configs" descr="Svn up configs" cmd="svn" args="up /usr/home/config/7080_configserver/data/" path="/usr/local/bin/" uid="config" gid="config" enable="yes"/>
+            </update_svn>
+            
+            <update_svn_chars>
+                <service name="update_characteristics" smsmail="no" descr="Svn up Characteristics" cmd="svn" args="up /usr/home/game/Characteristics" path="/usr/local/bin/" uid="game" gid="game" enable="yes"/>
+            </update_svn_chars>
+            
+            <service name="configserver" descr="Config server" cmd="twistd" path="/usr/local/bin/" uid="config" gid="config" enable="yes">
+                <param name="args" value="--reactor kqueue -n"/>
+                <param name="args" value="-y /usr/home/config/7080_configserver/bin/sb.py"/>
+                <param name="args" value="--pidfile /usr/home/config/7080_configserver/tmp/twistd.pid"/>
+                <param name="args" value="-l /usr/home/config/7080_configserver/log/twistd.log"/>
+                <param name="args" value="-d /usr/home/config/7080_configserver/"/>
+            </service>
+            
+            <main_secvives>
+                <service name="proxy" smsmail="yes" descr="Game proxy" cmd="proxy.debug" args="-n" path="/home/game/kor/trunk/bin/" uid="game" gid="game" enable="yes"/>
+                <service name="dbproxy" smsmail="yes" descr="DB proxy" cmd="dbproxy.debug" args="-n" path="/home/game/kor/trunk/bin/" uid="game" gid="game" enable="yes"/>
+                <service name="dbproxy_logs" smsmail="yes" descr="DB proxy logs" cmd="dbproxy_logs.debug" args="-n" path="/home/game/kor/trunk/bin/" uid="game" gid="game" enable="yes"/>
+                <service name="dbproxyloginsrv" descr="DB proxy for loginsrv" cmd="dbproxyloginsrv" args="-n" path="/home/game/kor/trunk/bin/" uid="game" gid="game" enable="yes"/>
+                <service name="chatsrv" smsmail="yes" descr="Chat service" cmd="cservice.debug" args="-n" path="/home/game/kor/trunk/bin/" uid="game" gid="game" enable="yes"/>
+                <service name="loginsrv" smsmail="yes" descr="Login service" cmd="loginsrv.debug" args="-n" path="/home/game/kor/trunk/bin/" uid="game" gid="game" enable="yes"/>
+                <service name="auction" smsmail="yes" descr="Auction service" cmd="auction.debug" args="-n" path="/home/game/kor/trunk/bin/" uid="game" gid="game" enable="yes"/>
+            </main_secvives>
+
+            <!-- ### cores ### -->
+            {cores}
+
+            <!-- ### logic ### -->
+            {logic}   
+        </services>
+    </srveye>
+
+core_name_comment: <!-- {core_name} -->
+core: >
+    <service name="{core_copy}" descr="{core_name} #{copy_num}" smsmail="yes" cmd="GMServerd_{core_num}" args="--core-port={game_port}
+    --script-port={logic_port} --http-port={http_port}{extra_params} --profiler-name=core{core_num}mirror{copy_num}
+    --profiler-sampling-seconds=1800 --profiler-report-samples=12"
+    path="/usr/home/game/game{core_num}_{copy_num}/bin/" uid="game" gid="game" enable="yes"/>
+
+logic_group: |
+    <!-- {core_name} #{copy_num} -->
+    <group name="{core_copy}_logic" descr="Logic for {core_name} #{copy_num}" start_timeout="1" enable="yes" run_depend="{core_copy}">
+        {scripts}
+    </group>
+
+logic_service: |
+    <service name="{fullname}" descr="{description}" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+        <param name="args" value="--reactor kqueue -n"/>
+        <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/{core_copy}/{name}.log"/>
+        <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/{core_copy}/{name}.pid"/>
+        <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/{core}/{name}.py"/>
+        <param name="env" value="KOR_HOST={host}"/>
+        <param name="env" value="KOR_PORT={port}"/>
+        <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
+    </service>

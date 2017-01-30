@@ -1,14 +1,15 @@
 use file_manager::FileManager;
 
 use yaml_rust::{Yaml, YamlLoader};
-use std::collections::HashMap;
+use std::collections::{HashMap, BTreeMap};
 
 
-static CORES_FILE_PATH: &'static str        = "conf/cores.yaml";
-static SERVERS_FILE_PATH: &'static str      = "conf/servers.yaml";
-static LOGIC_COMMON_FILE_PATH: &'static str = "conf/logic/common.yaml";
-static LOGIC_CORES_DIR_PATH: &'static str   = "conf/logic/cores";
-static TEMPLATES_XML_DIR_PATH: &'static str = "conf/templates/xml";
+static CORES_FILE_PATH: &'static str             = "conf/cores.yaml";
+static SERVERS_FILE_PATH: &'static str           = "conf/servers.yaml";
+static LOGIC_COMMON_FILE_PATH: &'static str      = "conf/logic/common.yaml";
+static LOGIC_CORES_DIR_PATH: &'static str        = "conf/logic/cores";
+static TEMPLATES_SERVERS_FILE_PATH: &'static str = "conf/templates/servers.yaml";
+static TEMPLATES_COPIES_FILE_PATH: &'static str  = "conf/templates/copies.yaml";
 
 
 #[derive(Debug)]
@@ -17,7 +18,7 @@ pub struct Config {
     servers: Yaml,
     logic_common: Yaml,
     logic_cores: HashMap<String, Yaml>,
-    templates_xml: HashMap<String, String>,
+    templates: Templates,
 }
 
 impl Config {
@@ -31,9 +32,16 @@ impl Config {
             servers: config_loader.load_file(SERVERS_FILE_PATH),
             logic_common: config_loader.load_file(LOGIC_COMMON_FILE_PATH),
             logic_cores: config_loader.load_dir(LOGIC_CORES_DIR_PATH),
-            templates_xml: config_loader.load_dir(TEMPLATES_XML_DIR_PATH),
+            templates: config_loader.load_templates(),
         }
+    }
 
+    pub fn get_cores(&self) -> &BTreeMap<Yaml, Yaml> {
+        self.cores.as_hash().unwrap()
+    }
+
+    pub fn get_servers(&self) -> &BTreeMap<Yaml, Yaml> {
+        self.servers.as_hash().unwrap()
     }
 }
 
@@ -44,6 +52,13 @@ struct ConfigLoader;
 impl ConfigLoader {
     pub fn new() -> ConfigLoader {
         ConfigLoader
+    }
+
+    pub fn load_templates(&self) -> Templates {
+        Templates {
+            copies: self.load_file(TEMPLATES_COPIES_FILE_PATH),
+            servers: self.load_file(TEMPLATES_SERVERS_FILE_PATH),            
+        }
     }
 }
 
@@ -61,3 +76,9 @@ impl FileManager<Yaml> for ConfigLoader {
 }
 
 
+#[derive(Debug)]
+struct Templates {
+    copies: Yaml,
+    servers: Yaml,
+    //scripts: Yaml
+}
