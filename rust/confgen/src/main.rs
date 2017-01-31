@@ -3,6 +3,9 @@ extern crate yaml_rust;
 mod config;
 mod file_manager;
 mod thekingdom;
+mod core;
+mod server;
+mod types;
 
 use thekingdom::TheKingdom;
 
