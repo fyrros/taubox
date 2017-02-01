@@ -50,7 +50,7 @@ impl Config {
         &self.logic_common
     }
 
-    pub fn get_logic(&self, core_id: &Id) -> &Yaml {
+    pub fn get_core_logic(&self, core_id: &Id) -> &Yaml {
         if let Some(yaml_config) = self.logic_cores.get(core_id) {
             yaml_config
         } else {

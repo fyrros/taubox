@@ -6,7 +6,7 @@ use types::*;
 use core::Core;
 use server::Server;
 use config::Config;
-use logic::LogicCommon;
+use logic::*;
 
 
 #[derive(Debug)]
@@ -14,7 +14,7 @@ pub struct TheKingdom {
     config: Config,
     cores: HashMap<Id,Core>,
     servers: HashMap<Id,Server>,
-    logic_common: LogicCommon,
+    logic: LogicManager,
 }
 
 
@@ -30,7 +30,7 @@ impl TheKingdom {
             config: Config::new(),
             cores: HashMap::new(),
             servers: HashMap::new(),
-            logic_common: LogicCommon::new(),
+            logic: LogicManager::new(),
         };
 
         thekingdom.load_logic();
@@ -41,17 +41,21 @@ impl TheKingdom {
     }
 
     fn load_logic(&mut self) {
-        self.logic_common.load(self.config.get_logic_common());
+        self.logic.load_common(self.config.get_logic_common());
     }
 
     fn load_cores(&mut self) {
         for (core_id_yaml, core_config) in self.config.get_cores() {
             let core_id = get_id(core_id_yaml);
-            let mut core = Core::new(core_id, core_config);
-            let logic_config = self.config.get_logic(&core_id);
-            core.add_logic(logic_config, &self.logic_common);
+            let core_logic = self.get_core_logic(&core_id);
+            let mut core = Core::new(core_id, core_config, core_logic);
             self.cores.insert(core_id, core);
         }
+    }
+
+    fn get_core_logic(&self, core_id: &Id) -> Vec<LogicScript> {
+        let logic_config = self.config.get_core_logic(&core_id);
+        self.logic.collect_core_logic(logic_config)
     }
 
     fn load_servers(&mut self) {

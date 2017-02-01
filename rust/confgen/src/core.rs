@@ -18,12 +18,12 @@ pub struct Core {
 
 impl Core {
     
-    pub fn new(core_id: Id, core_config: &Yaml) -> Core {
+    pub fn new(core_id: Id, core_config: &Yaml, core_logic: Vec<LogicScript>) -> Core {
         Core {
             id: core_id,
             name: core_config["name"].as_str().unwrap().to_string(),
             ports: Ports::new(&core_config["ports"]),
-            logic: Vec::new(),
+            logic: core_logic,
             copies: Vec::new(),
             extra_params: match core_config["extra_params"].as_str() {
                 Some(s) => Some(s.to_string()),
@@ -47,10 +47,6 @@ impl Core {
 
     pub fn add_copy(&mut self, copy_num: Id, server_ip: &str) {
         self.copies.push(CoreCopy::new(copy_num, server_ip));
-    }
-
-    pub fn add_logic(&mut self, logic: &Yaml, logic_common: &LogicCommon) {
-
     }
 }
 

@@ -4,31 +4,37 @@ use yaml_rust::Yaml;
 
 
 #[derive(Debug)]
-pub struct LogicCommon {
+pub struct LogicManager {
     auto_include: Vec<LogicScript>,
 }
 
-impl LogicCommon {
+impl LogicManager {
     
-    pub fn new() -> LogicCommon {
-        LogicCommon {
+    pub fn new() -> LogicManager {
+        LogicManager {
             auto_include: Vec::new(),
         }
     }
 
-    pub fn load(&mut self, config: &Yaml) {
+    pub fn load_common(&mut self, config: &Yaml) {
     	let ref special_rules = config["special_rules"];
     	for script_name in config["auto_include"].as_vec().unwrap() {
-    		self.add_script(&script_name, &special_rules);
+    		let script = self.new_script(&script_name, &special_rules);
+            self.auto_include.push(script);
     	}
     }
 
-    fn add_script(&mut self, script_name: &Yaml, special_rules: &Yaml) {
+    fn new_script(&mut self, script_name: &Yaml, special_rules: &Yaml) -> LogicScript {
     	let mut logic_script = LogicScript::new(script_name.as_str().unwrap());
     	if let Some(yaml_string) = special_rules.as_hash().unwrap().get(script_name) {
     		let path = yaml_string.as_str().unwrap();
     		logic_script.set_path(path);
     	}
+        logic_script
+    }
+
+    pub fn collect_core_logic(&self, config: &Yaml) -> Vec<LogicScript> {
+        
     }
 }
 
