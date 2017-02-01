@@ -1,7 +1,9 @@
 use file_manager::FileManager;
 
+use types::*;
 use yaml_rust::{Yaml, YamlLoader};
 use std::collections::{HashMap, BTreeMap};
+use std::path::PathBuf;
 
 
 static CORES_FILE_PATH: &'static str             = "conf/cores.yaml";
@@ -17,7 +19,7 @@ pub struct Config {
     cores: Yaml,
     servers: Yaml,
     logic_common: Yaml,
-    logic_cores: HashMap<String, Yaml>,
+    logic_cores: HashMap<Id, Yaml>,
     templates: Templates,
 }
 
@@ -43,6 +45,19 @@ impl Config {
     pub fn get_servers(&self) -> &BTreeMap<Yaml, Yaml> {
         self.servers.as_hash().unwrap()
     }
+
+    pub fn get_logic_common(&self) -> &Yaml {
+        &self.logic_common
+    }
+
+    pub fn get_logic(&self, core_id: &Id) -> &Yaml {
+        if let Some(yaml_config) = self.logic_cores.get(core_id) {
+            yaml_config
+        } else {
+            println!("Logic for {:?} not found!", core_id);
+            panic!();
+        }
+    }
 }
 
 
@@ -62,16 +77,24 @@ impl ConfigLoader {
     }
 }
 
-impl FileManager<String> for ConfigLoader {
+impl FileManager<String, String> for ConfigLoader {
     fn convert(&self, file_str: String) -> String {
         file_str
     }
+
+    fn get_file_key(&self, entry_path: &PathBuf) -> String {
+        entry_path.file_stem().unwrap().to_str().unwrap().to_string()
+    }
 }
 
-impl FileManager<Yaml> for ConfigLoader {
+impl FileManager<Id, Yaml> for ConfigLoader {
     fn convert(&self, file_str: String) -> Yaml {
         let docs = YamlLoader::load_from_str(&file_str).unwrap();
         docs[0].clone()
+    }
+
+    fn get_file_key(&self, entry_path: &PathBuf) -> Id {
+        entry_path.file_stem().unwrap().to_str().unwrap().parse().unwrap()
     }
 }
 

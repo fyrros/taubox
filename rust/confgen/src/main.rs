@@ -3,6 +3,7 @@ extern crate yaml_rust;
 mod config;
 mod file_manager;
 mod thekingdom;
+mod logic;
 mod core;
 mod server;
 mod types;
@@ -35,18 +36,7 @@ fn main() {
 	      - FileManagerCommand
     */
 
-    //let config = Config::new();
     let thekingdom = TheKingdom::new();
     thekingdom.generate_configs();
-    //xml_generator = XMLGenerator::new();
-    //xml_generator.run(thekingdom);
-    //xml_generator.save_result(file_manager);
-
-    /*
-	py_generator = PYGenerator::new();
-	py_generator.run(thekingdom);
-	py_generator.save_result();
-    */
-    //file_manager.save_result_xml(xml_generator.result());
 }
 

@@ -2,19 +2,22 @@ use std::collections::HashMap;
 use std::path::PathBuf;
 use std::fs::{read_dir, File};
 use std::io::prelude::*;
+use std::hash::Hash;
+use std::str::FromStr;
+use types::*;
 
-pub trait FileManager<T> {
+pub trait FileManager<K:Eq+Hash+FromStr, V> {
 
     fn get_path(&self, path_str: &str) -> PathBuf {
         PathBuf::from(path_str)
     }
 
-    fn load_file(&self, path_str: &str) -> T {
+    fn load_file(&self, path_str: &str) -> V {
         let path = self.get_path(path_str);
         self.open_and_convert(&path)
     }
 
-    fn load_dir(&self, path_str: &str) -> HashMap<String, T> {
+    fn load_dir(&self, path_str: &str) -> HashMap<K,V> {
         let path = self.get_path(path_str);
         let mut result = HashMap::new();
         for entry in read_dir(path.as_path()).unwrap() {
@@ -27,11 +30,9 @@ pub trait FileManager<T> {
         result
     }
 
-    fn get_file_key(&self, entry_path: &PathBuf) -> String {
-        entry_path.file_stem().unwrap().to_str().unwrap().to_string()
-    }
+    fn get_file_key(&self, entry_path: &PathBuf) -> K;
 
-    fn open_and_convert(&self, path: &PathBuf) -> T {
+    fn open_and_convert(&self, path: &PathBuf) -> V {
         let file_str = self.open(path);
         self.convert(file_str)
     }
@@ -43,5 +44,5 @@ pub trait FileManager<T> {
         result
     }
 
-    fn convert(&self, file_str: String) -> T;
+    fn convert(&self, file_str: String) -> V;
 }

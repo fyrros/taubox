@@ -2,6 +2,7 @@ use std::collections::{HashMap};
 
 use yaml_rust::Yaml;
 
+use logic::*;
 use types::*;
 
 
@@ -46,6 +47,10 @@ impl Core {
 
     pub fn add_copy(&mut self, copy_num: Id, server_ip: &str) {
         self.copies.push(CoreCopy::new(copy_num, server_ip));
+    }
+
+    pub fn add_logic(&mut self, logic: &Yaml, logic_common: &LogicCommon) {
+
     }
 }
 
@@ -95,13 +100,5 @@ impl CoreCopy {
             server_ip: server_ip.to_string(),
         }
     }
-}
-
-
-#[derive(Debug)]
-struct LogicScript {
-    name: String,
-    path: String,
-    description: String,
 }
 
