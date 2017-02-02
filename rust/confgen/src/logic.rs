@@ -1,6 +1,5 @@
-//use std::collections::{BTreeMap};
-
 use yaml_rust::Yaml;
+use std::collections::{BTreeMap};
 
 
 #[derive(Debug)]
@@ -14,7 +13,7 @@ impl<'a> LogicManager<'a> {
     pub fn new() -> LogicManager<'a> {
         LogicManager {
             auto_include: Vec::new(),
-            folders_order: vec!["quests","social","instances"],
+            folders_order: vec!["quests","social","instances","mobs"],
         }
     }
 
@@ -28,10 +27,18 @@ impl<'a> LogicManager<'a> {
 
     fn new_auto_include_script(&mut self, script_name: &Yaml, special_rules: &Yaml) -> LogicScript {
         let mut path = None;
-    	if let Some(yaml_string) = special_rules.as_hash().unwrap().get(script_name) {
-    		path = yaml_string.as_str();
+    	if let Some(yaml_string) = special_rules[script_name.as_str().unwrap()].as_str() {
+    		path = Some(yaml_string.to_string());
     	}
-        self.new_script(script_name.as_str().unwrap(), path)
+        self.new_script(script_name, path)
+    }
+
+    fn new_script(&self, script_name: &Yaml, path: Option<String>) -> LogicScript {
+        let mut script = LogicScript::new(script_name.as_str().unwrap());
+        if let Some(path_str) = path {
+            script.set_path(path_str)
+        }
+        script
     }
 
     pub fn collect_core_logic(&self, config: &Yaml) -> Vec<LogicScript> {
@@ -39,7 +46,6 @@ impl<'a> LogicManager<'a> {
         self.add_auto_include(&mut core_logic, &config["exclude"]);        
         self.add_regular_include(&mut core_logic, &config["include"]);
         //TODO: self.add_groups(core_logic, config["groups"]);
-
         core_logic
     }
 
@@ -57,22 +63,40 @@ impl<'a> LogicManager<'a> {
 
     fn add_regular_include(&self, core_logic: &mut Vec<LogicScript>, include_config: &Yaml) {
         for folder_name in self.folders_order.iter() {
-            if let Some(folder_scripts) = include_config[*folder_name].as_vec() {
-                for yaml_script_name in folder_scripts.iter() {
-                    let script_name = yaml_script_name.as_str().unwrap();
-                    let script = self.new_script(script_name, format!("{}/{}", *folder_name, script_name));
-                    core_logic.push(script)
-                }
+            match include_config[*folder_name] {
+                Yaml::Array(ref list_dir) => self.add_folder(core_logic, *folder_name, list_dir),
+                Yaml::Hash(ref hash_dir) => self.add_tree(core_logic, *folder_name, hash_dir),
+                _ => {}
             }
         }
     }
 
-    fn new_script(&self, script_name: &str, path: Option<&str>) -> LogicScript {
-        let mut script = LogicScript::new(script_name);
-        if let Some(path_str) = path {
-            script.set_path(path_str)
+    fn add_folder(&self, core_logic: &mut Vec<LogicScript>, path: &str, config: &Vec<Yaml>) {
+        for script_name in config {
+            self.add_script(core_logic, &script_name, path);
         }
-        script
+    }
+
+    fn add_tree(&self, core_logic: &mut Vec<LogicScript>, root_dir: &str, tree: &BTreeMap<Yaml,Yaml>) {
+        for (folder_name, folder_scripts) in tree.iter() {
+            let path = self.get_path(root_dir, folder_name);
+            self.add_folder(core_logic, path.as_str(), folder_scripts.as_vec().unwrap());
+        }
+    }
+
+    fn add_script(&self, logic: &mut Vec<LogicScript>, script_name: &Yaml, path: &str) {
+        let full_path = self.get_path(path, script_name);
+        let script = self.new_script(script_name, Some(full_path));
+        logic.push(script)
+    }
+
+    fn get_path(&self, path_start: &str, yaml_path_end: &Yaml) -> String {
+        let path_end = yaml_path_end.as_str().unwrap();
+        if path_end != "_" {
+            vec![path_start, path_end].join("/")
+        } else {
+            path_start.to_string()
+        }
     }
 }
 
@@ -94,8 +118,8 @@ impl LogicScript {
     	}
     }
 
-    fn set_path(&mut self, path: &str) {
-    	self.path = path.to_string();
+    fn set_path(&mut self, path: String) {
+    	self.path = path;
     }
 
     fn get_yaml_name(&self) -> Yaml {

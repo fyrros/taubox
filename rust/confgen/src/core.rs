@@ -1,5 +1,3 @@
-use std::collections::{HashMap};
-
 use yaml_rust::Yaml;
 
 use logic::*;
