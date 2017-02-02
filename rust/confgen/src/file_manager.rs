@@ -4,7 +4,7 @@ use std::fs::{read_dir, File};
 use std::io::prelude::*;
 use std::hash::Hash;
 use std::str::FromStr;
-use types::*;
+
 
 pub trait FileManager<K:Eq+Hash+FromStr, V> {
 

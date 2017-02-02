@@ -10,11 +10,11 @@ use logic::*;
 
 
 #[derive(Debug)]
-pub struct TheKingdom {
+pub struct TheKingdom<'a> {
     config: Config,
     cores: HashMap<Id,Core>,
     servers: HashMap<Id,Server>,
-    logic: LogicManager,
+    logic: LogicManager<'a>,
 }
 
 
@@ -23,9 +23,9 @@ fn get_id(yaml_id: &Yaml) -> Id {
 }
 
 
-impl TheKingdom {
+impl<'a> TheKingdom<'a> {
 
-    pub fn new() -> TheKingdom {
+    pub fn new() -> TheKingdom<'a> {
         let mut thekingdom = TheKingdom {
             config: Config::new(),
             cores: HashMap::new(),
@@ -48,7 +48,7 @@ impl TheKingdom {
         for (core_id_yaml, core_config) in self.config.get_cores() {
             let core_id = get_id(core_id_yaml);
             let core_logic = self.get_core_logic(&core_id);
-            let mut core = Core::new(core_id, core_config, core_logic);
+            let core = Core::new(core_id, core_config, core_logic);
             self.cores.insert(core_id, core);
         }
     }
