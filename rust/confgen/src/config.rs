@@ -130,5 +130,5 @@ impl ConfigFile {
     }
 }
 
-impl<'a> FilePath for ConfigFile{}
-impl<'a> FileSaver for ConfigFile{}
+impl FilePath for ConfigFile{}
+impl FileSaver for ConfigFile{}
