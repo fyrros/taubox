@@ -6,11 +6,27 @@ use std::hash::Hash;
 use std::str::FromStr;
 
 
-pub trait FileManager<K:Eq+Hash+FromStr, V> {
-
+pub trait FilePath {
+    
     fn get_path(&self, path_str: &str) -> PathBuf {
         PathBuf::from(path_str)
     }
+}
+
+pub trait FileSaver : FilePath {
+
+    fn save_file(&self, path_str: &str, body: &str) {
+        let path = self.get_path(path_str);
+        self.save(&path, body);
+    }
+
+    fn save(&self, path: &PathBuf, body: &str) {
+        let mut file = File::create(path).unwrap();
+        let _ = file.write_all(body.as_bytes());
+    }
+}
+
+pub trait FileLoader<K:Eq+Hash+FromStr, V> : FilePath {
 
     fn load_file(&self, path_str: &str) -> V {
         let path = self.get_path(path_str);
@@ -30,8 +46,6 @@ pub trait FileManager<K:Eq+Hash+FromStr, V> {
         result
     }
 
-    fn get_file_key(&self, entry_path: &PathBuf) -> K;
-
     fn open_and_convert(&self, path: &PathBuf) -> V {
         let file_str = self.open(path);
         self.convert(file_str)
@@ -45,4 +59,6 @@ pub trait FileManager<K:Eq+Hash+FromStr, V> {
     }
 
     fn convert(&self, file_str: String) -> V;
+
+    fn get_file_key(&self, entry_path: &PathBuf) -> K;
 }

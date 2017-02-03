@@ -1,4 +1,4 @@
-use file_manager::FileManager;
+use file_manager::*;
 
 use types::*;
 use yaml_rust::{Yaml, YamlLoader};
@@ -77,7 +77,10 @@ impl ConfigLoader {
     }
 }
 
-impl FileManager<String, String> for ConfigLoader {
+impl FilePath for ConfigLoader{}
+
+impl FileLoader<String, String> for ConfigLoader {
+
     fn convert(&self, file_str: String) -> String {
         file_str
     }
@@ -87,7 +90,8 @@ impl FileManager<String, String> for ConfigLoader {
     }
 }
 
-impl FileManager<Id, Yaml> for ConfigLoader {
+impl FileLoader<Id, Yaml> for ConfigLoader {
+
     fn convert(&self, file_str: String) -> Yaml {
         let docs = YamlLoader::load_from_str(&file_str).unwrap();
         docs[0].clone()
@@ -105,3 +109,26 @@ struct Templates {
     servers: Yaml,
     //scripts: Yaml
 }
+
+#[derive(Debug)]
+pub struct ConfigFile {
+    path: String,
+    body: String,
+}
+
+impl ConfigFile {
+    
+    pub fn new(path_string: String, body: String) -> ConfigFile {
+        ConfigFile {
+            path: path_string,
+            body: body,
+        }
+    }
+
+    pub fn save_config(&self) {
+        self.save_file(self.path.as_str(), self.body.as_str());
+    }
+}
+
+impl<'a> FilePath for ConfigFile{}
+impl<'a> FileSaver for ConfigFile{}
