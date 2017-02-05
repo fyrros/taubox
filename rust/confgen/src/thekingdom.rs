@@ -74,17 +74,14 @@ impl<'a> TheKingdom<'a> {
     
     pub fn generate(&self) {
         // servers
-        let servers_configs = self.generate_servers_configs_files();
-        for config_file in servers_configs {
-            config_file.save_config();
-        }
-
-        for (server_id, server_config) in self.servers {
-            let game_path = format!(RESULT_CORE_XML_FILE_PATH, server_id);
-            let logic_path = format!(RESULT_LOGIC_XML_FILE_PATH, server_id);
-            let (game_body, logic_body) = self.genrate_server_result(server_config);
-            let config_str = self.generate_server_config();
-            config_file.save_config()
+        for (server_id, server_config) in self.servers.iter() {
+            let game_path = self.format(RESULT_CORE_XML_FILE_PATH.to_string(), "{}", server_id.to_string());
+            let logic_path = self.format(RESULT_LOGIC_XML_FILE_PATH.to_string(), "{}", server_id.to_string());
+            let (game_body, logic_body) = self.genrate_server_result(&server_config);
+            let gameserver_result_file = ConfigFile::new(game_path, game_body);
+            let logicserver_result_file = ConfigFile::new(logic_path, logic_body);
+            gameserver_result_file.save_config();
+            logicserver_result_file.save_config();
         }
 
         // cores
@@ -94,11 +91,15 @@ impl<'a> TheKingdom<'a> {
         cores_result_file.save_config();
     }
 
-    fn genrate_server_result(&self, config: &Server) -> Vec<ConfigFile> {
-        Vec::new()
+    fn genrate_server_result(&self, config: &Server) -> (String, String) {
+        unimplemented!()
     }
 
     fn generate_cores_result(&self) -> String {
         String::new()
+    }
+
+    fn format(&self, template: String, keyword: &str, value: String) -> String {
+        template.as_str().replace(keyword, value.as_str())
     }
 }

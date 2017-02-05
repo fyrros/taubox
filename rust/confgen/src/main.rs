@@ -37,6 +37,6 @@ fn main() {
     */
 
     let thekingdom = TheKingdom::new();
-    thekingdom.generate_configs();
+    thekingdom.generate();
 }
 
