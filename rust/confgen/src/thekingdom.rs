@@ -124,13 +124,26 @@ impl<'a> TheKingdom<'a> {
     }
 
 
-    fn generate_logicserver(&self, server_config: &Server) -> String {
-        let logic_body = String::new();
+    fn generate_logicserver(&self, server: &Server) -> String {
         let logicservers = self.config.get_template("logicservers");
         let logicserver_copy = self.config.get_template("logicserver_copy");
         let logicserver_include = self.config.get_template("logicserver_include");
         
-        logic_body
+        let mut copies: Vec<String> = Vec::new();
+        let mut includes: Vec<String> = Vec::new();
+
+        for core_copy in server.get_copies() {
+            let copy_vars = core_copy.get_vars(server.get_logic_ip());
+            copies.push(strfmt(logicserver_copy, &copy_vars).unwrap());
+            includes.push(strfmt(logicserver_include, &copy_vars).unwrap());
+        }
+
+        let logicservers_vars = hashmap!{
+            "copies" => copies.join(TAB_IN_SERVERS),
+            "includes" => includes.join(TAB_IN_SERVERS)
+        };
+
+        strfmt(logicservers, &logicservers_vars).unwrap()
     }
 
     fn generate_cores_result(&self) -> String {
