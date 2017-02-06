@@ -1,6 +1,7 @@
-use std::collections::{HashMap};
+use std::collections::HashMap;
 
 use yaml_rust::Yaml;
+use strfmt::strfmt;
 
 use types::*;
 use core::Core;
@@ -13,6 +14,12 @@ static RESULT_TEMPLATES_XML_FILE_PATH: &'static str  = "result/templates.xml";
 static RESULT_CORE_XML_FILE_PATH: &'static str       = "result/core{}.xml";
 static RESULT_LOGIC_XML_FILE_PATH: &'static str      = "result/logic{}.xml";
 
+static TAB_IN_SERVERS: &'static str = "        ";
+
+fn get_id(yaml_id: &Yaml) -> Id {
+    yaml_id.as_i64().unwrap() as Id
+}
+
 
 #[derive(Debug)]
 pub struct TheKingdom<'a> {
@@ -22,12 +29,7 @@ pub struct TheKingdom<'a> {
     logic: LogicManager<'a>,
 }
 
-
-fn get_id(yaml_id: &Yaml) -> Id {
-    yaml_id.as_i64().unwrap() as Id
-}
-
-
+#[allow(unused_variables)]
 impl<'a> TheKingdom<'a> {
 
     pub fn new() -> TheKingdom<'a> {
@@ -75,9 +77,10 @@ impl<'a> TheKingdom<'a> {
     pub fn generate(&self) {
         // servers
         for (server_id, server_config) in self.servers.iter() {
-            let game_path = self.format(RESULT_CORE_XML_FILE_PATH.to_string(), "{}", server_id.to_string());
-            let logic_path = self.format(RESULT_LOGIC_XML_FILE_PATH.to_string(), "{}", server_id.to_string());
-            let (game_body, logic_body) = self.genrate_server_result(&server_config);
+            let server_id_vars = hashmap!{"id" => server_id};
+            let game_path = strfmt(RESULT_CORE_XML_FILE_PATH, &server_id_vars).unwrap();
+            let logic_path = strfmt(RESULT_LOGIC_XML_FILE_PATH, &server_id_vars).unwrap();
+            let (game_body, logic_body) = self.generate_server_result(&server_config);
             let gameserver_result_file = ConfigFile::new(game_path, game_body);
             let logicserver_result_file = ConfigFile::new(logic_path, logic_body);
             gameserver_result_file.save_config();
@@ -91,15 +94,46 @@ impl<'a> TheKingdom<'a> {
         cores_result_file.save_config();
     }
 
-    fn genrate_server_result(&self, config: &Server) -> (String, String) {
-        unimplemented!()
+    fn generate_server_result(&self, config: &Server) -> (String, String) {
+        let game_body = self.generate_gameserver(config);
+        let logic_body = self.generate_logicserver(config);
+
+        (game_body, logic_body)
+    }
+
+    fn generate_gameserver(&self, server: &Server) -> String {
+        let gameservers = self.config.get_template("gameservers");
+        let gameserver_copy = self.config.get_template("gameserver_copy");
+        let gameserver_include = self.config.get_template("gameserver_include");
+
+        let mut copies: Vec<String> = Vec::new();
+        let mut includes: Vec<String> = Vec::new();
+
+        for core_copy in server.get_copies() {
+            let copy_vars = core_copy.get_vars(server.get_game_ip());
+            copies.push(strfmt(gameserver_copy, &copy_vars).unwrap());
+            includes.push(strfmt(gameserver_include, &copy_vars).unwrap());
+        }
+
+        let gameservers_vars = hashmap!{
+            "copies" => copies.join(TAB_IN_SERVERS),
+            "includes" => includes.join(TAB_IN_SERVERS)
+        };
+
+        strfmt(gameservers, &gameservers_vars).unwrap()
+    }
+
+
+    fn generate_logicserver(&self, server_config: &Server) -> String {
+        let logic_body = String::new();
+        let logicservers = self.config.get_template("logicservers");
+        let logicserver_copy = self.config.get_template("logicserver_copy");
+        let logicserver_include = self.config.get_template("logicserver_include");
+        
+        logic_body
     }
 
     fn generate_cores_result(&self) -> String {
         String::new()
-    }
-
-    fn format(&self, template: String, keyword: &str, value: String) -> String {
-        template.as_str().replace(keyword, value.as_str())
     }
 }

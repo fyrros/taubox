@@ -1,4 +1,4 @@
-use std::collections::{HashMap};
+use std::collections::HashMap;
 
 use yaml_rust::Yaml;
 
@@ -43,13 +43,21 @@ impl Server {
         };
     }
 
-    fn get_game_ip(&self) -> &str {
+    pub fn get_copies(&self) -> &Vec<ServerCopyInfo> {
+        &self.copies
+    }
+
+    pub fn get_game_ip(&self) -> &str {
         self.game.get_ip()
+    }
+
+    pub fn get_logic_ip(&self) -> &str {
+        self.logic.get_ip()
     }
 }
 
 #[derive(Debug)]
-struct ServerInfo {
+pub struct ServerInfo {
     ident: String,
     ip: String,
 }
@@ -70,7 +78,7 @@ impl ServerInfo {
 }
 
 #[derive(Debug)]
-struct ServerCopyInfo {
+pub struct ServerCopyInfo {
     num: Id,
     core_id: Id,
     core_name: String,
@@ -85,6 +93,16 @@ impl ServerCopyInfo {
             core_id: core_id,
             core_name: core_name.clone(),
             http_port: http_port.clone(),
+        }
+    }
+
+    pub fn get_vars(&self, ip: &str) -> HashMap<String, String> {
+        hashmap!{
+            "ip" => ip,
+            "core_id" => self.core_id,
+            "copy_num" => self.num,
+            "core_name" => self.core_name,
+            "http_port" => self.http_port
         }
     }
 }

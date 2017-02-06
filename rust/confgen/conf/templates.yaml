@@ -1,4 +1,65 @@
-main: |
+### ==== SERVERS ==== #### 
+
+gameservers: | 
+  <?xml version='1.0' encoding='utf-8'?>
+  <srveye xmlns:xi="http://www.w3.org/2001/XInclude">
+
+      <xmpp login="srveye@gmail.com" password="thesrveyepwd"/>
+
+      <smsmail enable="yes" from_addr="mor@skazkastudio.ru" ident="{ident}">
+          <xi:include href="../smsmail.xml" parse="xml" xpointer="xpointer(//recipient)"/>
+      </smsmail>
+
+      <gameservers>
+          {copies}
+      </gameservers>
+
+      <services>
+          <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//update_svn_chars/service)"/>
+          {includes}
+      </services>
+
+      <rrd>
+          <path>/var/db/srveye</path>
+      </rrd>
+
+  </srveye>
+gameserver_copy: '<host ident="core{core_id}_{copy_num}" ip="{ip}" port="{http_port}">{core_name} ##{copy_num}</host>'
+gameserver_include: '<xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//service[@name=''core{core_id}_{copy_num}''])"/>'
+
+logicservers: |
+  <?xml version='1.0' encoding='utf-8'?>
+  <srveye xmlns:xi="http://www.w3.org/2001/XInclude">
+
+      <xmpp login="srveye@gmail.com" password="thesrveyepwd"/>
+
+      <smsmail enable="yes" from_addr="mor@skazkastudio.ru" ident="{ident}">
+          <xi:include href="../smsmail.xml" parse="xml" xpointer="xpointer(//recipient)"/>
+      </smsmail>
+
+      <xi:include href="core{server_id}.xml" parse="xml" xpointer="xpointer(//gameservers)"/>
+          
+      <logicservers>
+          {copies}
+      </logicservers>
+
+      <services>
+          <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//update_svn/service)"/>
+          {includes}
+      </services>
+
+      <rrd>
+          <path>/var/db/srveye</path>
+      </rrd>
+
+  </srveye>
+logicserver_copy: '<host ident="core{core_id}_{copy_num}_logic" ip="{ip}">{core_name} ##{copy_num} logic</host>'
+logicserver_include: '<xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//group[@name=''core{core_id}_{copy_num}_logic''])"/>'
+
+
+### ==== COPIES ==== ####
+
+logic_main: |
     <?xml version='1.0' encoding='utf-8'?>
     <srveye>
         <xmpp login="srveye@gmail.com" password="thesrveyepwd"/>
@@ -44,25 +105,25 @@ main: |
     </srveye>
 
 core_name_comment: <!-- {core_name} -->
-core: >
-    <service name="{core_copy}" descr="{core_name} #{copy_num}" smsmail="yes" cmd="GMServerd_{core_num}" args="--core-port={game_port}
+core_service: >
+    <service name="core{core_id}_{copy_num}" descr="{core_name} #{copy_num}" smsmail="yes" cmd="GMServerd_{core_id}" args="--core-port={game_port}
     --script-port={logic_port} --http-port={http_port}{extra_params} --profiler-name=core{core_num}mirror{copy_num}
     --profiler-sampling-seconds=1800 --profiler-report-samples=12"
-    path="/usr/home/game/game{core_num}_{copy_num}/bin/" uid="game" gid="game" enable="yes"/>
+    path="/usr/home/game/game{core_id}_{copy_num}/bin/" uid="game" gid="game" enable="yes"/>
 
 logic_group: |
     <!-- {core_name} #{copy_num} -->
-    <group name="{core_copy}_logic" descr="Logic for {core_name} #{copy_num}" start_timeout="1" enable="yes" run_depend="{core_copy}">
+    <group name="core{core_id}_{copy_num}_logic" descr="Logic for {core_name} #{copy_num}" start_timeout="1" enable="yes" run_depend="{core_copy}">
         {scripts}
     </group>
 
 logic_service: |
     <service name="{fullname}" descr="{description}" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
         <param name="args" value="--reactor kqueue -n"/>
-        <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/{core_copy}/{name}.log"/>
-        <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/{core_copy}/{name}.pid"/>
-        <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/{core}/{name}.py"/>
-        <param name="env" value="KOR_HOST={host}"/>
-        <param name="env" value="KOR_PORT={port}"/>
+        <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core{core_id}_{copy_num}/{name}.log"/>
+        <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core{core_id}_{copy_num}/{name}.pid"/>
+        <param name="args" value="-y /usr/home/logic/LogicServer/runing/service/core{core_id}/{name}.py"/>
+        <param name="env" value="KOR_HOST={server_ip}"/>
+        <param name="env" value="KOR_PORT={game_port}"/>
         <param name="env" value="KOR_CONFIG_SOURCE=http://10.10.10.35:7080/logicserver/config/"/>
     </service>

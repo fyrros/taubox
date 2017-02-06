@@ -1,4 +1,8 @@
 extern crate yaml_rust;
+extern crate strfmt;
+
+#[macro_use]
+mod utils;
 
 mod config;
 mod file_manager;

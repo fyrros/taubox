@@ -1,8 +1,8 @@
 [package]
 name = "confgen"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Alex Rulkov <fyrros@gmail.com>"]
 
 [dependencies]
+strfmt = "0.1.5"
 yaml-rust = "0.3.5"
-#yaml-rust = { git = "https://github.com/fateknot/yaml-rust.git" }
