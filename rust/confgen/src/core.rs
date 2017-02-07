@@ -58,12 +58,17 @@ impl Core {
     }
 
     pub fn get_vars(&self) -> HashMap<String, String> {
+        let extra_params = match &self.extra_params {
+            &Some(ref s) => s.clone(),
+            &None => "".to_string(),
+        };
         hashmap!{
             "core_id" => self.id,
             "core_name" => self.name,
             "game_port" => self.ports.get_game(),
             "logic_port" => self.ports.get_logic(),
-            "http_port" => self.ports.get_http()
+            "http_port" => self.ports.get_http(),
+            "extra_params" => extra_params
         }
     }
 }

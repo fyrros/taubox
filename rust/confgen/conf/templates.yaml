@@ -24,7 +24,7 @@ gameservers: |
       </rrd>
 
   </srveye>
-gameserver_copy: '<host ident="core{core_id}_{copy_num}" ip="{ip}" port="{http_port}">{core_name} ##{copy_num}</host>'
+gameserver_copy: '<host ident="core{core_id}_{copy_num}" ip="{ip}" port="{http_port}">{core_name} #{copy_num}</host>'
 gameserver_include: '<xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//service[@name=''core{core_id}_{copy_num}''])"/>'
 
 logicservers: |
@@ -53,7 +53,7 @@ logicservers: |
       </rrd>
 
   </srveye>
-logicserver_copy: '<host ident="core{core_id}_{copy_num}_logic" ip="{ip}">{core_name} ##{copy_num} logic</host>'
+logicserver_copy: '<host ident="core{core_id}_{copy_num}_logic" ip="{ip}">{core_name} #{copy_num} logic</host>'
 logicserver_include: '<xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//group[@name=''core{core_id}_{copy_num}_logic''])"/>'
 
 
@@ -107,7 +107,7 @@ logic_main: |
 core_name_comment: <!-- {core_name} -->
 core_service: >
     <service name="core{core_id}_{copy_num}" descr="{core_name} #{copy_num}" smsmail="yes" cmd="GMServerd_{core_id}" args="--core-port={game_port}
-    --script-port={logic_port} --http-port={http_port}{extra_params} --profiler-name=core{core_num}mirror{copy_num}
+    --script-port={logic_port} --http-port={http_port}{extra_params} --profiler-name=core{core_id}mirror{copy_num}
     --profiler-sampling-seconds=1800 --profiler-report-samples=12"
     path="/usr/home/game/game{core_id}_{copy_num}/bin/" uid="game" gid="game" enable="yes"/>
 

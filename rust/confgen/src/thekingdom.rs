@@ -128,6 +128,7 @@ impl<'a> TheKingdom<'a> {
         let servers_template = self.config.get_template(format!("{}servers", server_type.name).as_str());
         let servers_vars = hashmap!{
             "ident" => server_ident,
+            "server_id" => server.get_id(),
             "copies" => copies.join(TAB_IN_SERVERS),
             "includes" => includes.join(TAB_IN_SERVERS)
         };
@@ -143,8 +144,11 @@ impl<'a> TheKingdom<'a> {
         let core_service_template = self.config.get_template("core_service");
         let logic_group_template = self.config.get_template("logic_group");
         let logic_service_template = self.config.get_template("logic_service");
+        let mut cores_ids = self.cores.keys().collect::<Vec<&Id>>();
+        cores_ids.sort();
 
-        for (core_id, core) in self.cores.iter() {
+        for core_id in cores_ids.iter() {
+            let core = self.cores.get(core_id).unwrap();
             let mut core_vars = core.get_vars();
             cores.push(strfmt(core_name_comment_template, &core_vars).unwrap());
             for copy in core.get_copies() {
