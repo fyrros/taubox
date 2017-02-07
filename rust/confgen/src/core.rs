@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 use yaml_rust::Yaml;
 
 use logic::*;
@@ -46,6 +48,24 @@ impl Core {
     pub fn add_copy(&mut self, copy_num: Id, server_ip: &str) {
         self.copies.push(CoreCopy::new(copy_num, server_ip));
     }
+
+    pub fn get_copies(&self) -> &Vec<CoreCopy> {
+        &self.copies
+    }
+
+    pub fn get_logic(&self) -> &Vec<LogicScript> {
+        &self.logic
+    }
+
+    pub fn get_vars(&self) -> HashMap<String, String> {
+        hashmap!{
+            "core_id" => self.id,
+            "core_name" => self.name,
+            "game_port" => self.ports.get_game(),
+            "logic_port" => self.ports.get_logic(),
+            "http_port" => self.ports.get_http()
+        }
+    }
 }
 
 
@@ -82,7 +102,7 @@ impl Ports {
 
 
 #[derive(Debug)]
-struct CoreCopy {
+pub struct CoreCopy {
     num: Id,
     server_ip: String,
 }
@@ -93,5 +113,13 @@ impl CoreCopy {
             num: copy_num.clone(),
             server_ip: server_ip.to_string(),
         }
+    }
+
+    pub fn get_num(&self) -> &Id {
+        &self.num
+    }
+
+    pub fn get_ip(&self) -> String {
+        self.server_ip.clone()
     }
 }

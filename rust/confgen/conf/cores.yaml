@@ -1,5 +1,5 @@
 #<номер_ядра>: {<имя_ядра>, <порты>}
-1:  {name: "Tutorials",       ports: {game: 4321, logic: 4333, http: 8080}, extra_params: '--load-chars=Characteristics'}
+1:  {name: "Tutorials",       ports: {game: 4321, logic: 4333, http: 8080}, extra_params: ' --load-chars=Characteristics'}
 2:  {name: "Graven",          ports: {game: 4322, logic: 4334, http: 8081}}
 3:  {name: "Instances",       ports: {game: 4323, logic: 4335, http: 8082}}
 5:  {name: "Floring",         ports: {game: 4325, logic: 4337, http: 8084}}

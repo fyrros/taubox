@@ -21,6 +21,7 @@ pub trait FileSaver : FilePath {
     }
 
     fn save(&self, path: &PathBuf, body: &str) {
+        println!("{:?}", path);
         let mut file = File::create(path).unwrap();
         let _ = file.write_all(body.as_bytes());
     }

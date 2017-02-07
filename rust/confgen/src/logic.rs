@@ -1,5 +1,5 @@
 use yaml_rust::Yaml;
-use std::collections::{BTreeMap};
+use std::collections::{HashMap, BTreeMap};
 
 
 #[derive(Debug)]
@@ -105,7 +105,6 @@ impl<'a> LogicManager<'a> {
 pub struct LogicScript {
     name: String,
     path: String,
-    description: String,
 }
 
 impl LogicScript {
@@ -114,7 +113,6 @@ impl LogicScript {
     	LogicScript {
     		name: name.to_string(),
     		path: name.to_string(),
-    		description: String::new(),
     	}
     }
 
@@ -124,5 +122,13 @@ impl LogicScript {
 
     fn get_yaml_name(&self) -> Yaml {
         Yaml::String(self.name.clone())
+    }
+
+    pub fn add_script_info(&self, core_vars: &mut HashMap<String, String>) {
+        let fullname = self.path.replace("/","_").replace("_mob_","_");
+        let description = fullname.replace("_"," ");
+        core_vars.insert("name".to_string(), self.name.clone());
+        core_vars.insert("fullname".to_string(), fullname);
+        core_vars.insert("description".to_string(), description);
     }
 }

@@ -54,6 +54,18 @@ impl Server {
     pub fn get_logic_ip(&self) -> &str {
         self.logic.get_ip()
     }
+
+    pub fn get_game_ident(&self) -> &str {
+        self.game.get_ident()
+    }
+
+    pub fn get_logic_ident(&self) -> &str {
+        self.logic.get_ident()
+    }
+
+    pub fn get_id(&self) -> &Id {
+        &self.id
+    }
 }
 
 #[derive(Debug)]
@@ -74,6 +86,10 @@ impl ServerInfo {
 
     fn get_ip(&self) -> &str {
         self.ip.as_str()
+    }
+
+    fn get_ident(&self) -> &str {
+        self.ident.as_str()
     }
 }
 

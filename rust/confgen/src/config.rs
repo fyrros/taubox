@@ -102,15 +102,15 @@ impl FileLoader<Id, Yaml> for ConfigLoader {
 }
 
 #[derive(Debug)]
-pub struct ConfigFile {
+pub struct ResultFile {
     path: String,
     body: String,
 }
 
-impl ConfigFile {
+impl ResultFile {
     
-    pub fn new(path_string: String, body: String) -> ConfigFile {
-        ConfigFile {
+    pub fn new(path_string: String, body: String) -> ResultFile {
+        ResultFile {
             path: path_string,
             body: body,
         }
@@ -121,5 +121,5 @@ impl ConfigFile {
     }
 }
 
-impl FilePath for ConfigFile{}
-impl FileSaver for ConfigFile{}
+impl FilePath for ResultFile{}
+impl FileSaver for ResultFile{}

@@ -113,12 +113,12 @@ core_service: >
 
 logic_group: |
     <!-- {core_name} #{copy_num} -->
-    <group name="core{core_id}_{copy_num}_logic" descr="Logic for {core_name} #{copy_num}" start_timeout="1" enable="yes" run_depend="{core_copy}">
+    <group name="core{core_id}_{copy_num}_logic" descr="Logic for {core_name} #{copy_num}" start_timeout="1" enable="yes" run_depend="core{core_id}_{copy_num}">
         {scripts}
     </group>
 
 logic_service: |
-    <service name="{fullname}" descr="{description}" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
+    <service name="core{core_id}_{copy_num}_{fullname}" descr="{description}" cmd="twistd" path="/usr/local/bin/" uid="logic" gid="logic" enable="yes">
         <param name="args" value="--reactor kqueue -n"/>
         <param name="args" value="-l /usr/home/logic/LogicServer/runing/service/logs/core{core_id}_{copy_num}/{name}.log"/>
         <param name="args" value="--pidfile /usr/home/logic/LogicServer/runing/service/pids/core{core_id}_{copy_num}/{name}.pid"/>
