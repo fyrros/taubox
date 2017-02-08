@@ -71,6 +71,10 @@ impl Core {
             "extra_params" => extra_params
         }
     }
+
+    pub fn sort_copies(&mut self) {
+        self.copies.sort_by(|a,b| a.get_num().cmp(b.get_num()));
+    }
 }
 
 

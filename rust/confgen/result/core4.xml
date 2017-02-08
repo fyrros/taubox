@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<srveye xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <xmpp login="srveye@gmail.com" password="thesrveyepwd"/>
+
+    <smsmail enable="yes" from_addr="mor@skazkastudio.ru" ident="07-C4[11900]">
+        <xi:include href="../smsmail.xml" parse="xml" xpointer="xpointer(//recipient)"/>
+    </smsmail>
+
+    <gameservers>
+        <host ident="core5_3" ip="10.10.10.47" port="8084">Floring #3</host>
+        <host ident="core8_1" ip="10.10.10.47" port="8087">Gaina #1</host>
+        <host ident="core9_1" ip="10.10.10.47" port="8088">Spring Shore #1</host>
+        <host ident="core14_3" ip="10.10.10.47" port="8093">Hirn #3</host>
+        <host ident="core21_2" ip="10.10.10.47" port="8100">Colony_3 #2</host>
+        <host ident="core24_2" ip="10.10.10.47" port="8103">South Fyorl #2</host>
+        <host ident="core25_1" ip="10.10.10.47" port="8104">Event Arena #1</host>
+    </gameservers>
+
+    <services>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//update_svn_chars/service)"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//service[@name='core5_3'])"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//service[@name='core8_1'])"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//service[@name='core9_1'])"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//service[@name='core14_3'])"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//service[@name='core21_2'])"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//service[@name='core24_2'])"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//service[@name='core25_1'])"/>
+    </services>
+
+    <rrd>
+        <path>/var/db/srveye</path>
+    </rrd>
+
+</srveye>

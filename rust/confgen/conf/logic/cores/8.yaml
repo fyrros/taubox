@@ -55,6 +55,15 @@ include:
     - housekeeper
     - mothra_larva
     - mothra
+    flowers:
+    - bad_squirrel
+    - big_flowers
+    - small_flowers
+    - boss
+    - dwarf
+    - fairy_cat
+    - goblin
+    - squirrel
   quests:
   - event_quests
   - pets_quests

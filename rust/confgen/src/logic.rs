@@ -130,5 +130,6 @@ impl LogicScript {
         core_vars.insert("name".to_string(), self.name.clone());
         core_vars.insert("fullname".to_string(), fullname);
         core_vars.insert("description".to_string(), description);
+        core_vars.insert("path".to_string(), self.path.clone());
     }
 }

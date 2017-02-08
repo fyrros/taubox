@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<srveye xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <xmpp login="srveye@gmail.com" password="thesrveyepwd"/>
+
+    <smsmail enable="yes" from_addr="mor@skazkastudio.ru" ident="05-C3[11898]">
+        <xi:include href="../smsmail.xml" parse="xml" xpointer="xpointer(//recipient)"/>
+    </smsmail>
+
+    <gameservers>
+        <host ident="core2_2" ip="10.10.10.25" port="8081">Graven #2</host>
+        <host ident="core3_1" ip="10.10.10.25" port="8082">Instances #1</host>
+        <host ident="core5_2" ip="10.10.10.25" port="8084">Floring #2</host>
+        <host ident="core6_5" ip="10.10.10.25" port="8085">Deadlands #5</host>
+        <host ident="core15_3" ip="10.10.10.25" port="8094">Arena #3</host>
+        <host ident="core20_1" ip="10.10.10.25" port="8099">Two Towers #1</host>
+        <host ident="core21_3" ip="10.10.10.25" port="8100">Colony_3 #3</host>
+        <host ident="core26_1" ip="10.10.10.25" port="8105">Super Arena #1</host>
+    </gameservers>
+
+    <services>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//update_svn_chars/service)"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//service[@name='core2_2'])"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//service[@name='core3_1'])"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//service[@name='core5_2'])"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//service[@name='core6_5'])"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//service[@name='core15_3'])"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//service[@name='core20_1'])"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//service[@name='core21_3'])"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//service[@name='core26_1'])"/>
+    </services>
+
+    <rrd>
+        <path>/var/db/srveye</path>
+    </rrd>
+
+</srveye>

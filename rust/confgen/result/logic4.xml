@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<srveye xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <xmpp login="srveye@gmail.com" password="thesrveyepwd"/>
+
+    <smsmail enable="yes" from_addr="mor@skazkastudio.ru" ident="08-L4[11901]">
+        <xi:include href="../smsmail.xml" parse="xml" xpointer="xpointer(//recipient)"/>
+    </smsmail>
+
+    <xi:include href="core4.xml" parse="xml" xpointer="xpointer(//gameservers)"/>
+        
+    <logicservers>
+        <host ident="core5_3_logic" ip="10.10.10.49">Floring #3 logic</host>
+        <host ident="core8_1_logic" ip="10.10.10.49">Gaina #1 logic</host>
+        <host ident="core9_1_logic" ip="10.10.10.49">Spring Shore #1 logic</host>
+        <host ident="core14_3_logic" ip="10.10.10.49">Hirn #3 logic</host>
+        <host ident="core21_2_logic" ip="10.10.10.49">Colony_3 #2 logic</host>
+        <host ident="core24_2_logic" ip="10.10.10.49">South Fyorl #2 logic</host>
+        <host ident="core25_1_logic" ip="10.10.10.49">Event Arena #1 logic</host>
+    </logicservers>
+
+    <services>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//update_svn/service)"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//group[@name='core5_3_logic'])"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//group[@name='core8_1_logic'])"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//group[@name='core9_1_logic'])"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//group[@name='core14_3_logic'])"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//group[@name='core21_2_logic'])"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//group[@name='core24_2_logic'])"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//group[@name='core25_1_logic'])"/>
+    </services>
+
+    <rrd>
+        <path>/var/db/srveye</path>
+    </rrd>
+
+</srveye>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<srveye xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <xmpp login="srveye@gmail.com" password="thesrveyepwd"/>
+
+    <smsmail enable="yes" from_addr="mor@skazkastudio.ru" ident="16-L8[12070]">
+        <xi:include href="../smsmail.xml" parse="xml" xpointer="xpointer(//recipient)"/>
+    </smsmail>
+
+    <xi:include href="core8.xml" parse="xml" xpointer="xpointer(//gameservers)"/>
+        
+    <logicservers>
+        <host ident="core6_3_logic" ip="10.10.10.65">Deadlands #3 logic</host>
+        <host ident="core7_3_logic" ip="10.10.10.65">Kohill Islands #3 logic</host>
+        <host ident="core14_1_logic" ip="10.10.10.65">Hirn #1 logic</host>
+        <host ident="core19_1_logic" ip="10.10.10.65">Royal Path #1 logic</host>
+        <host ident="core24_1_logic" ip="10.10.10.65">South Fyorl #1 logic</host>
+        <host ident="core29_1_logic" ip="10.10.10.65">North Fyorl #1 logic</host>
+    </logicservers>
+
+    <services>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//update_svn/service)"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//group[@name='core6_3_logic'])"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//group[@name='core7_3_logic'])"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//group[@name='core14_1_logic'])"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//group[@name='core19_1_logic'])"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//group[@name='core24_1_logic'])"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//group[@name='core29_1_logic'])"/>
+    </services>
+
+    <rrd>
+        <path>/var/db/srveye</path>
+    </rrd>
+
+</srveye>

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<srveye xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <xmpp login="srveye@gmail.com" password="thesrveyepwd"/>
+
+    <smsmail enable="yes" from_addr="mor@skazkastudio.ru" ident="04-L2[11762-2]">
+        <xi:include href="../smsmail.xml" parse="xml" xpointer="xpointer(//recipient)"/>
+    </smsmail>
+
+    <xi:include href="core2.xml" parse="xml" xpointer="xpointer(//gameservers)"/>
+        
+    <logicservers>
+        <host ident="core1_2_logic" ip="10.10.10.39">Tutorials #2 logic</host>
+        <host ident="core3_2_logic" ip="10.10.10.39">Instances #2 logic</host>
+        <host ident="core5_1_logic" ip="10.10.10.39">Floring #1 logic</host>
+        <host ident="core6_2_logic" ip="10.10.10.39">Deadlands #2 logic</host>
+        <host ident="core15_7_logic" ip="10.10.10.39">Arena #7 logic</host>
+        <host ident="core16_1_logic" ip="10.10.10.39">Event #1 logic</host>
+        <host ident="core23_2_logic" ip="10.10.10.39">Colony_8 #2 logic</host>
+        <host ident="core28_2_logic" ip="10.10.10.39">Colony_7 #2 logic</host>
+    </logicservers>
+
+    <services>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//update_svn/service)"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//group[@name='core1_2_logic'])"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//group[@name='core3_2_logic'])"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//group[@name='core5_1_logic'])"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//group[@name='core6_2_logic'])"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//group[@name='core15_7_logic'])"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//group[@name='core16_1_logic'])"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//group[@name='core23_2_logic'])"/>
+        <xi:include href="../templates.xml" parse="xml" xpointer="xpointer(//group[@name='core28_2_logic'])"/>
+    </services>
+
+    <rrd>
+        <path>/var/db/srveye</path>
+    </rrd>
+
+</srveye>

@@ -14,7 +14,7 @@ static RESULT_TEMPLATES_XML_FILE_PATH: &'static str  = "result/templates.xml";
 static RESULT_GAME_XML_FILE_PATH: &'static str       = "result/core{id}.xml";
 static RESULT_LOGIC_XML_FILE_PATH: &'static str      = "result/logic{id}.xml";
 
-static TAB_IN_SERVERS: &'static str = "        ";
+static TAB_IN_SERVERS: &'static str = "\n        ";
 
 fn get_id(yaml_id: &Yaml) -> Id {
     yaml_id.as_i64().unwrap() as Id
@@ -52,6 +52,7 @@ impl<'a> TheKingdom<'a> {
         thekingdom.load_logic();
         thekingdom.load_cores();
         thekingdom.load_servers();
+        thekingdom.sort_copies_in_cores();
 
         thekingdom
     }
@@ -80,6 +81,12 @@ impl<'a> TheKingdom<'a> {
             let mut server = Server::new(server_id, server_config);
             server.add_copies(server_config, &mut self.cores);
             self.servers.insert(server_id, server);
+        }
+    }
+
+    fn sort_copies_in_cores(&mut self) {
+        for (_,mut core) in &mut self.cores {
+            core.sort_copies();
         }
     }
     
@@ -151,6 +158,7 @@ impl<'a> TheKingdom<'a> {
             let core = self.cores.get(core_id).unwrap();
             let mut core_vars = core.get_vars();
             cores.push(strfmt(core_name_comment_template, &core_vars).unwrap());
+
             for copy in core.get_copies() {
                 core_vars.insert("copy_num".to_string(), copy.get_num().to_string());
                 core_vars.insert("server_ip".to_string(), copy.get_ip());
@@ -161,7 +169,7 @@ impl<'a> TheKingdom<'a> {
                     script.add_script_info(&mut core_vars);
                     scripts.push(strfmt(logic_service_template, &core_vars).unwrap());
                 }
-                core_vars.insert("scripts".to_string(), scripts.join(TAB_IN_SERVERS));
+                core_vars.insert("scripts".to_string(), scripts.join("\n"));
                 groups.push(strfmt(logic_group_template, &core_vars).unwrap());
             }
         }
